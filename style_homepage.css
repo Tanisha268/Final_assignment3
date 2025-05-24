@@ -18,13 +18,14 @@ header {
 }
 
   /*------------------ THIS SECTION IS FOR THE FIRST MOVING IMAGE STACK -----------------------*/
+/* ------------------ FIRST MOVING IMAGES STACK ----------------------- */
 .moving_images_one {
-  width: 10%;
-  height: 200%;
+  width: 8vw; /* responsive instead of 10% */
+  height: 150vh; /* responsive instead of 200% */
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 65%;
+  left: 65vw; /* instead of 65% */
   z-index: 2;
 }
 
@@ -32,7 +33,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  gap: 30px;
+  gap: 2vh; /* instead of 30px */
   display: flex;
   flex-direction: column;
   animation: moveImagesUp 10s linear infinite;
@@ -54,14 +55,15 @@ header {
 }
 
 
-  /*------------------ THIS SECTION IS FOR THE SECOND MOVING IMAGES STACK -----------------------*/
+
+/* ------------------ SECOND MOVING IMAGES STACK ----------------------- */
 .moving_images_two {
-  width: 10%;
-  height: 200%;
+  width: 8vw;
+  height: 150vh;
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 77%;
+  left: 77vw;
   z-index: 2;
 }
 
@@ -69,7 +71,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  gap: 30px;
+  gap: 2vh;
   display: flex;
   flex-direction: column;
   animation: moveImagesDown 10s linear infinite;
@@ -90,14 +92,14 @@ header {
   }
 }
 
-  /*------------------ THIS SECTION IS FOR THE THIRD MOVING IMAGES STACK -----------------------*/
+/* ------------------ THIRD MOVING IMAGES STACK ----------------------- */
 .moving_images_three {
-  width: 10%;
-  height: 200%;
+  width: 8vw;
+  height: 150vh;
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 89%;
+  left: 89vw;
   z-index: 2;
 }
 
@@ -105,7 +107,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  gap: 30px;
+  gap: 2vh;
   display: flex;
   flex-direction: column;
   animation: moveImagesUp 10s linear infinite;
@@ -117,14 +119,48 @@ header {
   display: block;
 }
 
-@keyframes moveImagesUp {
-  0% {
-    transform: translateY(0);
+@media (max-width: 600px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden; /* or any fixed height */
   }
-  100% {
-    transform: translateY(-50%);
+
+  .image_stack_one {
+    display: none;
   }
-}
+
+    .image_stack_three {
+      display: none;
+    }
+    .moving_images_two {
+      width: 10vw;
+      height: 50vh;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 77vw;
+      z-index: 2;
+    }
+    
+    .image_stack_two {
+      position: absolute;
+      top: 0;
+      left: 0;
+      gap: 1vh;
+      display: flex;
+      flex-direction: column;
+      animation: moveImagesDown 10s linear infinite;
+    }
+    
+    .image_stack_two img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }  
+  }
+
   /*------------------ THIS SECTION IS FOR THE BANNER  -----------------------*/
 .black_rectangle {
   position: absolute;
@@ -141,17 +177,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover; /* scales image to fill container */
   z-index: 1;
-}
-
-/* Foreground content */
-.header-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
 }
 
 /* Banner always on top */
@@ -162,6 +190,42 @@ header {
   overflow: hidden;
   z-index: 3;
 }
+  /*-------- responsive for phone ----------*/
+  @media (max-width: 600px) {
+    .black_rectangle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 57vh;
+      background-color: black; /* or any color you want */
+      z-index: 0; /* behind the image */
+    }
+  
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 62vh;
+      object-fit: contain; /* or 'cover' depending on your need */
+      z-index: 1; /* in front of the black rectangle */
+    }
+  }
+
+/*-------- responsive for surface pro ----------*/
+@media (max-width: 1400px) and (min-width: 1000px) {
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
 .red_rectangle {
   position: absolute;
@@ -209,6 +273,19 @@ header {
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 390px) {
+  .red_rectangle,
+  .marquee {
+    height: 20px; /* reduce height for small screen */
+  }
+
+  .marquee-content p {
+    font-size: 18px; /* shrink font */
+    line-height: 50px;
+    padding-right: 30px;
+  }
+}
   /*------------------ THIS SECTION IS FOR THE WORDS + DESIGN ON THE BANNER -----------------------*/
   .header-content {
     position: absolute;
@@ -241,7 +318,52 @@ header {
     width: 650px;
     z-index: 2; /* behind headings */
   }
+  /*-------- responsive for phone ----------*/
+  @media (max-width: 600px) {
+    .header-content {
+      top: 30vh;
+      left: 10vh;
+    }
+  
+    .header-content h1 {
+      font-size: 65px; /* scale down heading */
+      margin: 0 0 1px 0; /* bottom margin to separate from h2 */
 
+    }
+  
+    .header-content h2 {
+      font-size: 25px; /* scale down subheading */
+    }
+  
+    .retro_lines {
+      top: 30%;
+      left: 30%;
+      transform: translateX(-50%);
+      width: 320px; /* shrink lines */
+    }
+  }
+
+/*-------- responsive for surface pro ----------*/
+@media (max-width: 1400px) and (min-width: 1000px) {
+  .header-content {
+    top: 400px;
+    left: 10%;
+
+  }
+  .header-content h1 {
+    font-size: 120px;
+  }
+
+  .header-content h2 {
+    font-size:50px;
+  }
+
+  .retro_lines {
+    top: 160px; /* also moved up to stay under heading */
+    left: 60px;
+    width: 600px;
+  }
+}
   /*------------------ THIS SECTION IS FOR THE NAVIGATION BAR -----------------------*/
   nav {
     position: relative;
@@ -286,15 +408,15 @@ header {
     cursor: pointer;
   }
   
-  /* Responsive for tablets and smaller */
-  @media (max-width: 900px) {
+  /* Responsive for phones */
+  @media (max-width: 600px) {
     nav {
       flex-direction: column;
       align-items: flex-start;
-      height: auto;
+      height: 30px;
       padding: 15px 20px;
     }
-  
+
     .nav_links {
       flex-direction: column;
       gap: 15px;
@@ -302,7 +424,7 @@ header {
     }
   
     .nav_icons {
-      margin-top: 10px;
+      margin-top: 1px;
       align-self: flex-end;
     }
   
@@ -311,7 +433,7 @@ header {
     }
   
     .nav_icons img {
-      height: 32px;
+      height: 35px;
     }
   }
 
@@ -325,18 +447,19 @@ header {
   cursor: pointer;
 }
 
-/* Show it only on small screens */
-@media (max-width: 768px) {
+/* responsiveness for phone */
+@media (max-width: 600px) {
   .menu-toggle {
     display: block;
+
   }
 
   .nav_links {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 110%;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 1px;
   }
 
   .nav_links.active {
@@ -373,7 +496,7 @@ header {
     #menswear-box h2 {
       position: absolute;
       font-size: 35px;
-      color: black;
+      color: rgb(0, 0, 0);
       margin: 2px 0;
       font-family: "Marcellus SC", serif;
       font-weight: normal;
@@ -488,7 +611,9 @@ header {
           height: auto;
         }
 
-     /*------------------ THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
+
+
+     /*---------------------- THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
   .Customer_Review_Section {
     position: relative;
     padding: 60px 20px 0px;
@@ -536,9 +661,8 @@ header {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 40px;
-   
-
   }
+
   .review p {
     margin-top: 8px;   /* Reduce space between icon and text */
   }
@@ -563,6 +687,53 @@ header {
     margin-right: auto;       /* Center the icon */
   }
 
+/* responsiveness for phone */
+@media (max-width: 600px) {
+  
+  .background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 70%;
+    z-index: 0;
+  }
+
+  /* Heading stays above background */
+  .customer-reviews-heading {
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+
+  }
+  
+  /* Reviews container */
+  .review-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .review p {
+    margin-top: 2px;   /* Reduce space between icon and text */
+  }
+
+  .review {
+    flex: 1 1 30%;
+    min-width: 250px;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .review img {
+    width: 40px;              /* Adjust as needed */
+    margin-bottom: 1px;       /* Reduce gap between icon and text */       /* Center the icon */
+  }
+}
   /*------------------ THIS SECTION IS FOR THE SHOP CATEGORIES -----------------------*/
   .shop_categories {
     background-image: url('red_gradient_background.png');
@@ -588,11 +759,6 @@ header {
     flex-wrap: nowrap;
   }
   
-  .categories_row > div {
-    flex: 0 0 270px;              /* Fixed size: wide enough to make them large */
-    text-align: center;
-  }
-  
   .categories_row img {
     width: 100%;
     height: auto;
@@ -607,19 +773,45 @@ header {
     letter-spacing: 1px;
   }
   
-  /* Tablets: 2 per row */
-  @media (max-width: 900px) {
+  /* responsive for phone */
+  @media (max-width: 600px) {
+    .shop_categories {
+      background-size: cover;
+      padding: 30px 0px 10px 30px;
+    }
+  
+    .shopping_categories_heading {
+      text-align: center;
+      font-size: 35px;
+      margin: -10px 0 20px 0;
+    }
+  
+    .categories_row {
+      align-items: center;
+      gap: 20px;
+    }
+  
     .categories_row > div {
-      flex: 1 1 calc(50% - 20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .categories_row img {
+      width: 30vh;
+      height: 40vh;
+      display: block;
+    }
+  
+    .categories_row p {
+      font-size: 20px;
+      margin-top: 10px;
+      letter-spacing: 1px;
     }
   }
   
-  /* Mobile: 1 per row */
-  @media (max-width: 500px) {
-    .categories_row > div {
-      flex: 1 1 100%;
-    }
-  }
+ 
 
   /*------------------ THIS SECTION IS FOR THE ABOUT US SECTION -----------------------*/
   .about_us_section {
@@ -655,24 +847,21 @@ header {
     font-family: "Jacques Francois", serif;
   }
   
-  /* Responsive typography */
-  @media (max-width: 768px) {
+  /* Responsive for phone */
+  @media (max-width: 600px) {
+    .about_us_section {
+      background-image: url('clothing_background.png');
+      padding: 5px 25px 0px 25px;
+      text-align: center;
+      display: flex;
+    }
+  
     .about_us_heading {
       font-size: 36px;
     }
   
     .about_us_paragraph {
       font-size: 18px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about_us_heading {
-      font-size: 28px;
-    }
-  
-    .about_us_paragraph {
-      font-size: 16px;
     }
   }
 
@@ -711,6 +900,54 @@ header {
   .blog_images img:hover {
     transform: scale(1.03);
   }
+    /* Responsive for phone */
+    @media (max-width: 600px) {
+      .blog_section {
+        background-image: url('red_gradient_background.png');
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+    
+      .blogs_heading {
+        font-family: "Marcellus SC", serif;
+        font-size: 35px;
+        font-weight: normal;
+        margin-bottom: 30px;
+        color: white;
+      }
+    
+      /* ✅ SCROLLING container */
+      .blog_scroll_wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+      /* ✅ FLEX container inside scroll wrapper */
+      .blog_images {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        width: max-content;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .blog_images img {
+        padding-left: 20px;
+        width: 250px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        height: auto;
+        margin: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    
+      .blog_scroll_wrapper::-webkit-scrollbar {
+        display: none;
+      }
+    }
     /*------------------ THIS SECTION IS FOR THE FOOTER -----------------------*/
   .footer {
     background-image: url('black_rectangle_footer.jpg');
@@ -758,4 +995,52 @@ header {
     height: 20px; /* adjust icon size */
     width: auto;
   }
+
+      /* Responsive for phone */
+      @media (max-width: 600px) {
+        .footer {
+          background-image: url('black_rectangle_footer.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          padding: 5px 20px;
+          gap: 20px;
+        }
+        
+        .footer_logo {
+          height: 40px;
+        }
+        
+        .footer_words {
+          display: flex;
+          gap: 50px;
+          text-decoration: underline;
+        }
+        
+        .footer_words h2 {
+          font-size: 10px;
+          margin: 0px;
+        }
+        
+        .follow_section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 30px;
+        }
+        
+        .follow_logos {
+          display: flex;
+          gap: 15px;
+        }
+        
+        .follow_logos img {
+          height: 20px; /* adjust icon size */
+          width: auto;
+        }
+
+    
+       
+      }
 
