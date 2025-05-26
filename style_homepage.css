@@ -679,12 +679,12 @@ header {
 
   }
   .review img {
-    width: auto;              /* Adjust as needed */
+    width: auto;              
     height: auto;
-    margin-bottom: 2px;       /* Reduce gap between icon and text */
+    margin-bottom: 2px;       
     display: block;
     margin-left: auto;
-    margin-right: auto;       /* Center the icon */
+    margin-right: auto;      
   }
 
 /* responsiveness for phone */
@@ -734,7 +734,7 @@ header {
     margin-bottom: 1px;       /* Reduce gap between icon and text */       /* Center the icon */
   }
 }
-  /*------------------ THIS SECTION IS FOR THE SHOP CATEGORIES -----------------------*/
+  /*----------------------------- THIS SECTION IS FOR THE SHOP CATEGORIES -------------------------------*/
   .shop_categories {
     background-image: url('red_gradient_background.png');
     background-size: cover;
@@ -810,10 +810,48 @@ header {
       letter-spacing: 1px;
     }
   }
+
+    /* responsive for surface pro */
+    @media (min-width: 1368px) and (max-width: 1400px) {
+      .shop_categories {
+        background-size: cover;
+        padding: 30px 0px 10px 30px;
+      }
+    
+      .shopping_categories_heading {
+        text-align: center;
+        font-size: 55px;
+        margin: -10px 0 20px 0;
+      }
+    
+      .categories_row {
+        align-items: center;
+        gap: 30px;
+      }
+    
+      .categories_row > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .categories_row img {
+        width: 42vh;
+        height: 57vh;
+        display: block;
+      }
+    
+      .categories_row p {
+        font-size: 20px;
+        margin-top: 10px;
+        letter-spacing: 1px;
+      }
+    }
   
  
 
-  /*------------------ THIS SECTION IS FOR THE ABOUT US SECTION -----------------------*/
+  /*--------------------------- THIS SECTION IS FOR THE ABOUT US SECTION -------------------------------*/
   .about_us_section {
     background-image: url('clothing_background.png');
     background-size: cover;
@@ -865,7 +903,7 @@ header {
     }
   }
 
-  /*------------------ THIS SECTION IS FOR THE BLOG SECTION -----------------------*/
+  /*--------------------------- THIS SECTION IS FOR THE BLOG SECTION -----------------------------------*/
   .blog_section {
     background-image:url('red_gradient_background.png');;
     padding: 40px 80px 40px 80px;
@@ -903,18 +941,14 @@ header {
     /* Responsive for phone */
     @media (max-width: 600px) {
       .blog_section {
-        background-image: url('red_gradient_background.png');
         background-color: #fff;
-        text-align: center;
         padding: 20px 0;
       }
     
       .blogs_heading {
-        font-family: "Marcellus SC", serif;
         font-size: 35px;
         font-weight: normal;
         margin-bottom: 30px;
-        color: white;
       }
     
       /* ✅ SCROLLING container */
@@ -926,7 +960,6 @@ header {
     
       /* ✅ FLEX container inside scroll wrapper */
       .blog_images {
-        display: flex;
         flex-wrap: nowrap;
         gap: 20px;
         width: max-content;
@@ -939,7 +972,6 @@ header {
         width: 250px;
         flex-shrink: 0;
         scroll-snap-align: start;
-        height: auto;
         margin: 0;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
@@ -948,7 +980,51 @@ header {
         display: none;
       }
     }
-    /*------------------ THIS SECTION IS FOR THE FOOTER -----------------------*/
+
+        /* Responsive for surface pro size */
+        @media (min-width: 1368px) and (max-width: 1400px) {
+          .blog_section {
+            background-color: #fff;
+            padding: 20px 0;
+          }
+        
+          .blogs_heading {
+            font-size: 55px;
+            font-weight: normal;
+            margin-bottom: 30px;
+          }
+        
+          /* ✅ SCROLLING container */
+          .blog_scroll_wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+          }
+        
+          /* ✅ FLEX container inside scroll wrapper */
+          .blog_images {
+            flex-wrap: nowrap;
+            gap: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0;
+          }
+        
+          .blog_images img {
+            padding-left: 20px;
+            width: 380px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            margin: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          }
+        
+          .blog_scroll_wrapper::-webkit-scrollbar {
+            display: none;
+          }
+        }
+    
+    /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
   .footer {
     background-image: url('black_rectangle_footer.jpg');
     background-size: cover;
