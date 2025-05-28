@@ -20,7 +20,7 @@ header {
   /*------------------ THIS SECTION IS FOR THE FIRST MOVING IMAGE STACK -----------------------*/
 /* ------------------ FIRST MOVING IMAGES STACK ----------------------- */
 .moving_images_one {
-  width: 8vw; /* responsive instead of 10% */
+  width: 10vw; /* responsive instead of 10% */
   height: 150vh; /* responsive instead of 200% */
   overflow: hidden;
   position: absolute;
@@ -40,7 +40,7 @@ header {
 }
 
 .image_stack_one img {
-  width: 100%;
+  width: 110%;
   height: auto;
   display: block;
 }
@@ -58,8 +58,8 @@ header {
 
 /* ------------------ SECOND MOVING IMAGES STACK ----------------------- */
 .moving_images_two {
-  width: 8vw;
-  height: 150vh;
+  width: 10vw;
+  height: 100vh;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -78,7 +78,7 @@ header {
 }
 
 .image_stack_two img {
-  width: 100%;
+  width: 110%;
   height: auto;
   display: block;
 }
@@ -94,7 +94,7 @@ header {
 
 /* ------------------ THIRD MOVING IMAGES STACK ----------------------- */
 .moving_images_three {
-  width: 8vw;
+  width: 10vw;
   height: 150vh;
   overflow: hidden;
   position: absolute;
@@ -114,7 +114,7 @@ header {
 }
 
 .image_stack_three img {
-  width: 100%;
+  width: 110%;
   height: auto;
   display: block;
 }
@@ -162,12 +162,13 @@ header {
   }
 
   /*------------------ THIS SECTION IS FOR THE BANNER  -----------------------*/
+
 .black_rectangle {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* full height of header */
+  height: 90vh; /* Matches .banner height */
   background-color: black;
   z-index: 0;
 }
@@ -175,20 +176,11 @@ header {
 .background-image {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0; /* You had 100px, which offsets the image to the right */
   width: 100%;
-  height: 100vh;
-  object-fit: cover; /* scales image to fill container */
+  height: 90vh;; /* Matches .banner height */
+  object-fit: cover;
   z-index: 1;
-}
-
-/* Banner always on top */
-.banner {
-  position: relative;
-  width: 100%;
-  height: 70px;
-  overflow: hidden;
-  z-index: 3;
 }
   /*-------- responsive for phone ----------*/
   @media (max-width: 600px) {
@@ -213,20 +205,16 @@ header {
     }
   }
 
-/*-------- responsive for surface pro ----------*/
-@media (max-width: 1400px) and (min-width: 1000px) {
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
-  }
-}
-
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Smaller height */
+    overflow: hidden;
+    z-index: 3;
+  }
+
 .red_rectangle {
   position: absolute;
   top: 0;
@@ -289,7 +277,7 @@ header {
   /*------------------ THIS SECTION IS FOR THE WORDS + DESIGN ON THE BANNER -----------------------*/
   .header-content {
     position: absolute;
-    top: 400px;       /* Move down the screen */
+    bottom: 100px;       /* Move down the screen */
     left: 10%;        /* Starting from 10% from the left */
     transform: translateX(-10%);  /* Pulls it slightly left */
     text-align: center;
@@ -343,11 +331,20 @@ header {
     }
   }
 
-/*-------- responsive for surface pro ----------*/
+/*-------- responsive for surface pro  ----------*/
 @media (max-width: 1400px) and (min-width: 1000px) {
   .header-content {
-    top: 400px;
-    left: 10%;
+    position: absolute;
+    bottom: 100px;       /* Move down the screen */
+    left: 10%;        /* Starting from 10% from the left */
+    transform: translateX(-30%);  /* Pulls it slightly left */
+    text-align: center;
+    z-index: 6;
+  }
+
+  .header-content {
+    top: 500px;
+    left: 20%;
 
   }
   .header-content h1 {
@@ -359,13 +356,14 @@ header {
   }
 
   .retro_lines {
-    top: 160px; /* also moved up to stay under heading */
+    top: 350px; /* also moved up to stay under heading */
     left: 60px;
-    width: 600px;
+    width: 700px;
   }
 }
   /*------------------ THIS SECTION IS FOR THE NAVIGATION BAR -----------------------*/
   nav {
+    margin-top: -90px; /* adjust as needed */
     position: relative;
     background-color: black;
     height: 70px;
@@ -373,7 +371,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 30px;
     position: relative;
     z-index: 5;
     flex-wrap: wrap;
@@ -391,7 +389,7 @@ header {
   .nav_links li {
     color: white;
     font-family: "Jacques Francois", serif;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
     white-space: nowrap;
   }
@@ -419,7 +417,7 @@ header {
 
     .nav_links {
       flex-direction: column;
-      gap: 15px;
+      gap: 125px;
       width: 100%;
     }
   
@@ -429,7 +427,7 @@ header {
     }
   
     .nav_links li {
-      font-size: 18px;
+      font-size: 12px;
     }
   
     .nav_icons img {
@@ -451,7 +449,6 @@ header {
 @media (max-width: 600px) {
   .menu-toggle {
     display: block;
-
   }
 
   .nav_links {
@@ -481,8 +478,8 @@ header {
   #menswear-box {
     position: absolute;
     top: 100%;
-    width: 70%;
-    height: 800%;
+    width: 60%;
+    height: 740%;
     padding: 15px;
     display: none;
     z-index: 100;
@@ -495,7 +492,7 @@ header {
 
     #menswear-box h2 {
       position: absolute;
-      font-size: 35px;
+      font-size: 30px;
       color: rgb(0, 0, 0);
       margin: 2px 0;
       font-family: "Marcellus SC", serif;
@@ -517,7 +514,7 @@ header {
         /* each item of Specials in search results */ 
          .specials-list li {
           color: black;
-          font-size: 19px;
+          font-size: 17px;
           padding-top: 5px; 
           margin-bottom: 8px;
         }
@@ -530,7 +527,7 @@ header {
     
     #menswear-box h2:nth-of-type(2) {   /* FOR TOPS */
       top: 5%;
-      left: 40%;
+      left: 35%;
     }
         .tops-list {
           list-style-type: none; /* Remove default bullets */
@@ -542,7 +539,7 @@ header {
         /* each item of Tops in search results */ 
         .tops-list li {
           color: black;
-          font-size: 19px;
+          font-size: 17px;
           padding-top: 5px;
           margin-bottom: 8px;
         }
@@ -550,12 +547,12 @@ header {
         #menswear-box .tops-list {
           position: absolute;
           top: 4%;     /* Move up or down */
-          left: 41%;    /* Move right */
+          left: 36%;    /* Move right */
         }
 
     #menswear-box h2:nth-of-type(3) {  /* FOR BOTTOMS */
       top: 70%;
-      left: 40%;
+      left: 35%;
     }
         .bottoms-list {
           list-style-type: none; 
@@ -567,7 +564,7 @@ header {
         /* each item of Tops in search results */ 
         .bottoms-list li {
           color: black;
-          font-size: 19px;
+          font-size: 17px;
           padding-top: 5px;
           margin-bottom: 8px;
         }
@@ -575,12 +572,12 @@ header {
         #menswear-box .bottoms-list {
           position: absolute;
           top: 69%;     /* Move up or down */
-          left: 42%;    /* Move right */
+          left: 36%;    /* Move right */
         }
     
     #menswear-box h2:nth-of-type(4) {
       top: 5%;
-      left: 70%;
+      left: 60%;
     }
         .shopbybrand-list {
           list-style-type: none; /* Remove default bullets */
@@ -592,7 +589,7 @@ header {
         /* each item of Tops in search results */ 
         .shopbybrand-list li {
           color: black;
-          font-size: 19px;
+          font-size: 17px;
           padding-top: 5px;
           margin-bottom: 8px;
         }
@@ -600,7 +597,7 @@ header {
         #menswear-box .shopbybrand-list {
           position: absolute;
           top: 4%;     /* Move up or down */
-          left: 71%;    /* Move right */
+          left: 61%;    /* Move right */
         }
 
     #menswear-box .denim_model {  /* Image inside the white search results rectanglee */
@@ -614,77 +611,82 @@ header {
 
 
      /*---------------------- THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
-  .Customer_Review_Section {
-    position: relative;
-    padding: 60px 20px 0px;
-    background-color: rgba(0, 255, 0, 0.2); /* light green for debugging */
-    overflow: hidden;
-    z-index: 1;
-    margin: 0;
-    background-image: url('background\ retro\ image.jpg');
-  }
-  
-  /* Background image container */
-  .background-images {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    height: 85%;
-    z-index: 0;
-  }
-  
-  .background-images img {
-    height: auto;
-    object-fit: contain;
-  }
-  
-  /* Heading stays above background */
-  .customer-reviews-heading {
-    position: relative;
-    text-align: center;
-    font-size: 55px;
-    margin: -5px 0 40px 0;
-    font-weight: normal;
-    font-family: "Marcellus SC", serif;
-    color: black;
-    margin-bottom: 40px;
-    z-index: 2;
-  }
+     .Customer_Review_Section {
+      position: relative;
+      padding: clamp(1rem, 5vw, 2.5rem) clamp(2rem, 10vw, 6.25rem) 0;
+      background-color: rgba(0, 255, 0, 0.2); /* for debugging */
+      overflow: hidden;
+      z-index: 2;
+      margin: 0;
+      background-image: url('background retro image.jpg'); /* Make sure the path is correct and unescaped */
+      background-size: contain;
+      background-position: center;
+    }
+    
+    /* Background image container */
+    .background-images {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      height: 50%;
+    }
+    
+    .background-images img {
+      height: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    
+    /* Heading stays above background */
+    .customer-reviews-heading {
+      position: relative;
+      text-align: center;
+      font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+      margin-top: -0.9rem;
+      margin-bottom: clamp(1rem, 1vw, 2rem);
+      font-weight: normal;
+      font-family: "Marcellus SC", serif;
+      color: black;
+      z-index: 2;
+    }
   
   /* Reviews container */
   .review-container {
     position: relative;
     z-index: 2;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: clamp(30px, 80vw, 80px); /* Responsive spacing */
+    padding: 0.5rem 2rem;
+  }
+  
+  .review {
+    flex: 1 1 clamp(250px, 30%, 300px); /* Responsive width between 250–300px */
+    max-width: 300px;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 20px); /* Responsive text */
+    font-family: "Jacques Francois", serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .review p {
-    margin-top: 8px;   /* Reduce space between icon and text */
+    margin-top: 8px;
+    justify-self: center;
   }
-
-  .review {
-    flex: 1 1 30%;
-    min-width: 250px;
-    text-align: center;
-    font-size: 25px;
-    font-family: "Jacques Francois", serif;
-    color: black;
-    align-items: center; /* horizontally center icon + text */
-    padding-bottom: 0px;
-
-  }
+  
   .review img {
-    width: auto;              
+    width: auto;
     height: auto;
-    margin-bottom: 2px;       
     display: block;
     margin-left: auto;
-    margin-right: auto;      
+    margin-right: auto;
+    margin-bottom: 2px;
   }
 
 /* responsiveness for phone */
@@ -739,13 +741,15 @@ header {
     background-image: url('red_gradient_background.png');
     background-size: cover;
     background-position: center;
-    padding: 40px 10px 10px 25px;
+    padding: 30px 5px 5px 25px;
+    max-height: 500px; /* example, adjust as needed */
     overflow: hidden;
   }
   
+  
   .shopping_categories_heading {
     text-align: center;
-    font-size: 55px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin: -10px 0 40px 0;
     font-weight: normal;
     font-family: "Marcellus SC", serif;
@@ -755,12 +759,12 @@ header {
   .categories_row {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 45px;
     flex-wrap: nowrap;
   }
   
   .categories_row img {
-    width: 100%;
+    width: 110%;
     height: auto;
     display: block;
   }
@@ -771,9 +775,10 @@ header {
     margin-top: 10px;
     color: white;
     letter-spacing: 1px;
+    text-align: center;
   }
   
-  /* responsive for phone */
+  /* --------- responsive for phone ----------- */
   @media (max-width: 600px) {
     .shop_categories {
       background-size: cover;
@@ -810,44 +815,6 @@ header {
       letter-spacing: 1px;
     }
   }
-
-    /* responsive for surface pro */
-    @media (min-width: 1368px) and (max-width: 1400px) {
-      .shop_categories {
-        background-size: cover;
-        padding: 30px 0px 10px 30px;
-      }
-    
-      .shopping_categories_heading {
-        text-align: center;
-        font-size: 55px;
-        margin: -10px 0 20px 0;
-      }
-    
-      .categories_row {
-        align-items: center;
-        gap: 30px;
-      }
-    
-      .categories_row > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-    
-      .categories_row img {
-        width: 42vh;
-        height: 57vh;
-        display: block;
-      }
-    
-      .categories_row p {
-        font-size: 20px;
-        margin-top: 10px;
-        letter-spacing: 1px;
-      }
-    }
   
  
 
@@ -857,7 +824,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10px 30px 0px 30px;
+    padding: 2vw 5vw 0 5vw; /* responsive padding */
     color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
@@ -866,26 +833,27 @@ header {
   }
   
   .about_us_content {
-    max-width: 1100px;
+    max-width: 90vw; /* max width relative to viewport */
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: clamp(20px, 3vw, 40px) clamp(10px, 2vw, 20px);
   }
   
   .about_us_heading {
-    font-size: 55px;
-    margin-bottom: 20px;
-    margin-top: -6px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    margin-top: -40px;
     font-family: "Marcellus SC", serif;
     font-weight: normal;
   }
   
   .about_us_paragraph {
-    font-size: 30px;
-    line-height: 1.8;
+    font-size: clamp(16px, 1.5vw, 30px);
+    line-height: 1.6;
+    max-width: 900px;
     font-family: "Jacques Francois", serif;
   }
-  
-  /* Responsive for phone */
+
+  /* -------- Responsive for phone --------- */
   @media (max-width: 600px) {
     .about_us_section {
       background-image: url('clothing_background.png');
@@ -905,31 +873,30 @@ header {
 
   /*--------------------------- THIS SECTION IS FOR THE BLOG SECTION -----------------------------------*/
   .blog_section {
-    background-image:url('red_gradient_background.png');;
-    padding: 40px 80px 40px 80px;
+    background-image: url('red_gradient_background.png');
+    padding: clamp(20px, 5vw, 40px) clamp(20px, 8vw, 80px);
     text-align: center;
     background-color: #fff; /* or any background you prefer */
   }
   
   .blogs_heading {
     font-family: "Marcellus SC", serif;
-    font-size: 55px;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: normal;
     margin-top: -10px;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 4vw, 30px);
     color: rgb(255, 255, 255);
   }
   
   .blog_images {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: clamp(30px, 8vw, 100px);
     flex-wrap: wrap;
-  
   }
   
   .blog_images img {
-    width: 350px; /* adjust size as needed */
+    width: clamp(220px, 23vw, 350px); /* responsive width */
     height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -938,7 +905,9 @@ header {
   .blog_images img:hover {
     transform: scale(1.03);
   }
-    /* Responsive for phone */
+
+
+    /* ------- Responsive for phone ---------- */
     @media (max-width: 600px) {
       .blog_section {
         background-color: #fff;
@@ -980,49 +949,6 @@ header {
         display: none;
       }
     }
-
-        /* Responsive for surface pro size */
-        @media (min-width: 1368px) and (max-width: 1400px) {
-          .blog_section {
-            background-color: #fff;
-            padding: 20px 0;
-          }
-        
-          .blogs_heading {
-            font-size: 55px;
-            font-weight: normal;
-            margin-bottom: 30px;
-          }
-        
-          /* ✅ SCROLLING container */
-          .blog_scroll_wrapper {
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-          }
-        
-          /* ✅ FLEX container inside scroll wrapper */
-          .blog_images {
-            flex-wrap: nowrap;
-            gap: 50px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin: 0;
-          }
-        
-          .blog_images img {
-            padding-left: 20px;
-            width: 380px;
-            flex-shrink: 0;
-            scroll-snap-align: start;
-            margin: 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          }
-        
-          .blog_scroll_wrapper::-webkit-scrollbar {
-            display: none;
-          }
-        }
     
     /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
   .footer {

@@ -190,7 +190,7 @@ html, body {
     .black-rectangle h1 {
       font-size: 30px;
       font-weight: normal;
-      margin-left:5%;
+      margin-left:8%;
     }
 
     .black-rectangle img {
@@ -252,7 +252,7 @@ html, body {
     height: 10px;
     background-color: #888;
   }
-  
+
   .filtering li:hover {
     background-color: #e0e0e0;
   }
@@ -269,8 +269,14 @@ html, body {
     flex: 1;
     max-width: 1200px;
     width: 100%;
-    margin-left: auto; /* Aligns it to the right */
+    margin: 0 auto;
     overflow: hidden;
+    min-height: 6vh;
+    background-image: url('background_retro_image.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    padding-top: 1010px; /* Optional: adjust to your needs */
   }
   
   /*  Product content appears on top */
@@ -321,16 +327,18 @@ html, body {
 
   /* --------Responsive for phone size-------- */
   @media (max-width: 600px) {
-    @media (max-width: 600px) {
-      .product_search_results {
-        position: relative;
-        flex: 1;
-        max-width: 1200px;
-        width: 100%;
-    
-        min-height: 100vh;          /* fill full viewport height */
-        background-repeat: repeat;  /* tile the image */
-      }
+    .product_search_results {
+      flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      min-height: 2vh;
+      background-image: url('background_retro_image.png');
+      background-repeat: repeat;
+      background-size: auto;
+      background-position: top left;
+      padding-top: 370px; /* Optional: adjust to your needs */
     }
       /*  Product grid and cards */
       .product_grid {
@@ -348,9 +356,9 @@ html, body {
       }
       
           .product_card img {
-            max-width: 60%;
+            max-width: 80%;
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 7px;
           }
                 .product_card img:hover {
                   transform: scale(1.05);
@@ -358,20 +366,21 @@ html, body {
                 }
           
                 .product_card h2 {
-                  font-size: 15px;
+                  font-size: 16px;
+                  font-weight: normal;
                   word-wrap: break-word;  /* wraps long words */
                   white-space: normal;
                   line-height: 1.7   
                 }
           
           .product_card p {
-            font-size: 19px;
+            font-size: 20px;
             margin-top: 4px;        
-            margin-bottom: 10px;
+            margin-bottom: 20px;
           }
   }
   
-  /*----- Load More Button----- */
+  /*---------=- Load More Button----------- */
   .load-more-button {
     grid-column: 1 / -1;      
     display: flex;
@@ -384,10 +393,19 @@ html, body {
     height: auto;
     cursor: pointer;
   }
-  
-
-
-
+    /*----------- respsonsive for phone ----------- */
+  @media (max-width: 600px) {
+    .load-more-button {
+      grid-column: 1 / -1;      
+      display: flex;
+      justify-content: flex-start; 
+      margin: 5px 0 20px 150px;      
+    }
+    
+    .load-more-button img {
+      width: 200px;
+    }
+  }
 
 /*----- Sort-by Rectangle----- */
 .sort-rectangle {
@@ -396,7 +414,7 @@ html, body {
   height: 49px;
   background-color: rgb(76, 2, 2);
   font-family: "Marcellus SC", serif;
-  font-size: 1.5rem;      /* scalable font size */
+  font-size: 1.4rem;      /* scalable font size */
   color: white;           /* to contrast with background */
   display: flex;
   align-items: center;
@@ -408,13 +426,32 @@ html, body {
   z-index: 20;
   box-sizing: border-box;
 }
+.sort-mobile {
+  display: none;
+}
 
-/* Medium devices */
-@media (max-width: 1000px) {
-  .sort-rectangle {
-    width: 15vw;
-    min-width: 100px;
-    font-size: 1rem;
-    top: 3.5;
+  @media (max-width: 600px) {
 
-  }}
+    .sort-rectangle:not(.sort-mobile) {
+      display: none;
+    }
+    .sort-mobile {
+      width: 17vw;
+      min-width: 130px;       /* keeps minimum width similar to original */
+      height: 30px;
+      background-color: rgb(76, 2, 2);
+      font-family: "Marcellus SC", serif;
+      font-size: 0.8rem;      /* scalable font size */
+      color: white;           /* to contrast with background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      position: absolute;
+      top: 2vh;               /* responsive vertical positioning */
+      right: 2.4vw;             /* responsive horizontal positioning */
+      z-index: 20;
+      box-sizing: border-box;
+    }
+ 
+  }
