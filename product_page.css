@@ -2,10 +2,6 @@ html, body {
     margin: 0;
     padding: 0;
   }
-
-  section{
-    border: green;
-  }
   
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
 .red_rectangle {
