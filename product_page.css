@@ -2,6 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
   }
+
+  section{
+    border: green;
+  }
   
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
 .red_rectangle {
@@ -262,7 +266,7 @@ html, body {
 
     .small_images_sidebar {
       gap: clamp(20px, 7vw, 50px);
-      margin-top: clamp(30px, 5vh, 60px);
+      margin-top: clamp(30px, 7vh, 60px);
       z-index: 3;
       order: 1; /* force it below the main image */
       flex-direction: row;
@@ -274,12 +278,10 @@ html, body {
     .product_description_section {
       width: 50%; /* matches the left side */
       display: flex;
-      margin-left: 20px;
       flex-direction: column;
       color: #333;
     }
 
-  
   .product_description_section h1 {
     font-family: "Jacques Francois", sans-serif;
     font-weight: normal;
@@ -296,17 +298,6 @@ html, body {
     font-family: "Jersey 10", sans-serif;
   }
 
-  @media (max-width: 600px) {
-    .product_description_section {
-      width: 50%; /* matches the left side */
-      display: none;
-      margin-left: 20px;
-      flex-direction: column;
-      color: #333;
-    }
-
-
-  }
   /*  -------- Add to Cart button ------- */
   .pink_rectangle {
     width: clamp(200px, 35%, 600px);       
@@ -345,7 +336,7 @@ html, body {
       color: #444;
       text-align: center;
       margin-top: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       user-select: none;
       font-weight: 500;  /* slightly bolder */
       letter-spacing: 0.05em; /* a bit spaced out */
@@ -356,11 +347,41 @@ html, body {
       border: none;            
       height: 2px;             
       background-color: #aaa;  
-      width: 110%; 
-      margin: 20px auto;       
-      border-radius: 2px;     
+      width: 100%;    
+      display: block;
     }
 
+
+/* ----------------- Responsive for phone size --------------- */
+  @media (max-width: 600px) {
+    .product_description_section {
+      margin-top: 60vh;
+      width: 100%; 
+      display: flex;
+      flex-direction: column;
+      color: #333;
+    }
+    .product_description_section h1 {
+      font-family: "Jacques Francois", sans-serif;
+      font-weight: normal;
+      font-size: clamp(2rem, 3vw, 50px); 
+      margin-top: 40px;
+    }
+
+    hr {
+      border: none;            
+      height: 2px;             
+      background-color: #aaa;  
+      width: 100%;    
+      display: block;
+    }
+  
+    .product_description_section h2 {
+      font-size: clamp(1.2rem, 7vw, 30rem);
+      margin-top: -30px;
+      font-family: "Jersey 10", sans-serif;
+    }
+  }
 
     /*------------------ THIS SECTION IS FOR THE PRODUCT DESCRIPTIONS DESCRIPTIONS -----------------------*/
     .product_description_description h1 {
@@ -368,6 +389,7 @@ html, body {
       text-align: center;
       margin-top: -8px;
       margin-bottom: 20px;
+      
     }
     
     .product_description_description h2 {
@@ -377,12 +399,13 @@ html, body {
       text-decoration: underline;
       margin-top: 20px;
       margin-bottom: 1px;
+      margin-left: 50px;
     }
         
         .product_description_description p {
           font-family: "Jacques Francois", serif;
           font-size: 18px;
-          margin-left: 80px;
+          margin-left: 60px;
           margin-top: 5px;       /* Add this line to reduce space above the <p> */
           margin-bottom: 10px;   /* Keep or adjust this as needed */
         }
@@ -390,8 +413,7 @@ html, body {
         .product_description_description ul {
           font-family: "Jacques Francois", serif;
           font-size: 18px;
-          margin-left: 90px;
-          padding-left: 20px;
+          margin-left: 80px;
           list-style-type: disc;
           margin-bottom: 20px;
         }
@@ -414,6 +436,59 @@ html, body {
               font-size: 18px;
             }
 
+/* ----------------- Responsive for phone size --------------- */
+  @media (max-width: 600px) {
+    .product_description_description h1 {
+      font-size: 24px;
+      margin-top: 3px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .product_description_description h2 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 1px;
+      margin-left: 20px;
+      font-weight: 200;
+    }
+        
+        .product_description_description p {
+          font-family: "Jacques Francois", serif;
+          font-size: 15px;
+          margin-left: 25px;
+          margin-top: 5px;       /* Add this line to reduce space above the <p> */
+          margin-bottom: 10px;
+        
+        }
+        
+        .product_description_description ul {
+          font-family: "Jacques Francois", serif;
+          font-size: 15px;
+          margin-left: 10px;
+          list-style-type: disc;
+          margin-bottom: 20px;
+          margin-right: 5px;
+        }
+        
+            .product_description_description li {
+              margin-bottom: 8px;
+            }
+            
+            .my-table {
+              width: clamp(250px, 45%, 600px);
+              border-collapse: collapse;
+              margin: 4px 20px;
+            }
+            
+            .my-table td {
+              border: 2px solid #ccc;
+              padding: 10px;
+              text-align: center;
+              font-family: "Jacques Francois", serif;
+              font-size: 15px;
+            }
+  }
 
 
 
