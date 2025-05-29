@@ -151,7 +151,7 @@ html, body {
   background-color: black;
   border: none;
   position: absolute; 
-  top: 12px;          
+  top: 2px;          
   left: 20px;        
   z-index: 1000; 
 }
@@ -164,6 +164,7 @@ html, body {
 
       nav {
         margin-top: 9px; 
+        height: 40px;
       }
 
       .nav_links {
@@ -178,24 +179,66 @@ html, body {
       .nav_icons {
         margin-right: 10px;
       } 
+      
 }  
 
 
   /*------------------ THIS SECTION IS FOR THE TITLE OF THE PAGE - YOUR CART -----------------------*/
   .black-rectangle {
     width: 100%;    
-    height: 130px;    
+    height: 120px;    
     background-color: black;
     color: white;                
     display: flex;               
     align-items: center;        
     justify-content: center;     
-    font-size: 70px;
+    font-size: 65px;
     font-family: "Marcellus SC", sans-serif;
   }
 
 /* --------Responsive for phone size-------- */
-  @media (max-width: 600px) {
-    
 
+@media (max-width: 600px) {
+  .black-rectangle {
+    height: 75px;
+    font-size: 40px;
   }
+}
+
+  /*------------------ THIS SECTION IS FOR THE TITLE OF THE PAGE - YOUR CART -----------------------*/
+  .cart_pages {
+    display: flex;
+  }
+  
+  .cart_pages button {
+    flex: 1;
+    background-color: rgb(242, 242, 242);
+    color: rgb(79, 78, 78);
+    height: 50px;
+    font-size: 1.4rem;
+    font-family: "Jacques Francois", serif;
+    border: 0.6px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* --------Responsive for phone size-------- */
+
+@media (max-width: 600px) {
+  .cart_pages {
+    display: flex;
+  }
+  
+  .cart_pages button {
+    height: 40px;
+    font-size: 0.7rem;
+    font-family: "Jacques Francois", serif;
+    border: 0.2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
