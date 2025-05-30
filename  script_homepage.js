@@ -1,5 +1,4 @@
   /*------------------ THIS SECTION IS FOR ADDING THE WHITE SEARCH RESULTS -----------------------*/
-onsole.log("JS file loaded!");
   window.onload = function() {
     const menswearBtn = document.getElementById("menswear-btn");
     const menswearBox = document.getElementById("menswear-box");
