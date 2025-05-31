@@ -1,101 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="cart_page.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cart_page.css" />
 </head>
 
 <body>
-    <section class = "promo">
-        <div class="banner">
-            <div class="red_rectangle"></div>
-            <div class="marquee">
-              <div class="marquee-content">
-                <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-              </div>
-            </div>
-          </div>
-        </section>
-    <section class="top_pattern_logo"> 
-        <img src="background_top_patterns.png" class="top_pattern">
-        <img src="small_retro_logo_top_pattern.png" class="small_retro_logo">
-    </section>
+  <!-- Top Marquee Promotion -->
+  <section class="promo">
+    <div class="banner">
+      <div class="red_rectangle"></div>
+      <div class="marquee">
+        <div class="marquee-content">
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <nav>
-        <div class="menu-toggle">☰</div>
-          <ul class="nav_links">
-              <li>Home</li>
-              <li>Latest Arrivals</li>
-              <li>Menswear</li>
-              <li>Womenswear</li>
-              <li>Accessories</li>
-              <li>About Us</li>
-              <li>Blog</li>
-              <li>Contact</li>
-              <li>FAQ</li>
-          </ul>
-          <div class="nav_icons"> 
-              <img src="search_icon.png" alt="Search Icon">
-              <img src="avatar_login.png" alt="Avatar Login">
-              <img src="shoppingcart_icon.png" alt="Shopping Cart">
-            </div>
-       </nav>
+  <!-- Top Pattern & Logo -->
+  <section class="top_pattern_logo"> 
+    <img src="background_top_patterns.png" class="top_pattern" />
+    <img src="small_retro_logo_top_pattern.png" class="small_retro_logo" />
+  </section>
 
-       <div class="black-rectangle">
-        Your Cart
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="menu-toggle">☰</div>
+    <ul class="nav_links">
+      <li>Home</li>
+      <li>Latest Arrivals</li>
+      <li>Menswear</li>
+      <li>Womenswear</li>
+      <li>Accessories</li>
+      <li>About Us</li>
+      <li>Blog</li>
+      <li>Contact</li>
+      <li>FAQ</li>
+    </ul>
+    <div class="nav_icons"> 
+      <img src="search_icon.png" alt="Search Icon" />
+      <img src="avatar_login.png" alt="Avatar Login" />
+      <img src="shoppingcart_icon.png" alt="Shopping Cart" />
+    </div>
+  </nav>
+
+  <!-- Cart Title -->
+  <div class="black-rectangle">
+    Your Cart
+  </div>
+
+  <!-- Cart Page Steps -->
+  <div class="cart_pages">
+    <button class="your_bag">Your Bag</button>
+    <button class="shipping_payment">Shipping & Payment</button>
+    <button class="confirmation">Confirmation</button>
+  </div>
+
+<!-- Replace the last part of your HTML with this -->
+<div class="cart_main_container">
+  <!-- LEFT: Cart items section -->
+  <div class="cart_items_summary">
+    <div class="cart_items_section">
+      <!-- Row Headings -->
+      <div class="cart_row headings">
+        <div class="product_heading">Product</div>
+        <div class="price_heading">Price</div>
+        <div class="quantity_heading">Quantity</div>
+        <div class="total_heading">Total</div>
       </div>
 
-      <div class="cart_pages">
-        <button class="your_bag">Your Bag</button>
-        <button class="shipping_payment">Shipping & Payment</button>
-        <button class="confirmation">Confirmation</button>
-      </div>
-      <div class="cart_items_summary">
+      <!-- Cart Item Row -->
+      <div class="cart_row">
+        <div class="product">
+          <div class="product-left">
+            <img src="brown_jacket_cart.jpg" class="jacket_cart" alt="Brown Jacket">
+            <p class="remove">Remove</p>
+          </div>
+          <div class="product-right">
+            <h2>Diesel Brand Jacket</h2>
+          </div>
+        </div>
 
-        <!-- Row Headings -->
-        <div class="cart_row headings">
-          <div class="product_heading">Product</div>
-          <div class="price_heading">Price</div>
-          <div class="quantity_heading">Quantity</div>
-          <div class="total_heading">Total</div>
-        </div>
-      
-        <!-- Cart Item Row -->
-        <div class="cart_row">
-          <div class="product">
-            <div class="product-left">
-              <img src="brown_jacket_cart.jpg" class="jacket_cart" alt="Brown Jacket">
-              <p class="remove">Remove</p>
-            </div>
-            <div class="product-right">
-              <h2>Diesel Brand Jacket</h2>
-            </div>
+        <div class="price">$95.00</div>
+
+        <div class="quantity">
+          <div class="quantity-button">
+            <button class="decrease">−</button>
+            <span class="quantity-value">1</span>
+            <button class="increase">+</button>
           </div>
-        
-          <div class="price">$95.00</div>
-        
-          <div class="quantity">
-            <div class="quantity-button">
-              <button class="decrease">−</button>
-              <span class="quantity-value">1</span>
-              <button class="increase">+</button>
-            </div>
-          </div>
-        
-          <div class="total">$95.00</div> 
         </div>
-     
-        <div class = "product_cart_summary">
-          <p>Continue Shopping</p>
-        </div>
-    
+
+        <div class="total">$95.00</div> 
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Order Summary -->
+  <div class="product_cart_summary">
+    <div class="order_summary">
+      <h2>Order Summary</h2>
+      <div class="summary_row">
+        <div class="label">Number of Items</div>
+        <div class="value">3</div>
+      </div>
+      <div class="summary_row">
+        <div class="label">Subtotal:</div>
+        <div class="value">$285.00</div>
+      </div>
+      <div class="summary_row">
+        <div class="label">Sales Discount</div>
+        <div class="value">-$20.00</div>
+      </div>
+      <div class="cart_total_section">
+        <div class="cart_total_line"></div>
+        <div class="cart_total_text"><span class="underline">Total:</span>   $114.50</div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

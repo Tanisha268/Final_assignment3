@@ -244,6 +244,14 @@ html, body {
 }
 
   /*------------------ THIS SECTION IS FOR CART IMAGES AND DESCRIPTIONS -----------------------*/
+  .cart_main_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+}
+  
   .cart_items_summary {
     background-image: url("background_retro_image.png");
     background-size: cover;         /* makes image cover container */
@@ -325,8 +333,65 @@ html, body {
     }
     
   /*------------------ THIS SECTION IS FOR CART SUMMARY  -----------------------*/
+.product_cart_summary {
+  width: 30%;
+  margin-left: auto; /* Pushes it to the right */
 
-  .product_cart_summary {
-    width: 30%;
+}
+
+    .order_summary {
+      border: 2px solid #333;
+      padding: 20px;
+      background-color: #fff;
+      width: 80%;
+      box-sizing: border-box;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-family: 'Jacques Francois', serif;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+
+    .order_summary h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .summary_row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 1.3rem;
+    }
+
+    .summary_row .label {
+      font-weight: 600;
+    }
+
+    .summary_row .value {
+      font-weight: normal;
+    }
+
+    .cart_total_section {
+      margin-top: 20px;
+    }
     
-  }
+    .cart_total_line {
+      border-top: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    
+    .cart_total_text {
+      text-align: right;
+      font-size: 1.3rem;
+      font-family: 'Jacques Francois', serif;
+    }
+    
+    .cart_total_text .underline {
+      text-decoration: underline;
+      font-weight: bold;
+    }
