@@ -65,68 +65,95 @@
     <button class="confirmation">Confirmation</button>
   </div>
 
-<!-- Replace the last part of your HTML with this -->
-<div class="cart_main_container">
-  <!-- LEFT: Cart items section -->
-  <div class="cart_items_summary">
-    <div class="cart_items_section">
-      <!-- Row Headings -->
-      <div class="cart_row headings">
-        <div class="product_heading">Product</div>
-        <div class="price_heading">Price</div>
-        <div class="quantity_heading">Quantity</div>
-        <div class="total_heading">Total</div>
+  <div class="cart_main_container">
+    <!-- LEFT: Cart items section -->
+    <div class="cart_items_summary">
+      <div class="cart_items_section">
+        <!-- Row Headings -->
+        <div class="cart_row headings">
+          <div class="product_heading">Product</div>
+          <div class="price_heading">Price</div>
+          <div class="quantity_heading">Quantity</div>
+          <div class="total_heading">Total</div>
+        </div>
+  
+        <!-- First Cart Item Row -->
+        <div class="cart_row">
+          <div class="product">
+            <div class="product-left">
+              <img src="brown_jacket_cart.jpg" class="jacket_cart" alt="Brown Jacket">
+              <p class="remove">Remove</p>
+            </div>
+            <div class="product-right">
+              <h2>Diesel Brand Jacket</h2>
+            </div>
+          </div>
+          <div class="price">$95.00</div>
+          <div class="quantity">
+            <div class="quantity-button">
+              <button class="decrease">−</button>
+              <span class="quantity-value">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+          <div class="total">$95.00</div> 
+        </div>
+  
+        <!-- Second Cart Item Row -->
+        <div class="cart_row">
+          <div class="product">
+            <div class="product-left">
+              <img src="navy_jacket_cart.jpg" class="jacket2_cart" alt="Black Hoodie">
+              <p class="remove">Remove</p>
+            </div>
+            <div class="product-right">
+              <h2>Vintage Black Hoodie</h2>
+            </div>
+          </div>
+          <div class="price">$60.00</div>
+          <div class="quantity">
+            <div class="quantity-button">
+              <button class="decrease">−</button>
+              <span class="quantity-value">2</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+          <div class="total">$120.00</div> 
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Order Summary and Payment Options wrapped together -->
+    <div class="product_cart_summary">
+      <div class="order_summary">
+        <h2>Order Summary</h2>
+        <div class="summary_row">
+          <div class="label">Number of Items</div>
+          <div class="value">3</div>
+        </div>
+        <div class="summary_row">
+          <div class="label">Subtotal:</div>
+          <div class="value">$285.00</div>
+        </div>
+        <div class="summary_row">
+          <div class="label">Sales Discount</div>
+          <div class="value">-$20.00</div>
+        </div>
+        <div class="cart_total_section">
+          <div class="cart_total_line"></div>
+          <div class="cart_total_text"><span class="underline">Total:</span>   $114.50</div>
+        </div>
       </div>
 
-      <!-- Cart Item Row -->
-      <div class="cart_row">
-        <div class="product">
-          <div class="product-left">
-            <img src="brown_jacket_cart.jpg" class="jacket_cart" alt="Brown Jacket">
-            <p class="remove">Remove</p>
-          </div>
-          <div class="product-right">
-            <h2>Diesel Brand Jacket</h2>
-          </div>
+      <div class="payment_options">
+        <div class="continue_checkout">
+          Continue to Checkout
         </div>
-
-        <div class="price">$95.00</div>
-
-        <div class="quantity">
-          <div class="quantity-button">
-            <button class="decrease">−</button>
-            <span class="quantity-value">1</span>
-            <button class="increase">+</button>
-          </div>
-        </div>
-
-        <div class="total">$95.00</div> 
+        <img src="checkout_shoppay.jpg" alt="Shop Pay" />
+        <img src="checkout_paypal.jpg" alt="PayPal" />
+        <img src="checkout_gpay.jpg" alt="Google Pay" />
       </div>
     </div>
   </div>
-
-  <!-- RIGHT: Order Summary -->
-  <div class="product_cart_summary">
-    <div class="order_summary">
-      <h2>Order Summary</h2>
-      <div class="summary_row">
-        <div class="label">Number of Items</div>
-        <div class="value">3</div>
-      </div>
-      <div class="summary_row">
-        <div class="label">Subtotal:</div>
-        <div class="value">$285.00</div>
-      </div>
-      <div class="summary_row">
-        <div class="label">Sales Discount</div>
-        <div class="value">-$20.00</div>
-      </div>
-      <div class="cart_total_section">
-        <div class="cart_total_line"></div>
-        <div class="cart_total_text"><span class="underline">Total:</span>   $114.50</div>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 </html>

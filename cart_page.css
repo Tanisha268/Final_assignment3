@@ -181,18 +181,16 @@ html, body {
       } 
       
 }  
-
-
   /*------------------ THIS SECTION IS FOR THE TITLE OF THE PAGE - YOUR CART -----------------------*/
   .black-rectangle {
     width: 100%;    
-    height: 120px;    
+    height: 90px;    
     background-color: black;
     color: white;                
     display: flex;               
     align-items: center;        
     justify-content: center;     
-    font-size: 65px;
+    font-size: 50px;
     font-family: "Marcellus SC", sans-serif;
   }
 
@@ -200,8 +198,8 @@ html, body {
 
 @media (max-width: 600px) {
   .black-rectangle {
-    height: 75px;
-    font-size: 40px;
+    height: 60px;
+    font-size: 30px;
   }
 }
 
@@ -249,7 +247,7 @@ html, body {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
   
   .cart_items_summary {
@@ -257,7 +255,7 @@ html, body {
     background-size: cover;         /* makes image cover container */
     background-position: center;    /* centers the image */
     background-repeat: no-repeat;
-    height: 100vh;                  /* full height of the viewport */
+    height: 80vh;                  /* full height of the viewport */
     width: 70%;                     /* only 70% width */
   }
     
@@ -284,10 +282,11 @@ html, body {
             align-items: left;
           }
           
-          .jacket_cart {
+          .jacket_cart, .jacket2_cart {
             width: 100%;
             height: auto;
           }
+       
           
           .remove {
             margin-top: 8px;
@@ -332,7 +331,60 @@ html, body {
       cursor: pointer;
     }
     
-  /*------------------ THIS SECTION IS FOR CART SUMMARY  -----------------------*/
+  /* --------------- Responsive for phone size --------------- */
+    @media (max-width: 600px) {
+      .cart_main_container {
+        flex-direction: column;
+        align-items: stretch;
+        column-gap: 1500px; /* smaller gap for small screens */
+        width: 100%;
+        height: 50%;
+        margin-bottom: 40px;
+      }
+    
+      .cart_items_summary,
+      .product_cart_summary {
+        width: 100%;
+        height: 30%;
+      }
+    
+      .cart_row {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+    
+      .product-right h2 {
+        font-size: 0.7rem;
+        margin-left: -8px;
+      }
+    
+      .quantity-button button {
+        width: 20px;
+        height: 20px;
+        font-size: 1rem;
+      }
+
+      .price,
+      .total {
+        font-size: 0.8rem;
+      }
+    
+      .summary_row {
+        font-size: 1rem;
+      }
+    
+      .cart_total_text {
+        font-size: 1.1rem;
+      }
+
+      .remove {
+        margin-top: 4px;
+        font-size: 0.4rem;
+        text-align: center;
+  }
+    }
+  /*--------------------------------- THIS SECTION IS FOR CART SUMMARY  ---------------------------------------*/
 .product_cart_summary {
   width: 30%;
   margin-left: auto; /* Pushes it to the right */
@@ -394,4 +446,117 @@ html, body {
     .cart_total_text .underline {
       text-decoration: underline;
       font-weight: bold;
+    }
+
+  /* --------------- Responsive for phone size --------------- */ 
+    @media (max-width: 600px) {
+        .product_cart_summary {
+          width: 90%;
+          margin: 0 auto;
+          display: flex;           /* add this */
+          flex-direction: column;  /* add this */
+          align-items: center;     /* optional, centers children horizontally */
+        }
+    
+      .order_summary {
+        width: 90%;
+        padding: 3px;
+        margin: 0 auto;
+        margin-top: 30px;
+        border-width: 1px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            }
+    
+      .order_summary h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+      }
+    
+      .summary_row {
+        font-size: 0.9rem;
+        padding: 6px 0;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    
+      .cart_total_text {
+        font-size: 1.1rem;
+        text-align: right;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+    }
+
+
+    /*--------------------------------- THIS SECTION IS FOR PAYMENT OPTIONS ---------------------------------------*/
+    .payment_options {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* space between images */
+      margin-top: 20px;
+    }
+    .continue_checkout {
+      width: 70%;               /* same width as payment images */
+      margin: 0px auto 30px auto;  /* center horizontally, add spacing on top */
+      padding: 12px 0;
+      background-color: black;
+      border: 2px solid red;
+      color: white;
+      font-family: 'Jacques Francois', serif;
+      font-size: 1.2rem;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .continue_checkout:hover {
+      color: black;
+      transform: translateY(-5px);  /* moves the button up by 5px */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* subtle shadow for lift effect */
+    }
+
+    .payment_options img {
+      width: 80%; /* or any appropriate width */
+      max-width: 300px;
+      height: 70%;
+      transform: translateY(-5px);  /* moves the button up by 5px */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* subtle shadow for lift effect */
+    }
+
+    @media (max-width: 600px) {
+      .cart_main_container {
+        flex-direction: column;  /* stack all children vertically */
+        align-items: center;     /* center content horizontally */
+      }
+    
+      .product_cart_summary {
+        width: 90%;              /* full width on mobile */
+        margin: 0 auto;
+      }
+    
+      .payment_options {
+        width: 90%;              /* match width to order summary */
+        padding-top: 20px;
+        flex-direction: column;  /* stack images vertically */
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+    
+      .payment_options img {
+        width: 80%;              /* responsive width */
+        max-width: 300px;
+        height: auto;            /* keep aspect ratio */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        transform: none;         /* remove any unwanted translate */
+      }
+    
+      .continue_checkout {
+        width: 80%;              /* consistent width */
+        margin: 20px auto 30px auto;
+      }
     }
