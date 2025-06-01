@@ -54,8 +54,6 @@ header {
   }
 }
 
-
-
 /* ------------------ SECOND MOVING IMAGES STACK ----------------------- */
 .moving_images_two {
   width: 10vw;
@@ -196,12 +194,12 @@ header {
   
     .background-image {
       position: absolute;
-      top: 0;
+      top: -135px;
       left: 0;
       width: 100%;
-      height: 62vh;
-      object-fit: contain; /* or 'cover' depending on your need */
-      z-index: 1; /* in front of the black rectangle */
+      height: 60vh;
+      object-fit: contain; /* fills entire area */
+      z-index: 1;
     }
   }
 
@@ -393,6 +391,9 @@ header {
     cursor: pointer;
     white-space: nowrap;
   }
+      .nav_links li:hover {
+        text-decoration: underline;
+      }
   
   .nav_icons {
     display: flex;
@@ -405,8 +406,21 @@ header {
     width: auto;
     cursor: pointer;
   }
+
+
+  .nav_links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: "Jacques Francois", serif;
+    font-size: 17px;
+    cursor: pointer;
+  }
   
-  /* Responsive for phones */
+  .nav_links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ----------- Responsive for phones ------------- */
   @media (max-width: 600px) {
     nav {
       flex-direction: column;
@@ -607,6 +621,7 @@ header {
           width: 150px; /* adjust size as needed */
           height: auto;
         }
+
 
 
 

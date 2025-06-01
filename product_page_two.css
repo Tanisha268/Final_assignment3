@@ -199,6 +199,20 @@ html, body {
     position: relative;
     border-radius: 10px;
   }
+
+        .back-to-results {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: 'Jacques Francoiss',serif;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            padding: 6px 12px;
+            border-radius: 5px;
+            z-index: 5;
+            cursor: pointer;
+        }
+
   
   .product_images_left {
     position: relative;
@@ -259,6 +273,7 @@ html, body {
       z-index: 2;
       margin-left: 30px;
     }
+
 
     .small_images_sidebar {
       gap: clamp(20px, 7vw, 50px);

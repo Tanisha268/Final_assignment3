@@ -52,14 +52,22 @@
          <section class="main_product_page">
           <!-- Left Side with background set in CSS -->
 
+      
+
           <div class="product_images_left">
-            <div class="small_images_sidebar">
-              <img src="product_one_small_image1.jpg">
-              <img src="product_one_small_image2.jpg">
-              <img src="product_one_small_image3.jpg">
+            <a href="search_results.html" class="back-to-results">← Back to Search Results</a>
+          
+            <div class="images-container">
+              <div class="small_images_sidebar">
+                <img src="product_one_small_image1.jpg">
+                <img src="product_one_small_image2.jpg">
+                <img src="product_one_small_image3.jpg">
+              </div>
+              <img class="main_image" src="product_one_img1.png">
             </div>
-            <img class="main_image" src="product_one_img1.png">
           </div>
+
+          
         
           <!-- Right Side -->
           <div class="product_description_section">
@@ -69,6 +77,34 @@
                     <button class="pink_rectangle">
                       Add to Cart
                     </button>
+                        <div id="cart-notification" class="cart-notification hidden">
+                          <button id="close-cart-notification" class="close-button">×</button>
+                        
+                          <h2>YAY</h2>
+                          <p>Item Added to Cart</p>
+                        
+                          <div class="cart-item">
+                            <img src="product_one.jpg" alt="Diesel Jacket" />
+                            <div class="item-details">
+                              <p class="item-name">Diesel Brand Jacket</p>
+                              <p>Qty: 1</p>
+                            </div>
+                            <div class="item-price">
+                              <p class="price">Price: $95.00</p>
+                            </div>
+                          </div>
+                        
+                          <hr />
+                        
+                          <div class="totals-row">
+                            <p>Total Items: 1</p>
+                            <p>Total Price: $95.00</p>
+                          </div>
+                        
+                          <button class="view-cart-button">View Cart</button>
+                        </div>
+                        <script src="script.js"></script>
+                    <!-- Simulated "Add to Cart" button -->
                 </div>
             <img src = "buy_with_shop_pay.jpg" class = "buy_later">
             <p class="payment_options_text">More Payment Options</p>
@@ -103,5 +139,26 @@
               </div>
           </div>
         </section>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            // Cart notification toggle
+            const addToCartBtn = document.querySelector('.pink_rectangle');
+            const closeBtn = document.getElementById('close-cart-notification');
+            const cartNotification = document.getElementById('cart-notification');
+        
+            if (addToCartBtn && cartNotification) {
+              addToCartBtn.addEventListener('click', () => {
+                cartNotification.classList.remove('hidden');
+              });
+            }
+        
+            if (closeBtn && cartNotification) {
+              closeBtn.addEventListener('click', () => {
+                cartNotification.classList.add('hidden');
+              });
+            }
+          });
+        </script>
 </body>
 </html>

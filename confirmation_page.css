@@ -1,0 +1,362 @@
+
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
+.red_rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-image: url("red\ rectangle.png");
+    z-index: 10;
+  }
+  
+  .marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scrollText 16s linear infinite;
+  }
+  
+  .marquee-content p {
+    font-family: "Jacques Francois", serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    line-height: 70px;
+    margin: 0;
+    padding-right: 50px; /* spacing between duplicated lines */
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /*------------------ THIS SECTION IS FOR THE TOP PATTERN AND LOGO -----------------------*/
+  .top_pattern_logo {
+    position: relative;
+    width: 100%;
+  }
+  
+  .top_pattern {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 70px; /* pushes below the red banner */
+    z-index: 1;
+    position: relative;
+  }
+  
+  .small_retro_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 3;
+    width: 100px; 
+    height: auto;
+  }
+/* --------Responsive for phone size-------- */
+  @media (max-width: 600px) {
+    .top_pattern {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin-top: 70px; 
+      z-index: 1;
+      position: relative;
+    }
+    
+    .small_retro_logo {
+      width: 50px; 
+    }
+  }
+
+  /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
+
+  nav {
+    position: relative;
+    background-color: black;
+    height: 60px;
+    width: 100%; /* Keep this at 100%! */
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    flex-wrap: wrap;
+    margin-top: 5px; /
+}
+
+  
+  .nav_icons {
+    display: flex;
+    gap: 20px;
+    margin-left: auto; 
+    margin-right: 20px;
+  }
+  
+  .nav_icons img {
+    height: 42px;
+    width: auto;
+    cursor: pointer;
+    margin-top: 2.5px;
+  }
+
+  .nav_links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-top: 17px;
+    margin-left: 30px; 
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav_links li {
+    color: white;
+    font-family: "Jacques Francois", serif;
+    font-size: 22px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+ .nav_links li:hover {
+    text-decoration: underline; 
+} 
+  /* Responsive for tablets and smaller */
+ /* Hide the hamburger by default */
+ .menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  position: absolute; 
+  top: 2px;          
+  left: 20px;        
+  z-index: 1000; 
+}
+
+/* --------Responsive for phone size-------- */
+@media (max-width: 600px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        margin-top: 9px; 
+        height: 40px;
+      }
+
+      .nav_links {
+        display: none;  /* Hide the nav links */
+      }
+
+      .nav_icons img {
+        height: 30px;
+        width: auto;
+      }
+      
+      .nav_icons {
+        margin-right: 10px;
+      }   
+}  
+
+
+  /*------------------ THIS SECTION IS FOR MAIN CONFIRMATION PAGE AREA -----------------------*/
+
+  .confirmation_message {
+    background-image: url("background_retro_image.png");
+    width: 100%;
+    height: 70vh;  /* full viewport height */
+    background-size: cover;  
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    text-align: center;
+  }
+  
+  .confirmation_text {
+    margin-top: 50px;
+    width: 100%;        /* full width for margin to work */
+    color: rgb(0, 0, 0);       /* or any color that contrasts with the bg */
+    font-family: "Jacques Francois", serif;
+  }
+
+        .confirmation_text h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .confirmation_text h2 {
+            font-size: 40px;
+      }
+
+      .confirmation_text p {
+        font-size: 20px;
+    }
+    .confirmation_text p:last-of-type {
+        font-size: 20px;
+            text-decoration: underline;
+ }
+
+      /* ------------- Responsive for phone ----------------- */
+      @media (max-width: 600px) { 
+        .confirmation_message {
+            background-image: url("background_retro_image.png");
+            width: 100%;
+            height: 80vh;  /* full viewport height */
+            background-size: cover;  
+            background-position: center;
+            
+            display: flex;
+            justify-content: center;  /* horizontal center */
+            text-align: center;
+          }
+          
+          .confirmation_text {
+            margin-top: 50px;
+            width: 100%;        /* full width for margin to work */
+            color: rgb(0, 0, 0);       /* or any color that contrasts with the bg */
+            font-family: "Jacques Francois", serif;
+          }
+        
+                .confirmation_text h1 {
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+        
+                .confirmation_text h2 {
+                    font-size: 30px;
+              }
+        
+              .confirmation_text p {
+                font-size: 15px;
+            }
+            .confirmation_text p:last-of-type {
+                font-size: 15px;
+                    text-decoration: underline;
+         }
+
+      }
+
+
+
+  /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
+  .footer {
+    background-image: url('black_rectangle_footer.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    color: white;
+    gap: 40px;
+  }
+  
+  .footer_logo {
+    height: 60px;
+  }
+  
+  .footer_words {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    text-decoration: underline;
+    color: white;
+    font-family: 'Marcellus SC', serif;
+  }
+  
+  .footer_words h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px;
+  }
+  
+  .follow_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .follow_logos {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .follow_logos img {
+    height: 20px; /* adjust icon size */
+    width: auto;
+  }
+
+      /* ------------- Responsive for phone ----------------- */
+      @media (max-width: 600px) {
+        .footer {
+          background-image: url('black_rectangle_footer.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          padding: 5px 20px;
+          gap: 20px;
+        }
+        
+        .footer_logo {
+          height: 40px;
+        }
+        
+        .footer_words {
+          display: flex;
+          gap: 50px;
+          text-decoration: underline;
+        }
+        
+        .footer_words h2 {
+          font-size: 10px;
+          margin: 0px;
+        }
+        
+        .follow_section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 30px;
+        }
+        
+        .follow_logos {
+          display: flex;
+          gap: 15px;
+        }
+        
+        .follow_logos img {
+          height: 20px; /* adjust icon size */
+          width: auto;
+        }
+       
+      }
+
+
+

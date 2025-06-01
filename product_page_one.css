@@ -199,7 +199,27 @@ html, body {
     position: relative;
     border-radius: 10px;
   }
+      .back-to-results {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-family: 'Jacques Francoiss',serif;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        padding: 6px 12px;
+        border-radius: 5px;
+        z-index: 5;
+        cursor: pointer;
+      }
   
+  .images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
   .product_images_left {
     position: relative;
     width: 60%;
@@ -294,7 +314,7 @@ html, body {
     font-family: "Jersey 10", sans-serif;
   }
 
-  /*  -------- Add to Cart button ------- */
+  /*  ------------------- Add to Cart button ----------------------- */
   .pink_rectangle {
     width: clamp(200px, 35%, 600px);       
     height: clamp(40px, 3.5vw, 80px);       
@@ -318,6 +338,110 @@ html, body {
     background-color: rgb(190, 70, 90);
   }
 
+  /*  ------------------- Add to Cart Pressing and Summary Appearing ----------------------- */
+  .cart-notification {
+    position: absolute; /* makes it float above everything */
+    top: 225px; /* distance from the top of the screen */
+    right: 0px; /* distance from the right edge */
+    width: 400px;
+    background-color: #dedede;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    z-index: 9999; /* ensures it's on top */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-notification h2 {
+    margin-top: 0;
+    color: #000000;
+    text-align: center;
+    font-family: "Jacques Francois", serif;
+  }
+  
+      .cart-notification p {
+        text-align: center;
+
+      }
+  
+  .cart-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item img {
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .item-price {
+    text-align: right;
+  }
+  
+  .item-price .price {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  .totals-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .view-cart-button {
+    display: block; /* makes margin auto work */
+    margin: 20px auto 0; /* top: 15px, sides: auto (center), bottom: 0 */
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid orange;
+    color: orange;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+      .view-cart-button:hover {
+        background-color: orange;
+        color: white;
+      }
+
+  .close-button {
+    float: right;
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  /* Hidden by default */
+  .hidden {
+    display: none;
+  }
   /*  -------- Buy later button------- */
   .buy_later {
     width: clamp(200px, 35%, 600px); 
