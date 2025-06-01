@@ -72,7 +72,7 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%); 
     z-index: 3;
-    width: 150px; 
+    width: 100px; 
     height: auto;
   }
 /* --------Responsive for phone size-------- */
@@ -89,7 +89,6 @@ html, body {
     .small_retro_logo {
       width: 50px; 
     }
-
   }
 
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
@@ -103,7 +102,7 @@ html, body {
     align-items: center;
     z-index: 5;
     flex-wrap: wrap;
-    margin-top: 20px; /
+    margin-top: 5px; /
 }
 
   
@@ -527,6 +526,9 @@ html, body {
       box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* subtle shadow for lift effect */
     }
 
+
+
+  /* --------------- Responsive for phone size --------------- */ 
     @media (max-width: 600px) {
       .cart_main_container {
         flex-direction: column;  /* stack all children vertically */

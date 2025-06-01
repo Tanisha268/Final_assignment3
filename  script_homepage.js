@@ -40,3 +40,15 @@
         menswearBox.style.display === "block" ? "none" : "block";
     });
   }
+
+
+
+  /*------------------ CLICKABLE BUTTONS FOR  -----------------------*/  
+
+  <script>
+  function selectOption(clickedOption) {
+    const options = document.querySelectorAll('.option');
+    options.forEach(opt => opt.classList.remove('selected'));
+    clickedOption.classList.add('selected');
+  }
+</script>

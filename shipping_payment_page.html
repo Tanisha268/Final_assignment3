@@ -7,9 +7,228 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="cart_page.css" />
+    <link rel="stylesheet" href="shipping_payment_page.css" />
 </head>
 <body>
+      <!-- Top Marquee Promotion -->
+  <section class="promo">
+    <div class="banner">
+      <div class="red_rectangle"></div>
+      <div class="marquee">
+        <div class="marquee-content">
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Pattern & Logo -->
+  <section class="top_pattern_logo"> 
+    <img src="background_top_patterns.png" class="top_pattern" />
+    <img src="small_retro_logo_top_pattern.png" class="small_retro_logo" />
+  </section>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="menu-toggle">☰</div>
+    <ul class="nav_links">
+      <li>Home</li>
+      <li>Latest Arrivals</li>
+      <li>Menswear</li>
+      <li>Womenswear</li>
+      <li>Accessories</li>
+      <li>About Us</li>
+      <li>Blog</li>
+      <li>Contact</li>
+      <li>FAQ</li>
+    </ul>
+    <div class="nav_icons"> 
+      <img src="search_icon.png" alt="Search Icon" />
+      <img src="avatar_login.png" alt="Avatar Login" />
+      <img src="shoppingcart_icon.png" alt="Shopping Cart" />
+    </div>
+  </nav>
+
+  <!-- Cart Title -->
+  <div class="black-rectangle">
+    Your Cart
+  </div>
+
+  <!-- Cart Page Steps -->
+  <div class="cart_pages">
+    <button class="your_bag">Your Bag</button>
+    <button class="shipping_payment">Shipping & Payment</button>
+    <button class="confirmation">Confirmation</button>
+  </div>
     
+
+  <!------------------------------ Left Side Container ----------------------------->
+  <div class = "cart_main_container">
+    <div class = "checkout_area">
+        <div class = "express_checkout"> 
+                <h2>Express Checkout</h2>
+                <img src="checkout_shoppay.jpg" alt="Shop Pay" />
+                <img src="checkout_paypal.jpg" alt="PayPal" />
+                <img src="checkout_gpay.jpg" alt="Google Pay" />
+         </div>
+        <div class="line-with-text">
+            <span>OR</span>
+        </div>
+    <!--Shipping and Delivery Option Button -->
+        <div class="shipping_option" onclick="toggleOption(this)">
+            <div class="circle_button"></div>
+            <span>Pick up in Store</span>
+          </div>
+          <div class="shipping_option" onclick="toggleOption(this)">
+            <div class="circle_button"></div>
+            <span>Shipping</span>
+          </div>
+              <!--Choosing store location -->
+    <div class="pickup_details" style="display: none; margin-left: 30px;">
+        <p>Select your store location:</p>
+      
+        <div class="store_option" onclick="selectStore(this)">
+          <div class="store_name">City Store</div>
+          <div class="store_address">First floor, Nicholas Building, 37 Swanston St, Melbourne</div>
+        </div>
+      
+        <div class="store_option" onclick="selectStore(this)">
+          <div class="store_name">Warehouse</div>
+          <div class="store_address">85-89 Brunswick Road, Brunswick East</div>
+        </div>
+      </div>
+
+          <!-- PAYMENT SECTION (initially hidden) -->
+          <div class="payment_section" style="display: none; margin-left: 30px;">
+            <p class="payment_title">Payment</p>
+            <div class="payment_wrapper">
+              <div class="payment_field">
+                <input type="text" class="payment_input" placeholder="Card Number" />
+              </div>
+          
+              <div class="payment_field">
+                <input type="text" class="payment_input" placeholder="Name on Card" />
+              </div>
+          
+              <div class="row_fields">
+                <div class="payment_field half_width">
+                  <input type="text" class="payment_input" placeholder="Expiration Date MM/YY" />
+                </div>
+                <div class="payment_field half_width">
+                  <input type="text" class="payment_input" placeholder="Security Code" />
+                </div>
+              </div>
+            </div>
+                   <!-- PAYMENT BUTTON -->
+            <button id="paymentButton" class="payment_button" disabled>Payment</button>
+          </div>
+
+  </div>
+
+
+   <!---------------------- Right Side Container - Order Summary ----------------------------->
+   <div class = "right_side_summary"> 
+    <div class="order_summary">
+        <h2>Order Summary</h2>
+      
+        <div class="product_row">
+          <img src="brown_jacket_cart.jpg" alt="Product 1">
+          <div class="product_details">
+            <div class="product_name">Diesel Brand Jacket</div>
+            <div class="product_price">$45.00</div>
+          </div>
+        </div>
+      
+        <div class="product_row">
+          <img src="navy_jacket_cart.jpg" alt="Product 2">
+          <div class="product_details">
+            <div class="product_name">Navy Green Spray Jacket</div>
+            <div class="product_price">$69.50</div>
+          </div>
+        </div>
+      
+        <div class="divider"></div>
+      
+        <div class="discount_section">
+          <div class="discount_box">Discount Code or Gift Card</div>
+          <button class="apply_button">Apply</button>
+        </div>
+      
+        <div class="summary_row">
+          <div class="label small">Subtotal – 2 items</div>
+          <div class="value small">$114.50</div>
+        </div>
+      
+        <div class="summary_row">
+          <div class="label small">Pick-up</div>
+          <div class="value small">FREE</div>
+        </div>
+      
+        <div class="summary_row total_row">
+          <div class="label underline">TOTAL</div>
+          <div class="value large">$114.50</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+     <!-- CHOOSING PICK UP OR DELIVERY -->
+     <script>
+        function toggleOption(clickedOption) {
+          const isSelected = clickedOption.classList.contains('selected');
+          const pickupDetails = document.querySelector('.pickup_details');
+          const paymentSection = document.querySelector('.payment_section');
+      
+          // Unselect all
+          document.querySelectorAll('.shipping_option').forEach(option => {
+            option.classList.remove('selected');
+          });
+      
+          if (!isSelected) {
+            clickedOption.classList.add('selected');
+      
+            if (clickedOption.textContent.trim() === "Pick up in Store") {
+              pickupDetails.style.display = "block";
+              paymentSection.style.display = "block";
+            } else {
+              pickupDetails.style.display = "none";
+              paymentSection.style.display = "block"; // still show for Shipping
+            }
+          } else {
+            pickupDetails.style.display = "none";
+            paymentSection.style.display = "none";
+          }
+        }
+      </script>
+
+
+<script>
+    const paymentButton = document.getElementById('paymentButton');
+    const inputs = document.querySelectorAll('.payment_input');
+  
+    function checkInputs() {
+      const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+      if (allFilled) {
+        paymentButton.disabled = false;
+        paymentButton.style.opacity = '1';
+        paymentButton.style.cursor = 'pointer';
+      } else {
+        paymentButton.disabled = true;
+        paymentButton.style.opacity = '0.5';
+        paymentButton.style.cursor = 'not-allowed';
+      }
+    }
+  
+    inputs.forEach(input => {
+      input.addEventListener('input', checkInputs);
+    });
+  
+    checkInputs();
+  </script>
 </body>
 </html>
