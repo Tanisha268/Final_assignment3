@@ -133,12 +133,12 @@ header {
       display: none;
     }
     .moving_images_two {
-      width: 10vw;
+      width: 15vw;
       height: 50vh;
       overflow: hidden;
       position: absolute;
       top: 0;
-      left: 77vw;
+      left: 74vw;
       z-index: 2;
     }
     
@@ -174,8 +174,7 @@ header {
 .background-image {
   position: absolute;
   top: 0;
-  left: 0; /* You had 100px, which offsets the image to the right */
-  width: 100%;
+  left: 0; 
   height: 90vh;; /* Matches .banner height */
   object-fit: cover;
   z-index: 1;
@@ -183,23 +182,13 @@ header {
   /*-------- responsive for phone ----------*/
   @media (max-width: 600px) {
     .black_rectangle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 57vh;
-      background-color: black; /* or any color you want */
-      z-index: 0; /* behind the image */
+      height: 57vh; /* or 60vh if you want it slightly taller */
     }
   
     .background-image {
-      position: absolute;
-      top: -135px;
-      left: 0;
-      width: 100%;
-      height: 60vh;
-      object-fit: contain; /* fills entire area */
-      z-index: 1;
+      height: 57vh; /* make sure it matches */
+      object-fit: cover;
+      left: -400px;
     }
   }
 
@@ -263,11 +252,11 @@ header {
 @media (max-width: 390px) {
   .red_rectangle,
   .marquee {
-    height: 20px; /* reduce height for small screen */
+    height: 30px; /* reduce height for small screen */
   }
 
   .marquee-content p {
-    font-size: 18px; /* shrink font */
+    font-size: 16px; /* shrink font */
     line-height: 50px;
     padding-right: 30px;
   }
@@ -307,25 +296,25 @@ header {
   /*-------- responsive for phone ----------*/
   @media (max-width: 600px) {
     .header-content {
-      top: 30vh;
-      left: 10vh;
+      top: 25vh;
+      left: 5vh;
     }
   
     .header-content h1 {
-      font-size: 65px; /* scale down heading */
+      font-size: 50px; /* scale down heading */
       margin: 0 0 1px 0; /* bottom margin to separate from h2 */
 
     }
   
     .header-content h2 {
-      font-size: 25px; /* scale down subheading */
+      font-size: 20px; /* scale down subheading */
     }
   
     .retro_lines {
       top: 30%;
-      left: 30%;
+      left: 35%;
       transform: translateX(-50%);
-      width: 320px; /* shrink lines */
+      width: 300px; /* shrink lines */
     }
   }
 
@@ -422,61 +411,85 @@ header {
   
   /* ----------- Responsive for phones ------------- */
   @media (max-width: 600px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      height: 30px;
-      padding: 15px 20px;
-    }
-
+    /* 1. Remove default UL margin/padding entirely */
     .nav_links {
+      margin: 0;
+      padding: 0;
+      display: none;          /* still hidden by default */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 40%;
+      background-color: black;
       flex-direction: column;
-      gap: 125px;
+      z-index: 100;
+    }
+  
+    /* 2. Show when active */
+    .nav_links.active {
+      display: flex;
+    }
+  
+    /* 3. Reset any extra spacing on each LI */
+    .nav_links li {
+      list-style: none;
+      margin: 0;              /* remove any default margin */
+      padding-top: 2px;       /* small top padding */
+      padding-bottom: 2px;    /* small bottom padding */
+      padding-left: 5px;
+      padding-right: 5px;
+      border-bottom: 1px solid white;
+      color: white;
+      font-family: "Jacques Francois", serif;
+      font-size: 15px;
+      text-align: left;
+      line-height: 1.2;       /* ensures line height is tight */
+    }
+  
+    /* 4. Remove padding/margin on the <a> */
+    .nav_links li a {
+      display: block;
       width: 100%;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;       /* match the li’s line height */
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    .nav_links li:last-child {
+      border-bottom: none;
+    }
+  }
+      
+    /* 5. Ensure hamburger and icons remain centered vertically */
+    .menu-toggle {
+      display: block;          /* hamburger is visible on mobile */
+      font-size: 28px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      align-self: center;
     }
   
     .nav_icons {
-      margin-top: 1px;
-      align-self: flex-end;
-    }
-  
-    .nav_links li {
-      font-size: 12px;
+      display: flex;
+      gap: 20px;
+      margin-right: 50px;
+      align-items: center;     /* vertically center icons in the 70px nav bar */
     }
   
     .nav_icons img {
-      height: 35px;
+      height: 30px;
+      width: auto;
+      cursor: pointer;
+      margin-top: 0;
     }
-  }
 
-  /* Hide the hamburger by default */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-/* responsiveness for phone */
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav_links {
-    display: none;
-    flex-direction: column;
-    width: 110%;
-    gap: 15px;
-    margin-top: 1px;
-  }
-
-  .nav_links.active {
-    display: flex;
-  }
-}
+  
   
  /*------------------ THIS SECTION IS FOR THE WHITE SEARCH RESULTS -----------------------*/
   
@@ -622,9 +635,61 @@ header {
           height: auto;
         }
 
+        @media (max-width: 600px) {
+          /* A) Hide the desktop Menswear box entirely */
+            /* Hide the normal nav links menu on mobile */
+  ul.nav_links {
+    display: none;
+  }
+  /* Show mobile dropdown only when active */
+  #mobile-dropdown {
+    display: flex; /* or block, depending on your style */
+  }
+  #mobile-dropdown.hidden {
+    display: none;
+  }
+          #menswear-box {
+            display: none !important;
+          }
+          .mobile-dropdown {
+            display: flex;
+            position: absolute;
+            top: 50px; /* adjust to your nav height */
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-family: "Jacques Francois", serif;
+            z-index: 1000;
+            height: 300px; /* adjust as needed */
+          }
+          .mobile-dropdown.hidden {
+            display: none;
+          }
+          .mobile-menu-panel {
+            flex: 1;
+            padding: 16px;
+            border-right: 1px solid white;
+            box-sizing: border-box;
+            overflow-y: auto;
+          }
+          #mobile-menu-right {
+            border-left: 1px solid white;
+          }
+          #mobile-menu-right.hidden {
+            display: none;
+          }
+          .menu-item {
+            padding: 12px 8px;
+            cursor: pointer;
+            border-bottom: 1px solid white;
+          }
+          .menu-item:hover {
+            text-decoration: underline;
+          }
+        }
 
-
-
+        
      /*---------------------- THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
      .Customer_Review_Section {
       position: relative;
@@ -1061,3 +1126,8 @@ header {
        
       }
 
+
+
+
+
+      

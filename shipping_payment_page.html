@@ -57,9 +57,9 @@
     Your Cart
   </div>
 
-  <!-- Cart Page Steps -->
+  <!-- Cart PAGES -->
   <div class="cart_pages">
-    <button class="your_bag">Your Bag</button>
+    <button class="your_bag" onclick="location.href='cart_page.html'">Your Bag</button>
     <button class="shipping_payment">Shipping & Payment</button>
     <button class="confirmation">Confirmation</button>
   </div>
@@ -134,20 +134,8 @@
     <div class="order_summary">
         <h2>Order Summary</h2>
       
-        <div class="product_row">
-          <img src="brown_jacket_cart.jpg" alt="Product 1">
-          <div class="product_details">
-            <div class="product_name">Diesel Brand Jacket</div>
-            <div class="product_price">$45.00</div>
-          </div>
-        </div>
-      
-        <div class="product_row">
-          <img src="navy_jacket_cart.jpg" alt="Product 2">
-          <div class="product_details">
-            <div class="product_name">Navy Green Spray Jacket</div>
-            <div class="product_price">$69.50</div>
-          </div>
+        <div id="products_container">
+          <!-- Products will be dynamically inserted here -->
         </div>
       
         <div class="divider"></div>
@@ -157,9 +145,9 @@
           <button class="apply_button">Apply</button>
         </div>
       
-        <div class="summary_row">
-          <div class="label small">Subtotal – 2 items</div>
-          <div class="value small">$114.50</div>
+        <div class="summary_row" id="subtotal_row">
+          <div class="label small">Subtotal – <span id="total_items">0</span> items</div>
+          <div class="value small" id="subtotal_value">$0.00</div>
         </div>
       
         <div class="summary_row">
@@ -169,68 +157,16 @@
       
         <div class="summary_row total_row">
           <div class="label underline">TOTAL</div>
-          <div class="value large">$114.50</div>
+          <div class="value large" id="total_value">$0.00</div>
         </div>
       </div>
+    
     </div>
   </div>
 
 
+ 
 
-     <!-- CHOOSING PICK UP OR DELIVERY -->
-     <script>
-        function toggleOption(clickedOption) {
-          const isSelected = clickedOption.classList.contains('selected');
-          const pickupDetails = document.querySelector('.pickup_details');
-          const paymentSection = document.querySelector('.payment_section');
-      
-          // Unselect all
-          document.querySelectorAll('.shipping_option').forEach(option => {
-            option.classList.remove('selected');
-          });
-      
-          if (!isSelected) {
-            clickedOption.classList.add('selected');
-      
-            if (clickedOption.textContent.trim() === "Pick up in Store") {
-              pickupDetails.style.display = "block";
-              paymentSection.style.display = "block";
-            } else {
-              pickupDetails.style.display = "none";
-              paymentSection.style.display = "block"; // still show for Shipping
-            }
-          } else {
-            pickupDetails.style.display = "none";
-            paymentSection.style.display = "none";
-          }
-        }
-      </script>
-
-
-<script>
-    const paymentButton = document.getElementById('paymentButton');
-    const inputs = document.querySelectorAll('.payment_input');
-  
-    function checkInputs() {
-      const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-      if (allFilled) {
-        paymentButton.disabled = false;
-        paymentButton.style.opacity = '1';
-        paymentButton.style.cursor = 'pointer';
-      } else {
-        paymentButton.disabled = true;
-        paymentButton.style.opacity = '0.5';
-        paymentButton.style.cursor = 'not-allowed';
-      }
-    }
-  
-    inputs.forEach(input => {
-      input.addEventListener('input', checkInputs);
-    });
-  
-    checkInputs();
-  </script>
-
-<script src="script.js"></script>
+<script src="shipping_payment_page.js"></script>
 </body>
 </html>

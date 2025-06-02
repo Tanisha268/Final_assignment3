@@ -282,23 +282,25 @@ html, body {
           }
           
           .jacket_cart, .jacket2_cart {
-            width: 100%;
+            width: 50%;
             height: auto;
           }
        
           
           .remove {
-            margin-top: 8px;
+            margin-top: 5px;
             color: red;
             cursor: pointer;
             font-size: 0.9rem;
+             text-align: center;
+             margin-left: -120px;
       }
       
       .product-right {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 150px;
+        max-width: 70px;
         text-align: center;
       }
       
@@ -307,6 +309,7 @@ html, body {
             font-weight: normal;
             margin: 0;
             font-family: "Jacques Francois", serif;
+            margin-left: -130px;
           }
         
           .price,
@@ -498,8 +501,9 @@ html, body {
       margin-top: 20px;
     }
     .continue_checkout {
-      width: 70%;               /* same width as payment images */
-      margin: 0px auto 30px auto;  /* center horizontally, add spacing on top */
+      width: 80%; /* Match the image widths */
+      max-width: 300px; /* Prevent it from getting too wide */
+      margin: 0 auto 30px auto;
       padding: 12px 0;
       background-color: black;
       border: 2px solid red;
@@ -512,11 +516,6 @@ html, body {
       border-radius: 5px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .continue_checkout:hover {
-      color: black;
-      transform: translateY(-5px);  /* moves the button up by 5px */
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* subtle shadow for lift effect */
-    }
 
     .payment_options img {
       width: 80%; /* or any appropriate width */
@@ -525,7 +524,11 @@ html, body {
       transform: translateY(-5px);  /* moves the button up by 5px */
       box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* subtle shadow for lift effect */
     }
-
+    .checkout_link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
 
   /* --------------- Responsive for phone size --------------- */ 

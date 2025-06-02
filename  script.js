@@ -19,29 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
         menswearBox.style.display === "block" ? "none" : "block";
     });
   }
-
-  // Filtering items toggle red class
-  const filterItems = document.querySelectorAll('.filtering li');
-  filterItems.forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
-    });
-  });
-
-  // Cart notification toggle
-  const addToCartBtn = document.querySelector('.pink_rectangle');
-  const closeBtn = document.getElementById('close-cart-notification');
-  const cartNotification = document.getElementById('cart-notification');
-
-  if (addToCartBtn && cartNotification) {
-    addToCartBtn.addEventListener('click', () => {
-      cartNotification.classList.remove('hidden');
-    });
-  }
-
-  if (closeBtn && cartNotification) {
-    closeBtn.addEventListener('click', () => {
-      cartNotification.classList.add('hidden');
-    });
-  }
-});
+}

@@ -77,6 +77,42 @@ html, body {
     margin-top: 70px;
   }
 
+  .cart_icon_wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+      .cart_icon_wrapper #cart-icon {
+        width: auto; /* your preferred size */
+        height: 42px;
+      }
+      
+      .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #ff3b3b; /* bright red */
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 14px;
+        min-width: 20px;
+        height: 20px;
+        border-radius: 12px;
+        text-align: center;
+        line-height: 20px;
+        box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        pointer-events: none; /* clicks go through */
+        display: none; /* hidden when zero */
+        user-select: none;
+        transition: transform 0.3s ease;
+      }
+      
+      .cart-badge.show {
+        display: block;
+        transform: scale(1.1);
+      }
+
   .nav_links {
     display: flex;
     list-style: none;

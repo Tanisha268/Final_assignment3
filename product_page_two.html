@@ -62,7 +62,7 @@
             <img class="main_image" src="product_two_img1.jpg">
           </div>
         
-          <!-- Right Side -->
+      ]  <!-- Right Side -->
           <div class="product_description_section">
                 <div class="product_description_header">
                   <h1>Navy Green Spray Jacket</h1>
@@ -70,6 +70,23 @@
                     <button class="pink_rectangle">
                       Add to Cart
                     </button>
+                    <div id="cart-notification" class="cart-notification hidden">
+                      <button id="close-cart-notification" class="close-button">×</button>
+                      <h2>YAY</h2>
+                      <p>Item Added to Cart</p>
+                    
+                      <div class="cart-items-container"></div>
+                    
+                      <hr />
+                      <div class="totals-row">
+                        <p class="total-items">Total Items: 0</p>
+                        <p class="total-price">Total Price: $0.00</p>
+                      </div>
+                    
+                      <a href="cart_page.html" class="view-cart-button">View Cart</a>
+                    </div>
+                    
+        
                 </div>
             <img src = "buy_with_shop_pay.jpg" class = "buy_later">
             <p class="payment_options_text">More Payment Options</p>
@@ -104,5 +121,14 @@
               </div>
           </div>
         </section>
+        <script>
+          window.productInfo = {
+            name: 'Navy Green Spray Jacket',
+            price: 39.00,
+            image: 'product_two.jpg'
+          };
+        </script>
+
+        <script src="product_page_two.js"></script>
 </body>
 </html>
