@@ -409,9 +409,36 @@ header {
     text-decoration: underline;
   }
   
+  .menu-toggle {
+    display: none;          /* hamburger is visible on mobile */
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+  }
+
+      /* 5. Ensure hamburger and icons remain centered vertically */
+
+  
   /* ----------- Responsive for phones ------------- */
   @media (max-width: 600px) {
     /* 1. Remove default UL margin/padding entirely */
+    .menu-toggle {
+      display: block;          /* hamburger is visible on mobile */
+      font-size: 28px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+    }
+
     .nav_links {
       margin: 0;
       padding: 0;
@@ -429,6 +456,30 @@ header {
     .nav_links.active {
       display: flex;
     }
+
+    #menswear-box.open {
+      display: block;
+    }
+
+    #menswear-box{
+  
+    position: relative;
+    background: none;
+    box-shadow: none;
+    padding-left: 1.5rem;
+
+    }
+
+    #menswear-box h2 {
+      font-size: 17px;
+    }
+    .specials-list{
+      display:none;
+    }
+    .tops-list,.shopbybrand-list,.bottoms-list,.denim_model{
+      display:none;
+    }
+    
   
     /* 3. Reset any extra spacing on each LI */
     .nav_links li {
@@ -459,22 +510,7 @@ header {
   
     .nav_links li:last-child {
       border-bottom: none;
-    }
-  }
-      
-    /* 5. Ensure hamburger and icons remain centered vertically */
-    .menu-toggle {
-      display: block;          /* hamburger is visible on mobile */
-      font-size: 28px;
-      background: none;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin: 0;
-      padding: 0;
-      align-self: center;
-    }
-  
+        
     .nav_icons {
       display: flex;
       gap: 20px;
@@ -488,6 +524,10 @@ header {
       cursor: pointer;
       margin-top: 0;
     }
+    }
+  }
+      
+
 
   
   
@@ -635,61 +675,9 @@ header {
           height: auto;
         }
 
-        @media (max-width: 600px) {
-          /* A) Hide the desktop Menswear box entirely */
-            /* Hide the normal nav links menu on mobile */
-  ul.nav_links {
-    display: none;
-  }
-  /* Show mobile dropdown only when active */
-  #mobile-dropdown {
-    display: flex; /* or block, depending on your style */
-  }
-  #mobile-dropdown.hidden {
-    display: none;
-  }
-          #menswear-box {
-            display: none !important;
-          }
-          .mobile-dropdown {
-            display: flex;
-            position: absolute;
-            top: 50px; /* adjust to your nav height */
-            left: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            font-family: "Jacques Francois", serif;
-            z-index: 1000;
-            height: 300px; /* adjust as needed */
-          }
-          .mobile-dropdown.hidden {
-            display: none;
-          }
-          .mobile-menu-panel {
-            flex: 1;
-            padding: 16px;
-            border-right: 1px solid white;
-            box-sizing: border-box;
-            overflow-y: auto;
-          }
-          #mobile-menu-right {
-            border-left: 1px solid white;
-          }
-          #mobile-menu-right.hidden {
-            display: none;
-          }
-          .menu-item {
-            padding: 12px 8px;
-            cursor: pointer;
-            border-bottom: 1px solid white;
-          }
-          .menu-item:hover {
-            text-decoration: underline;
-          }
-        }
 
-        
+
+
      /*---------------------- THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
      .Customer_Review_Section {
       position: relative;
@@ -778,15 +766,15 @@ header {
     left: 0;
     display: flex;
     width: 100%;
-    height: 70%;
+    height: 50%;
     z-index: 0;
   }
 
   /* Heading stays above background */
   .customer-reviews-heading {
-    font-size: 35px;
-    margin-bottom: 20px;
-    margin-top: -20px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
   }
   
@@ -808,7 +796,7 @@ header {
     flex: 1 1 30%;
     min-width: 250px;
     text-align: center;
-    font-size: 17px;
+    font-size: 12px;
   }
 
   .review img {
@@ -863,20 +851,31 @@ header {
     .shop_categories {
       background-size: cover;
       padding: 30px 0px 10px 30px;
+      overflow-x: auto; /* fallback for horizontal scrolling */
     }
   
     .shopping_categories_heading {
       text-align: center;
-      font-size: 35px;
+      font-size: 30px;
       margin: -10px 0 20px 0;
     }
   
     .categories_row {
-      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;          /* prevent wrapping */
       gap: 20px;
+      overflow-x: auto;           /* enable horizontal scroll */
+      -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+      scrollbar-width: none;      /* hide scrollbar in Firefox */
+    }
+  
+    .categories_row::-webkit-scrollbar {
+      display: none;              /* hide scrollbar in Chrome/Safari */
     }
   
     .categories_row > div {
+      flex: 0 0 auto;             /* prevent shrinking & allow side-by-side layout */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -884,8 +883,8 @@ header {
     }
   
     .categories_row img {
-      width: 30vh;
-      height: 40vh;
+      width: 23vh;
+      height: 33vh;
       display: block;
     }
   
@@ -937,17 +936,17 @@ header {
   @media (max-width: 600px) {
     .about_us_section {
       background-image: url('clothing_background.png');
-      padding: 5px 25px 0px 25px;
+      padding: 35px 25px 0px 25px;
       text-align: center;
       display: flex;
     }
   
     .about_us_heading {
-      font-size: 36px;
+      font-size: 30px;
     }
   
     .about_us_paragraph {
-      font-size: 18px;
+      font-size: 13px;
     }
   }
 
@@ -995,9 +994,10 @@ header {
       }
     
       .blogs_heading {
-        font-size: 35px;
+        font-size: 30px;
         font-weight: normal;
         margin-bottom: 30px;
+        margin-top: 7px;
       }
     
       /* ✅ SCROLLING container */
@@ -1086,22 +1086,23 @@ header {
           background-repeat: no-repeat;
           display: flex;
           align-items: center;
-          padding: 5px 20px;
+          padding: 15px 20px;
           gap: 20px;
+          
         }
         
         .footer_logo {
-          height: 40px;
+          height: 20px;
         }
         
         .footer_words {
           display: flex;
-          gap: 50px;
+          gap: 10px;
           text-decoration: underline;
         }
         
         .footer_words h2 {
-          font-size: 10px;
+          font-size: 8px;
           margin: 0px;
         }
         
@@ -1109,25 +1110,155 @@ header {
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 30px;
+          gap: 10px;
         }
         
         .follow_logos {
           display: flex;
-          gap: 15px;
+          gap: 10px;
         }
         
         .follow_logos img {
-          height: 20px; /* adjust icon size */
+          height: 10px; /* adjust icon size */
           width: auto;
         }
-
-    
-       
       }
 
 
-
-
-
       
+        
+
+
+  /* ----------- Responsive for phones ------------- */
+  @media (max-width: 600px) {
+    /* 1. Remove default UL margin/padding entirely */
+    .menu-toggle {
+      display: block;          /* hamburger is visible on mobile */
+      font-size: 28px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+    }
+
+    .nav_links {
+      margin: 0;
+      padding: 0;
+      display: none;          /* still hidden by default */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 40%;
+      background-color: black;
+      flex-direction: column;
+      z-index: 100;
+    }
+  
+    /* 2. Show when active */
+    .nav_links.active {
+      display: flex;
+    }
+
+    #menswear-box.open {
+      display: block;
+    }
+
+    .nav_links.submenu-active > li:not(.submenu-open) {
+      display: none;
+    }
+
+    #menswear-box{
+  
+    position: relative;
+    box-shadow: none;
+    background-color:black;
+  border: 0px;
+    padding-left: 10px;
+    height:100%;
+    width:100%;
+    text-decoration: none;
+
+    }
+
+    #menswear-box h2 {
+      font-size: 15px;
+      position: relative;
+      padding-left: 10px;
+      padding-top:10px;
+      left:0%;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    #menswear-box h2:nth-of-type(1) {
+      top: 0%;
+      left: 0%;
+      text-decoration: none;
+    }
+    #menswear-box h2:nth-of-type(2) {
+      top: 0%;
+      left: 0%;
+      text-decoration: none;
+    }
+    #menswear-box h2:nth-of-type(3) {
+      top: 0%;
+      left: 0%;
+      text-decoration: none;
+    }
+    #menswear-box h2:nth-of-type(4) {
+      top: 0%;
+      left: 0%;
+      text-decoration: none;
+    }
+    .specials-list{
+      display:none;
+    }
+     /* Hide by default */
+    .tops-list,.shopbybrand-list,.bottoms-list,.denim_model{
+      display:none;
+    }
+
+#menswear-box .tops-list{
+  position:relative;
+  left:0%;
+}
+
+.tops-list{
+  margin-top: 10px;
+}
+.tops-list li {
+  color: white;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  border-bottom: 0px solid white;
+
+.back-arrow {
+  font-weight: bold;
+  font-size: 18px;
+  vertical-align: middle;
+  user-select: none;
+}
+
+#menswear-btn > .back-arrow {
+  margin-right: 8px;
+}
+
+#tops-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#tops-btn > .back-arrow {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+
+  }
+
+}

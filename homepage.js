@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
     // Toggle menu on hamburger click
     const toggleBtn = document.querySelector('.menu-toggle');
@@ -8,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
       });
     }
+
+
   
     // Menswear button toggle (if exists)
     const menswearBtn = document.getElementById("menswear-btn");
@@ -21,71 +24,158 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }); 
 
+  /* PART 2 
 
-
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav_links');
   
-  const menswearMenuItem = document.querySelector('[data-submenu="menswear"]');
-const mobileDropdown = document.getElementById('mobile-dropdown');
-const mobileMenuRight = document.getElementById('mobile-menu-right');
-const menuToggleBtn = document.querySelector('.menu-toggle');
+    if (toggleBtn && navLinks) {
+      toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+  
+    const menswearBtn = document.getElementById("menswear-btn");
+    const menswearBox = document.getElementById("menswear-box");
+  
+    if (menswearBtn && menswearBox) {
+      menswearBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+       
+        // Toggle submenu visibility
+      menswearBox.classList.toggle("open");
 
-const menswearSubmenuItems = ['Special', 'Tops', 'Bottoms', 'Shop by Brand'];
+      // Toggle class on the <li> for styling
+      menswearBtn.parentElement.classList.toggle("submenu-open");
 
-menuToggleBtn.addEventListener('click', () => {
-  mobileDropdown.classList.toggle('hidden');
-  if (mobileDropdown.classList.contains('hidden')) {
-    mobileMenuRight.classList.add('hidden');
-    mobileMenuRight.innerHTML = '';
-  }
-});
+      // Toggle class on the nav_links (for hiding other items if desired)
+      navLinks.classList.toggle("submenu-active");
+      });
+    }
 
-menswearMenuItem.addEventListener('click', () => {
-  // Show right panel
-  mobileMenuRight.classList.remove('hidden');
-  mobileMenuRight.innerHTML = '';
+    const topsBtn = document.getElementById("tops-btn");
+    const backBtn = document.getElementById("back-to-menswear");
+    
+    topsBtn.addEventListener("click", () => {
+      menswearBox.classList.add("tops-only");
+      backBtn.style.display = "block";
+    });
+    
+    backBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      menswearBox.classList.remove("tops-only");
+      backBtn.style.display = "none";
+    });
 
-  // Create header with back button and arrow
-  const header = document.createElement('div');
-  header.style.display = 'flex';
-  header.style.alignItems = 'center';
-  header.style.marginBottom = '12px';
 
-  const backBtn = document.createElement('div');
-  backBtn.textContent = '← Back';
-  backBtn.style.cursor = 'pointer';
-  backBtn.style.marginRight = '10px';
-  backBtn.style.fontWeight = 'normal';
-  backBtn.style.fontSize = '16px';
-  backBtn.addEventListener('click', () => {
-    mobileMenuRight.classList.add('hidden');
-    mobileMenuRight.innerHTML = '';
   });
+  
+*/
+  document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = () => window.innerWidth <= 600;
+    const isDesktop = () => window.innerWidth > 600;
+  
+    
+    // Toggle menu on hamburger click
+    const toggleBtnD = document.querySelector('.menu-toggle');
+    const navLinksD = document.querySelector('.nav_links');
+  
+    if (toggleBtnD && navLinksD) {
+      toggleBtnD.addEventListener('click', () => {
+        if (!isDesktop()) return;
+        navLinksD.classList.toggle('active');
+      });
+    }
 
-  const arrow = document.createElement('div');
-  arrow.style.width = '0';
-  arrow.style.height = '0';
-  arrow.style.borderLeft = '8px solid transparent';
-  arrow.style.borderRight = '8px solid transparent';
-  arrow.style.borderBottom = '8px solid white';
-  arrow.style.marginRight = '8px';
+    // Menswear button toggle (if exists)
+    const menswearBtnD = document.getElementById("menswear-btn");
+    const menswearBoxD = document.getElementById("menswear-box");
+    if (menswearBtnD && menswearBoxD) {
+      menswearBtnD.addEventListener("click", (e) => {
+        if (!isDesktop()) return;
+        e.stopPropagation();
+        menswearBoxD.style.display =
+          menswearBoxD.style.display === "block" ? "none" : "block";
+      });
+    }
 
-  const title = document.createElement('span');
-  title.textContent = 'Menswear';
-  title.style.fontFamily = '"Jacques Francois", serif';
-  title.style.fontSize = '18px';
-  title.style.fontWeight = 'bold';
-  title.style.color = 'white';
 
-  header.appendChild(backBtn);
-  header.appendChild(arrow);
-  header.appendChild(title);
-  mobileMenuRight.appendChild(header);
-
-  // Add submenu items
-  menswearSubmenuItems.forEach(item => {
-    const div = document.createElement('div');
-    div.textContent = item;
-    div.className = 'menu-item';
-    mobileMenuRight.appendChild(div);
+    
+    
+    const navLinks = document.querySelector('.nav_links');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menswearBtn = document.getElementById('menswear-btn');
+    const menswearBox = document.getElementById('menswear-box');
+    const backToMain = document.getElementById('back-to-main');
+  
+    const topsBtn = document.getElementById('tops-btn');
+    const topsList = document.querySelector('.tops-list');
+    const backToMenswear = document.getElementById('back-to-menswear');
+  
+    
+    
+    const mainNavItems = [...navLinks.children].filter(li => !li.querySelector('#menswear-box'));
+    const menswearSections = [...menswearBox.children].filter(el =>
+      !el.classList.contains('tops-list') &&
+      el.id !== 'tops-btn'
+    );
+  
+    menuToggle.addEventListener('click', () => {
+      if (!isMobile()) return;
+      navLinks.classList.toggle('active');
+    });
+  
+    menswearBtn.addEventListener('click', (e) => {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      mainNavItems.forEach(item => item.style.display = 'none');
+      menswearBox.style.display = 'block';
+      menswearSections.forEach(el => el.style.display = '');
+      topsBtn.style.display = 'flex';
+      topsList.style.display = 'none';
+      backToMain.style.display = 'inline-block';
+      backToMenswear.style.display = 'none';
+    });
+  
+    topsBtn.addEventListener('click', (e) => {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      menswearSections.forEach(el => el.style.display = 'none');
+      topsBtn.style.display = 'flex';
+      topsList.style.display = 'block';
+      backToMenswear.style.display = 'inline-block';
+      backToMain.style.display = 'none';
+    });
+  
+    backToMenswear.addEventListener('click', (e) => {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      menswearSections.forEach(el => el.style.display = '');
+      topsList.style.display = 'none';
+      topsBtn.style.display = 'flex';
+      backToMenswear.style.display = 'none';
+      backToMain.style.display = 'inline-block';
+    });
+  
+    backToMain.addEventListener('click', (e) => {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      mainNavItems.forEach(item => item.style.display = '');
+      menswearBox.style.display = 'none';
+      backToMain.style.display = 'none';
+    });
+  
+    // Optional: Close submenu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (!isMobile()) {
+        navLinks.classList.remove('active');
+        menswearBox.style.display = '';
+        mainNavItems.forEach(item => item.style.display = '');
+        topsList.style.display = '';
+        backToMain.style.display = 'none';
+        backToMenswear.style.display = 'none';
+      }
+    });
   });
-});
+    

@@ -281,45 +281,125 @@ html, body {
             }
   
  /* ----------------- Responsive for phone size --------------- */
- @media (max-width: 600px) {
+ .main_product_page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: clamp(500px, 90vh, 700px); 
+}
 
-  .main_product_page {
-    flex-direction: row;
-    }
-    .product_images_left {
+.main_image {
+  max-height: 80%;
+  margin-left: auto;
+  margin-right: clamp(40px, 8vw, 120px); 
+  max-width: 80%;
+  margin-top: clamp(40px, 8vh, 80px); 
+  z-index: 2;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+    .back-to-results {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 80vh;
-      background-image: url('background_retro_image.png');
-      background-size: cover;
-      background-position: center;
-      flex-direction: column;
-      z-index: -1; 
-      justify-content: center;
-      align-items: center;
-      display: flex;
+      top: 10px;
+      left: 20px;
+      font-family: 'Jacques Francoiss',serif;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      padding: 6px 12px;
+      border-radius: 5px;
+      z-index: 5;
+      cursor: pointer;
     }
 
-    .main_image {
-      position: relative;
-      max-height: 50%;
-      max-width: 100%;
-      margin-top: clamp(40px, 25vh, 800px); 
-      z-index: 2;
-      margin-left: 30px;
-    }
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
 
+.product_images_left {
+  position: relative;
+  width: 60%;
+  height: clamp(500px, 90vh, 700px);
+  background-image: url('background_retro_image.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
     .small_images_sidebar {
-      gap: clamp(20px, 7vw, 50px);
-      margin-top: clamp(30px, 7vh, 60px);
+      position: relative;
+      margin-top: clamp(400px, 90vh, 700px);
+      margin-right: auto;
+      margin-left: clamp(10px, 4vw, 30px); 
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(20px, 5vh, 50px); 
       z-index: 3;
-      order: 1; /* force it below the main image */
-      flex-direction: row;
-      margin-left: 59px;
     }
+    
+          .small_images_sidebar img {
+            width: clamp(70px, 8vw, 115px); 
+            height: auto;
+            cursor: pointer;
+          }
 
+/* ----------------- Responsive for phone size --------------- */
+@media (max-width: 600px) {
+  .main_product_page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product_images_left {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background-image: url('background_retro_image.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    justify-content: center;
+    padding-left: 30px;
+  }
+
+  .images-container {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order: small images come after main */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .main_image {
+    max-width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  .small_images_sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .small_images_sidebar img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+  }
 }
     /*------------------ THIS SECTION IS FOR THE PRODUCT DESCRIPTIONS HEADER-----------------------*/
     .product_description_section {
@@ -344,7 +424,6 @@ html, body {
     margin-left: 50px;
     font-family: "Jersey 10", sans-serif;
   }
-
   /*  ------------------- Add to Cart button ----------------------- */
   .pink_rectangle {
     width: clamp(200px, 35%, 600px);       
@@ -498,11 +577,65 @@ html, body {
       display: block;
     }
 
+    @media (max-width: 600px) {
+      .cart-notification {
+        width: 70%;
+        top: 150px;
+        right: 1%;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    
+      .cart-notification h2 {
+        font-size: 10px;
+        margin-top: 5px !important;
+      }
+    
+      .cart-notification p {
+        font-size: 14px;
+      }
+    
+      .cart-item img {
+        width: 40px;
+        height: auto;
+        margin-right: 8px;
+      }
+    
+      .item-name {
+        font-size: 14px;
+      }
+    
+      .item-price .price {
+        font-size: 14px;
+      }
+    
+      .view-cart-button {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    
+      .buy_later {
+        width: 100%;
+        font-size: 14px;
+      }
+    
+      .close-button {
+        font-size: 24px;
+      }
+    
+      .payment_options_text {
+        font-size: 10px;
+      }
+    
+      .totals-row {
+        font-size: 14px;
+      }
+    }
 
 /* ----------------- Responsive for phone size --------------- */
   @media (max-width: 600px) {
     .product_description_section {
-      margin-top: 60vh;
+      margin-top: 0.5vh;
       width: 100%; 
       display: flex;
       flex-direction: column;
@@ -512,7 +645,7 @@ html, body {
       font-family: "Jacques Francois", sans-serif;
       font-weight: normal;
       font-size: clamp(2rem, 3vw, 50px); 
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     hr {
