@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       backToMain.style.display = 'none';
     });
   
-    // Optional: Close submenu when resizing to desktop
+
     window.addEventListener('resize', () => {
       if (!isMobile()) {
         navLinks.classList.remove('active');

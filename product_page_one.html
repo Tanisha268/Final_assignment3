@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="product_page_one.css">
+    <link rel="stylesheet" href="../css/product_page_one.css">
 </head>
 
 <body>
@@ -25,8 +25,8 @@
               </div>
             </section>
         <section class="top_pattern_logo"> 
-            <img src="background_top_patterns.png" class="top_pattern">
-            <img src="small_retro_logo_top_pattern.png" class="small_retro_logo">
+            <img src="../img/background_top_patterns.png" class="top_pattern">
+            <img src="../img/small_retro_logo_top_pattern.png" class="small_retro_logo">
         </section>
 
         <nav>
@@ -43,10 +43,10 @@
                 <li>FAQ</li>
             </ul>
             <div class="nav_icons"> 
-                <img src="search_icon.png" alt="Search Icon">
-                <img src="avatar_login.png" alt="Avatar Login">
-                <div class="cart_icon_wrapper">
-                  <img src="shoppingcart_icon.png" alt="Shopping Cart" id="cart-icon">
+                <img src="../img/search_icon.png" alt="Search Icon">
+                <img src="../img/avatar_login.png" alt="Avatar Login">
+                <div class="../img/cart_icon_wrapper">
+                  <img src="../img/shoppingcart_icon.png" alt="Shopping Cart" id="cart-icon">
                   <div id="cart-badge" class="cart-badge">0</div>
               </div>
               </div>
@@ -62,11 +62,11 @@
           
             <div class="images-container">
               <div class="small_images_sidebar">
-                <img src="product_one_small_image1.jpg">
-                <img src="product_one_small_image2.jpg">
-                <img src="product_one_small_image3.jpg">
+                <img src="../img/product_one_small_image1.jpg">
+                <img src="../img/product_one_small_image2.jpg">
+                <img src="../img/product_one_small_image3.jpg">
               </div>
-              <img class="main_image" src="product_one_img1.png">
+              <img class="main_image" src="../img/product_one_img1.png">
             </div>
           </div>
 
@@ -80,7 +80,7 @@
                   <button class="pink_rectangle" 
                   data-name="Diesel Brand Jacket" 
                   data-price="95.00" 
-                  data-img="product_one.jpg">
+                  data-img="../img/product_one.jpg">
                   Add to Cart
                 </button>
                     <div id="cart-notification" class="cart-notification hidden">
@@ -100,7 +100,7 @@
                     <a href="cart_page.html" class="view-cart-button">View Cart</a>
                     </div>
                 </div>
-            <img src = "buy_with_shop_pay.jpg" class = "buy_later">
+            <img src = "../img/buy_with_shop_pay.jpg" class = "buy_later">
             <p class="payment_options_text">More Payment Options</p>
             <hr>   
 
@@ -133,15 +133,36 @@
               </div>
           </div>
         </section>
+
+        <footer class="footer">
+          <img src="../img/retro_star_logo.jpg" class="footer_logo">
+        
+          <div class="footer_words">
+            <h2>Our Products</h2>
+            <h2>About Us</h2>
+            <h2>Our Policies</h2>
+        
+            <div class="follow_section">
+              <h2>Follow Us</h2>
+              <div class="follow_logos">
+                <img src="../img/icon_facebook.png">
+                <img src="../img/icon_insta.png">
+                <img src="../img/icon_tiktok.jpg">
+              </div>
+            </div>
+        
+            <h2>Create Account</h2>
+          </div>
+        </footer>
         <script>
           window.productInfo = {
             name: 'Diesel Brand Jacket',
             price: 95.00,
-            image: 'product_one.jpg'
+            image: '../img/product_one.jpg'
           };
         </script>
 
-        <script src="product_page_two.js"></script>
+        <script src="../jss/product_page_two.js"></script>
       
 </body>
 </html>

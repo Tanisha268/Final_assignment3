@@ -13,16 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function updateTotals(cart) {
+      const quantityEl = document.querySelector('[data-type="quantity"]');
+      const subtotalEl = document.querySelector('[data-type="subtotal"]');
+      const discountEl = document.querySelector('[data-type="discount"]');
+      const totalEl = document.querySelector('[data-type="total"]');
+    
       const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
       const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  
-      summaryItems.textContent = totalItems;
-      subtotalValue.textContent = `$${subtotal.toFixed(2)}`;
-  
+    
       const discount = totalItems >= 2 ? 20 : 0;
       const total = subtotal - discount;
-  
-      totalValue.innerHTML = `<span class="underline">Total:</span> $${total.toFixed(2)}`;
+    
+      quantityEl.textContent = totalItems;
+      subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+      discountEl.textContent = discount > 0 ? `-$${discount.toFixed(2)}` : '$0.00';
+      totalEl.innerHTML = `<span class="underline">Total:</span> $${total.toFixed(2)}`;
     }
   
     function renderCart() {
@@ -42,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.innerHTML = `
           <div class="product">
             <div class="product-left">
-              <img src="${item.image}" class="jacket_cart" alt="${item.name}">
+              <img src="../img/${item.image}" class="jacket_cart" alt="${item.name}">
               <p class="remove" data-index="${index}">Remove</p>
             </div>
             <div class="product-right">
@@ -104,3 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     renderCart();
   });
+
+  
+  

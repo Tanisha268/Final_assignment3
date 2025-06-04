@@ -208,7 +208,7 @@ header {
   left: 0;
   width: 100%;
   height: 70px;
-  background-image: url("red\ rectangle.png");
+  background-image: url("../img/red\ rectangle.png");
   z-index: 10;
 }
 
@@ -686,7 +686,7 @@ header {
       overflow: hidden;
       z-index: 2;
       margin: 0;
-      background-image: url('background retro image.jpg'); /* Make sure the path is correct and unescaped */
+      background-image: url('../img/background retro image.jpg'); /* Make sure the path is correct and unescaped */
       background-size: contain;
       background-position: center;
     }
@@ -804,48 +804,67 @@ header {
     margin-bottom: 1px;       /* Reduce gap between icon and text */       /* Center the icon */
   }
 }
-  /*----------------------------- THIS SECTION IS FOR THE SHOP CATEGORIES -------------------------------*/
-  .shop_categories {
-    background-image: url('red_gradient_background.png');
-    background-size: cover;
-    background-position: center;
-    padding: 30px 5px 5px 25px;
-    max-height: 500px; /* example, adjust as needed */
-    overflow: hidden;
-  }
-  
-  
-  .shopping_categories_heading {
-    text-align: center;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin: -10px 0 40px 0;
-    font-weight: normal;
-    font-family: "Marcellus SC", serif;
-    color: white;
-  }
-  
-  .categories_row {
-    display: flex;
-    justify-content: space-between;
-    gap: 45px;
-    flex-wrap: nowrap;
-  }
-  
-  .categories_row img {
-    width: 110%;
-    height: auto;
-    display: block;
-  }
-  
-  .categories_row p {
-    font-family: 'Marcellus SC', serif;
-    font-size: 30px;
-    margin-top: 10px;
-    color: white;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  
+
+
+.shop_categories {
+  background-image: url('../img/red_gradient_background.png');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 5px 30px 25px;
+  max-height: 500px;
+}
+
+.shopping_categories_heading {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin: -10px 0 40px 0;
+  font-weight: normal;
+  font-family: "Marcellus SC", serif;
+  color: white;
+}
+
+/* ⬇️ Add scroll here, but ONLY to row */
+.categories_row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Enable scroll */
+  overflow-y: hidden;
+  gap: 55px; /* You can increase this even more */
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* Optional: prettier scroll bar */
+.categories_row::-webkit-scrollbar {
+  height: 10px;
+}
+.categories_row::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+/* ⬇️ Keep image + title grouped */
+.categories_row > div {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+/* Image size */
+.categories_row img {
+  width: 270px; /* Increase as needed */
+  height: auto;
+  display: block;
+}
+
+/* Title under image */
+.categories_row p {
+  font-family: 'Marcellus SC', serif;
+  font-size: 25px;
+  margin-top: 10px;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
   /* --------- responsive for phone ----------- */
   @media (max-width: 600px) {
     .shop_categories {
@@ -899,7 +918,7 @@ header {
 
   /*--------------------------- THIS SECTION IS FOR THE ABOUT US SECTION -------------------------------*/
   .about_us_section {
-    background-image: url('clothing_background.png');
+    background-image: url('../img/clothing_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -935,7 +954,7 @@ header {
   /* -------- Responsive for phone --------- */
   @media (max-width: 600px) {
     .about_us_section {
-      background-image: url('clothing_background.png');
+      background-image: url('../img/clothing_background.png');
       padding: 35px 25px 0px 25px;
       text-align: center;
       display: flex;
@@ -952,7 +971,7 @@ header {
 
   /*--------------------------- THIS SECTION IS FOR THE BLOG SECTION -----------------------------------*/
   .blog_section {
-    background-image: url('red_gradient_background.png');
+    background-image: url('../img/red_gradient_background.png');
     padding: clamp(20px, 5vw, 40px) clamp(20px, 8vw, 80px);
     text-align: center;
     background-color: #fff; /* or any background you prefer */
@@ -1032,7 +1051,7 @@ header {
     
     /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
   .footer {
-    background-image: url('black_rectangle_footer.jpg');
+    background-image: url('../img/black_rectangle_footer.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -1081,7 +1100,7 @@ header {
       /* Responsive for phone */
       @media (max-width: 600px) {
         .footer {
-          background-image: url('black_rectangle_footer.jpg');
+          background-image: url('../img/black_rectangle_footer.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           display: flex;

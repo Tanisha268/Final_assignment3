@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // <script>const productInfo = { name: 'Navy Green Spray Jacket', price: 39.00, image: 'product_two_img1.jpg' };</script>
   
     if (!window.productInfo) {
-      console.error('productInfo object not defined on this page.');
+      //console.error('productInfo object not defined on this page.');
       return;
     }
   
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const itemsHTML = cart.map(item => `
         <div class="cart-item">
-          <img src="${item.image}" alt="${item.name}" />
+          <img src="../img/${item.image}" alt="${item.name}" />
           <div class="item-details">
             <p class="item-name">${item.name}</p>
             <p>Qty: ${item.quantity}</p>
