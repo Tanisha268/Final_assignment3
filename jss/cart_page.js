@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         row.innerHTML = `
           <div class="product">
             <div class="product-left">
-              <img src="../img/${item.image}" class="jacket_cart" alt="${item.name}">
+              <img src="${item.image}" class="jacket_cart" alt="${item.name}">
               <p class="remove" data-index="${index}">Remove</p>
             </div>
             <div class="product-right">

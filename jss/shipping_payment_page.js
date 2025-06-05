@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const productsHTML = cart.map(item => `
         <div class="product_row">
-          <img src="../img/${item.image}" alt="${item.name}">
+          <img src="${item.image}" alt="${item.name}">
           <div class="product_details">
             <div class="product_name">${item.name}</div>
             <div class="product_price">$${item.price.toFixed(2)} x ${item.quantity}</div>
