@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const itemsHTML = cart.map(item => `
         <div class="cart-item">
-          <img src="../img/${item.image}" alt="${item.name}" />
+          <img src="${item.image}" alt="${item.name}" />
           <div class="item-details">
             <p class="item-name">${item.name}</p>
             <p>Qty: ${item.quantity}</p>
