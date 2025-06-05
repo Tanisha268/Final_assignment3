@@ -208,7 +208,7 @@ header {
   left: 0;
   width: 100%;
   height: 70px;
-  background-image: url("../img/red\ rectangle.png");
+  background-image: url("img/red\ rectangle.png");
   z-index: 10;
 }
 
@@ -686,7 +686,7 @@ header {
       overflow: hidden;
       z-index: 2;
       margin: 0;
-      background-image: url('../img/background retro image.jpg'); /* Make sure the path is correct and unescaped */
+      background-image: url('img/background retro image.jpg'); /* Make sure the path is correct and unescaped */
       background-size: contain;
       background-position: center;
     }
@@ -807,7 +807,7 @@ header {
 
 
 .shop_categories {
-  background-image: url('../img/red_gradient_background.png');
+  background-image: url('img/red_gradient_background.png');
   background-size: cover;
   background-position: center;
   padding: 30px 5px 30px 25px;
@@ -918,7 +918,7 @@ header {
 
   /*--------------------------- THIS SECTION IS FOR THE ABOUT US SECTION -------------------------------*/
   .about_us_section {
-    background-image: url('../img/clothing_background.png');
+    background-image: url('img/clothing_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -954,7 +954,7 @@ header {
   /* -------- Responsive for phone --------- */
   @media (max-width: 600px) {
     .about_us_section {
-      background-image: url('../img/clothing_background.png');
+      background-image: url('img/clothing_background.png');
       padding: 35px 25px 0px 25px;
       text-align: center;
       display: flex;
@@ -971,7 +971,7 @@ header {
 
   /*--------------------------- THIS SECTION IS FOR THE BLOG SECTION -----------------------------------*/
   .blog_section {
-    background-image: url('../img/red_gradient_background.png');
+    background-image: url('img/red_gradient_background.png');
     padding: clamp(20px, 5vw, 40px) clamp(20px, 8vw, 80px);
     text-align: center;
     background-color: #fff; /* or any background you prefer */
@@ -1051,7 +1051,7 @@ header {
     
     /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
   .footer {
-    background-image: url('../img/black_rectangle_footer.jpg');
+    background-image: url('img/black_rectangle_footer.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -1100,7 +1100,7 @@ header {
       /* Responsive for phone */
       @media (max-width: 600px) {
         .footer {
-          background-image: url('../img/black_rectangle_footer.jpg');
+          background-image: url('img/black_rectangle_footer.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           display: flex;
