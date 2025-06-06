@@ -1,7 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-  }
+    width: 100%;
+}
   
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
 .red_rectangle {
@@ -254,7 +255,7 @@ html, body {
   .product_images_left {
     position: relative;
     width: 60%;
-    height: clamp(500px, 90vh, 700px);
+    height: clamp(500px, 100vh, 700px);
     background-image: url('../img/background_retro_image.png');
     background-size: cover;
     background-position: center;
@@ -358,7 +359,7 @@ html, body {
 
   .product_images_left {
     position: relative;
-    width: 100vw;
+    width: 93%;
     height: auto;
     background-image: url('../img/background_retro_image.png');
     background-size: cover;
@@ -381,9 +382,10 @@ html, body {
 
   .main_image {
     max-width: 80vw;
+    margin-top: -8px;
     height: auto;
-    margin: 0 auto;
     z-index: 2;
+    justify-content: center;
   }
 
   .small_images_sidebar {
@@ -392,7 +394,7 @@ html, body {
     justify-content: center;
     gap: 25px;
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 20px;
   }
 
   .small_images_sidebar img {
@@ -450,16 +452,16 @@ html, body {
 
   /*  ------------------- Add to Cart Pressing and Summary Appearing ----------------------- */
   .cart-notification {
-    position: absolute; /* makes it float above everything */
-    top: 225px; /* distance from the top of the screen */
-    right: 0px; /* distance from the right edge */
+    position: absolute; 
+    top: 225px; 
+    right: 0px; 
     width: 400px;
     background-color: #dedede;
     border: 2px solid rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     font-family: Arial, sans-serif;
-    z-index: 9999; /* ensures it's on top */
+    z-index: 9999; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
   
@@ -472,7 +474,6 @@ html, body {
   
       .cart-notification p {
         text-align: center;
-
       }
   
   .cart-item {
@@ -481,32 +482,32 @@ html, body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  
-  .cart-item img {
-    width: 50px;
-    height: 100%;
-    object-fit: cover;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .item-details {
-    flex-grow: 1;
-  }
-  
-  .item-name {
-    text-decoration: underline;
-    font-weight: bold;
-  }
-  
-  .item-price {
-    text-align: right;
-  }
-  
-  .item-price .price {
-    text-decoration: underline;
-    font-weight: bold;
-  }
+      
+      .cart-item img {
+        width: 50px;
+        height: 100%;
+        object-fit: cover;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+      }
+      
+      .item-details {
+        flex-grow: 1;
+      }
+      
+      .item-name {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      
+      .item-price {
+        text-align: right;
+      }
+      
+      .item-price .price {
+        text-decoration: underline;
+        font-weight: bold;
+      }
   
   hr {
     margin: 15px 0;
@@ -521,8 +522,8 @@ html, body {
   }
   
   .view-cart-button {
-    display: block; /* makes margin auto work */
-    margin: 20px auto 0; /* top: 15px, sides: auto (center), bottom: 0 */
+    display: block; 
+    margin: 20px auto 0; 
     padding: 10px 20px;
     background-color: white;
     border: 2px solid orange;
@@ -544,7 +545,7 @@ html, body {
     color: #000000;
   }
   
-  /* Hidden by default */
+
   .hidden {
     display: none;
   }
@@ -577,6 +578,9 @@ html, body {
       display: block;
     }
 
+
+
+/* ----------------- Responsive for phone size --------------- */
     @media (max-width: 600px) {
       .cart-notification {
         width: 70%;
@@ -615,7 +619,7 @@ html, body {
       }
     
       .buy_later {
-        width: 100%;
+        width: 50%;
         font-size: 14px;
       }
     
@@ -686,8 +690,8 @@ html, body {
           font-family: "Jacques Francois", serif;
           font-size: 18px;
           margin-left: 60px;
-          margin-top: 5px;       /* Add this line to reduce space above the <p> */
-          margin-bottom: 10px;   /* Keep or adjust this as needed */
+          margin-top: 5px;       
+          margin-bottom: 10px;   
         }
         
         .product_description_description ul {
@@ -737,7 +741,7 @@ html, body {
           font-family: "Jacques Francois", serif;
           font-size: 15px;
           margin-left: 25px;
-          margin-top: 5px;       /* Add this line to reduce space above the <p> */
+          margin-top: 5px;       
           margin-bottom: 10px;
         
         }
@@ -770,16 +774,9 @@ html, body {
             }
   }
 
-
-
-
-   
-
-
-  
      /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
      .footer {
-      background-image: url('../img/black_rectangle_footer.jpg');
+      background-image: url('img/black_rectangle_footer.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       display: flex;
@@ -825,10 +822,10 @@ html, body {
       width: auto;
     }
   
-        /* Responsive for phone */
+        /* -------- Responsive for phone ---------- */
         @media (max-width: 600px) {
           .footer {
-            background-image: url('img/black_rectangle_footer.jpg');
+            background-image: url('../img/black_rectangle_footer.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;

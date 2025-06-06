@@ -1,168 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata for the page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Google Fonts for styling text -->
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+    <!-- External CSS for this product page -->
     <link rel="stylesheet" href="css/product_page_one.css">
 </head>
 
 <body>
-     <section class = "promo">
-            <div class="banner">
-                <div class="red_rectangle"></div>
-                <div class="marquee">
-                  <div class="marquee-content">
+
+    <!-- Top promotional banner with scrolling text -->
+    <section class="promo">
+        <div class="banner">
+            <div class="red_rectangle"></div>
+            <div class="marquee">
+                <div class="marquee-content">
                     <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
                     <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
                     <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
                     <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                  </div>
                 </div>
-              </div>
-            </section>
-        <section class="top_pattern_logo"> 
-            <img src="img/background_top_patterns.png" class="top_pattern">
-            <img src="img/small_retro_logo_top_pattern.png" class="small_retro_logo">
-        </section>
-
-        <nav>
-          <div class="menu-toggle">☰</div>
-            <ul class="nav_links">
-                <li>Home</li>
-                <li>Latest Arrivals</li>
-                <li>Menswear</li>
-                <li>Womenswear</li>
-                <li>Accessories</li>
-                <li>About Us</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>FAQ</li>
-            </ul>
-            <div class="nav_icons"> 
-                <img src="img/search_icon.png" alt="Search Icon">
-                <img src="img/avatar_login.png" alt="Avatar Login">
-                <div class="img/cart_icon_wrapper">
-                  <img src="img/shoppingcart_icon.png" alt="Shopping Cart" id="cart-icon">
-                  <div id="cart-badge" class="cart-badge">0</div>
-              </div>
-              </div>
-         </nav>
-
-         <section class="main_product_page">
-          <!-- Left Side with background set in CSS -->
-
-      
-
-          <div class="product_images_left">
-            <a href="search_results.html" class="back-to-results">← Back to Search Results</a>
-          
-            <div class="images-container">
-              <div class="small_images_sidebar">
-                <img src="img/product_one_small_image1.jpg">
-                <img src="img/product_one_small_image2.jpg">
-                <img src="img/product_one_small_image3.jpg">
-              </div>
-              <img class="main_image" src="img/product_one_img1.png">
             </div>
-          </div>
+        </div>
+    </section>
 
-          
-        
-          <!-- Right Side -->
-          <div class="product_description_section">
-                <div class="product_description_header">
-                  <h1>Diesel Brand Jacket</h1>
-                  <h2>$95.00</h2>
-                  <button class="pink_rectangle" 
-                  data-name="Diesel Brand Jacket" 
-                  data-price="95.00" 
-                  data-img="img/product_one.jpg">
-                  Add to Cart
+    <!-- Decorative top logo section -->
+    <section class="top_pattern_logo"> 
+        <img src="img/background_top_patterns.png" class="top_pattern">
+        <img src="img/small_retro_logo_top_pattern.png" class="small_retro_logo">
+    </section>
+
+    <!-- Main navigation menu -->
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav_links">
+            <li>Home</li>
+            <li>Latest Arrivals</li>
+            <li>Menswear</li>
+            <li>Womenswear</li>
+            <li>Accessories</li>
+            <li>About Us</li>
+            <li>Blog</li>
+            <li>Contact</li>
+            <li>FAQ</li>
+        </ul>
+        <div class="nav_icons"> 
+            <img src="img/search_icon.png" alt="Search Icon">
+            <img src="img/avatar_login.png" alt="Avatar Login">
+
+            <!-- Cart icon with badge -->
+            <div class="img/cart_icon_wrapper">
+                <img src="img/shoppingcart_icon.png" alt="Shopping Cart" id="cart-icon">
+                <div id="cart-badge" class="cart-badge">0</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main product section -->
+    <section class="main_product_page">
+
+        <!-- Left image section with sidebar thumbnails and main image -->
+        <div class="product_images_left">
+            <a href="search_results.html" class="back-to-results">← Back to Search Results</a>
+
+            <div class="images-container">
+                <div class="small_images_sidebar">
+                    <img src="img/product_one_small_image1.jpg">
+                    <img src="img/product_one_small_image2.jpg">
+                    <img src="img/product_one_small_image3.jpg">
+                </div>
+                <img class="main_image" src="img/product_one_img1.png">
+            </div>
+        </div>
+
+        <!-- Right description section -->
+        <div class="product_description_section">
+            <div class="product_description_header">
+                <h1>Diesel Brand Jacket</h1>
+                <h2>$95.00</h2>
+
+                <!-- Add to Cart button with product data attributes -->
+                <button class="pink_rectangle" 
+                        data-name="Diesel Brand Jacket" 
+                        data-price="95.00" 
+                        data-img="img/product_one.jpg">
+                    Add to Cart
                 </button>
-                    <div id="cart-notification" class="cart-notification hidden">
-                      <button id="close-cart-notification" class="close-button">×</button>
-                      <h2>YAY</h2>
-                      <p>Item Added to Cart</p>
-                    
-                      <div id="cart-items-container"></div>
-                    
-                      <hr />
-                    
-                      <div class="totals-row">
+
+                <!-- Notification shown when item added to cart -->
+                <div id="cart-notification" class="cart-notification hidden">
+                    <button id="close-cart-notification" class="close-button">×</button>
+                    <h2>YAY</h2>
+                    <p>Item Added to Cart</p>
+
+                    <div id="cart-items-container"></div>
+
+                    <hr />
+                    <div class="totals-row">
                         <p id="total-items">Total Items: 0</p>
                         <p id="total-price">Total Price: $0.00</p>
-                      </div>
-                    
-                    <a href="cart_page.html" class="view-cart-button">View Cart</a>
                     </div>
+                    <a href="cart_page.html" class="view-cart-button">View Cart</a>
                 </div>
-            <img src = "img/buy_with_shop_pay.jpg" class = "buy_later">
+            </div>
+
+            <!-- Payment image and label -->
+            <img src="img/buy_with_shop_pay.jpg" class="buy_later">
             <p class="payment_options_text">More Payment Options</p>
             <hr>   
 
-                <div class="product_description_description">
-                    <h1>Description</h1>
-                   
-                    <h2>Size</h2>
-                        <p>Tagged Size L</p>
-                    <h2>Measurements (cm)</h2>
-                        <table class="my-table">
-                          <tr>
-                            <td>Chest</td>
-                            <td>Length</td>
-                            <td>Arms</td>
-                          </tr>
-                          <tr>
-                            <td>62</td>
-                            <td>66</td>
-                            <td>63</td>
-                          </tr>
-                        </table>
-                    <h2>Materials</h2>
-                        <p>100% Polyester with fleeced lining</p>
-                    <h2>Features</h2>
-                        <ul>
-                          <li>Diesel patch motif to single chest zip pocket</li>
-                          <li>2 pockets to front</li>
-                          <li>Press stud button up tabs to back of waistband for adjustable sizing</li>
-                        </ul>
-              </div>
-          </div>
-        </section>
+            <!-- Product details: size, measurements, materials, features -->
+            <div class="product_description_description">
+                <h1>Description</h1>
 
-        <footer class="footer">
-          <img src="img/retro_star_logo.jpg" class="footer_logo">
-        
-          <div class="footer_words">
+                <h2>Size</h2>
+                <p>Tagged Size L</p>
+
+                <h2>Measurements (cm)</h2>
+                <table class="my-table">
+                    <tr>
+                        <td>Chest</td>
+                        <td>Length</td>
+                        <td>Arms</td>
+                    </tr>
+                    <tr>
+                        <td>62</td>
+                        <td>66</td>
+                        <td>63</td>
+                    </tr>
+                </table>
+
+                <h2>Materials</h2>
+                <p>100% Polyester with fleeced lining</p>
+
+                <h2>Features</h2>
+                <ul>
+                    <li>Diesel patch motif to single chest zip pocket</li>
+                    <li>2 pockets to front</li>
+                    <li>Press stud button up tabs to back of waistband for adjustable sizing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with sections and social icons -->
+    <footer class="footer">
+        <img src="img/retro_star_logo.jpg" class="footer_logo">
+
+        <div class="footer_words">
             <h2>Our Products</h2>
             <h2>About Us</h2>
             <h2>Our Policies</h2>
-        
+
             <div class="follow_section">
-              <h2>Follow Us</h2>
-              <div class="follow_logos">
-                <img src="img/icon_facebook.png">
-                <img src="img/icon_insta.png">
-                <img src="img/icon_tiktok.jpg">
-              </div>
+                <h2>Follow Us</h2>
+                <div class="follow_logos">
+                    <img src="img/icon_facebook.png">
+                    <img src="img/icon_insta.png">
+                    <img src="img/icon_tiktok.jpg">
+                </div>
             </div>
-        
+
             <h2>Create Account</h2>
-          </div>
-        </footer>
-        <script>
-          window.productInfo = {
+        </div>
+    </footer>
+
+    <!-- Script used to hold product data -->
+    <script>
+        window.productInfo = {
             name: 'Diesel Brand Jacket',
             price: 95.00,
             image: 'img/product_one.jpg'
-          };
-        </script>
+        };
+    </script>
 
-        <script src="jss/product_page_two.js"></script>
-      
+    <!-- JS file for add-to-cart functionality (filename should probably be `product_page_one.js`) -->
+    <script src="jss/product_page_two.js"></script>
+
 </body>
 </html>

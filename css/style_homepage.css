@@ -14,11 +14,10 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden; /* or any fixed height */
+  overflow: hidden; 
 }
 
   /*------------------ THIS SECTION IS FOR THE FIRST MOVING IMAGE STACK -----------------------*/
-/* ------------------ FIRST MOVING IMAGES STACK ----------------------- */
 .moving_images_one {
   width: 10vw; /* responsive instead of 10% */
   height: 150vh; /* responsive instead of 200% */
@@ -54,7 +53,7 @@ header {
   }
 }
 
-/* ------------------ SECOND MOVING IMAGES STACK ----------------------- */
+/* ----------------------------------- SECOND MOVING IMAGES STACK ------------------------------------ */
 .moving_images_two {
   width: 10vw;
   height: 100vh;
@@ -90,7 +89,7 @@ header {
   }
 }
 
-/* ------------------ THIRD MOVING IMAGES STACK ----------------------- */
+/* -------------------------------- THIRD MOVING IMAGES STACK ----------------------------- */
 .moving_images_three {
   width: 10vw;
   height: 150vh;
@@ -117,6 +116,7 @@ header {
   display: block;
 }
 
+  /*------------ responsive for phone --------------*/
 @media (max-width: 600px) {
   header {
     position: relative;
@@ -159,7 +159,7 @@ header {
     }  
   }
 
-  /*------------------ THIS SECTION IS FOR THE BANNER  -----------------------*/
+  /*----------------------------- THIS SECTION IS FOR THE HOMEPAGE BANNER  -----------------------------*/
 
 .black_rectangle {
   position: absolute;
@@ -192,7 +192,7 @@ header {
     }
   }
 
-  /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
+  /*---------------------- THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP ---------------------------*/
 
   .banner {
     position: relative;
@@ -249,6 +249,7 @@ header {
   }
 }
 
+  /*-------- responsive for phone ----------*/
 @media (max-width: 390px) {
   .red_rectangle,
   .marquee {
@@ -318,37 +319,8 @@ header {
     }
   }
 
-/*-------- responsive for surface pro  ----------*/
-@media (max-width: 1400px) and (min-width: 1000px) {
-  .header-content {
-    position: absolute;
-    bottom: 100px;       /* Move down the screen */
-    left: 10%;        /* Starting from 10% from the left */
-    transform: translateX(-30%);  /* Pulls it slightly left */
-    text-align: center;
-    z-index: 6;
-  }
 
-  .header-content {
-    top: 500px;
-    left: 20%;
-
-  }
-  .header-content h1 {
-    font-size: 120px;
-  }
-
-  .header-content h2 {
-    font-size:50px;
-  }
-
-  .retro_lines {
-    top: 350px; /* also moved up to stay under heading */
-    left: 60px;
-    width: 700px;
-  }
-}
-  /*------------------ THIS SECTION IS FOR THE NAVIGATION BAR -----------------------*/
+  /*-------------------------- THIS SECTION IS FOR THE NAVIGATION BAR -----------------------------*/
   nav {
     margin-top: -90px; /* adjust as needed */
     position: relative;
@@ -421,14 +393,12 @@ header {
     align-self: center;
   }
 
-      /* 5. Ensure hamburger and icons remain centered vertically */
 
   
   /* ----------- Responsive for phones ------------- */
   @media (max-width: 600px) {
-    /* 1. Remove default UL margin/padding entirely */
     .menu-toggle {
-      display: block;          /* hamburger is visible on mobile */
+      display: block;          
       font-size: 28px;
       background: none;
       color: white;
@@ -442,7 +412,7 @@ header {
     .nav_links {
       margin: 0;
       padding: 0;
-      display: none;          /* still hidden by default */
+      display: none;          
       position: absolute;
       top: 60px;
       left: 0;
@@ -452,7 +422,7 @@ header {
       z-index: 100;
     }
   
-    /* 2. Show when active */
+
     .nav_links.active {
       display: flex;
     }
@@ -481,12 +451,11 @@ header {
     }
     
   
-    /* 3. Reset any extra spacing on each LI */
     .nav_links li {
       list-style: none;
-      margin: 0;              /* remove any default margin */
-      padding-top: 2px;       /* small top padding */
-      padding-bottom: 2px;    /* small bottom padding */
+      margin: 0;             
+      padding-top: 2px;       
+      padding-bottom: 2px;    
       padding-left: 5px;
       padding-right: 5px;
       border-bottom: 1px solid white;
@@ -494,28 +463,29 @@ header {
       font-family: "Jacques Francois", serif;
       font-size: 15px;
       text-align: left;
-      line-height: 1.2;       /* ensures line height is tight */
+      line-height: 1.2;      
     }
   
-    /* 4. Remove padding/margin on the <a> */
+
     .nav_links li a {
       display: block;
       width: 100%;
       margin: 0;
       padding: 0;
-      line-height: 1.2;       /* match the li’s line height */
+      line-height: 1.2;      
       text-decoration: none;
       color: inherit;
     }
   
     .nav_links li:last-child {
       border-bottom: none;
+    }
         
     .nav_icons {
       display: flex;
       gap: 20px;
       margin-right: 50px;
-      align-items: center;     /* vertically center icons in the 70px nav bar */
+      align-items: center;     
     }
   
     .nav_icons img {
@@ -525,158 +495,172 @@ header {
       margin-top: 0;
     }
     }
-  }
-      
-
-
   
   
  /*------------------ THIS SECTION IS FOR THE WHITE SEARCH RESULTS -----------------------*/
   
-  #menswear-btn .dropdown-wrapper {
-    position: relative;
-    display: inline-block;
-  }
+/* Container wrapping the menswear button and its dropdown */
+#menswear-btn .dropdown-wrapper {
+  position: relative;        /* Establish positioning context for absolute children */
+  display: inline-block;     /* Allow horizontal layout and contain dropdown */
+}
 
-  #menswear-btn:hover {
-   text-decoration: underline;
-  }
-  /* The dropdown box */
-  #menswear-box {
-    position: absolute;
-    top: 100%;
-    width: 60%;
-    height: 740%;
-    padding: 15px;
-    display: none;
-    z-index: 100;
-    background-color: rgb(250, 249, 249);
-    border-radius: 10px;
-    border: 2px solid rgb(84, 83, 83);
-    box-sizing: border-box;
-    box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.3); /* ← shadow added here */
-  }
+/* Underline menswear button text on hover for visual feedback */
+#menswear-btn:hover {
+ text-decoration: underline;
+}
 
-    #menswear-box h2 {
-      position: absolute;
-      font-size: 30px;
-      color: rgb(0, 0, 0);
-      margin: 2px 0;
-      font-family: "Marcellus SC", serif;
-      font-weight: normal;
-      text-decoration: underline;
-    }
-    #menswear-box h2:nth-of-type(1) {
-      top: 5%;
-      left: 8%;
-    }
-        /* Style the "Specials" list */
-        .specials-list {
-          list-style-type: none; /* Remove default bullets */
-          padding-left: 0;       /* Remove default padding */
-          margin-bottom: 1em;
-          margin-top: 50px;
-         }
-         
-        /* each item of Specials in search results */ 
-         .specials-list li {
-          color: black;
-          font-size: 17px;
-          padding-top: 5px; 
-          margin-bottom: 8px;
-        }
+/* Dropdown box styling for the menswear menu */
+#menswear-box {
+  position: absolute;        /* Position dropdown relative to its nearest positioned ancestor */
+  top: 100%;                /* Position dropdown immediately below the button */
+  width: 60%;               /* Width relative to the parent container */
+  height: 740%;             /* Very tall dropdown to fit all categories */
+  padding: 15px;            /* Inner spacing inside dropdown */
+  display: none;            /* Hidden by default, shown on interaction */
+  z-index: 100;             /* Sit above most other page elements */
+  background-color: rgb(250, 249, 249); /* Light off-white background */
+  border-radius: 10px;      /* Rounded corners */
+  border: 2px solid rgb(84, 83, 83); /* Dark border around dropdown */
+  box-sizing: border-box;   /* Include padding and border in element's width/height */
+  box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
 
-        #menswear-box .specials-list {
-          position: absolute;
-          top: 4%;     /* Move up or down */
-          left: 9%;
-        }
-    
-    #menswear-box h2:nth-of-type(2) {   /* FOR TOPS */
-      top: 5%;
-      left: 35%;
-    }
-        .tops-list {
-          list-style-type: none; /* Remove default bullets */
-          padding-left: 0;       /* Remove default padding */
-          margin-bottom: 1em;
-          margin-top: 50px;
-      
-        }
-        /* each item of Tops in search results */ 
-        .tops-list li {
-          color: black;
-          font-size: 17px;
-          padding-top: 5px;
-          margin-bottom: 8px;
-        }
+/* Main headings inside the dropdown */
+#menswear-box h2 {
+  position: absolute;       /* Position each heading explicitly */
+  font-size: 30px;          /* Large heading font size */
+  color: rgb(0, 0, 0);      /* Black text */
+  margin: 2px 0;            /* Minimal vertical margin */
+  font-family: "Marcellus SC", serif; /* Elegant serif font */
+  font-weight: normal;      /* Normal weight for the font */
+  text-decoration: underline; /* Underline for emphasis */
+}
 
-        #menswear-box .tops-list {
-          position: absolute;
-          top: 4%;     /* Move up or down */
-          left: 36%;    /* Move right */
-        }
+/* Positioning the first heading (e.g., "Specials") */
+#menswear-box h2:nth-of-type(1) {
+  top: 5%;                  /* 5% from top of dropdown */
+  left: 8%;                 /* 8% from left side */
+}
 
-    #menswear-box h2:nth-of-type(3) {  /* FOR BOTTOMS */
-      top: 70%;
-      left: 35%;
-    }
-        .bottoms-list {
-          list-style-type: none; 
-          padding-left: 0;       
-          margin-bottom: 1em;
-          margin-top: 50px;
-      
-        }
-        /* each item of Tops in search results */ 
-        .bottoms-list li {
-          color: black;
-          font-size: 17px;
-          padding-top: 5px;
-          margin-bottom: 8px;
-        }
+/* Style for the "Specials" list within the dropdown */
+.specials-list {
+  list-style-type: none;    /* Remove default bullet points */
+  padding-left: 0;          /* Remove default left padding */
+  margin-bottom: 1em;       /* Space below the list */
+  margin-top: 50px;         /* Space above the list */
+}
 
-        #menswear-box .bottoms-list {
-          position: absolute;
-          top: 69%;     /* Move up or down */
-          left: 36%;    /* Move right */
-        }
-    
-    #menswear-box h2:nth-of-type(4) {
-      top: 5%;
-      left: 60%;
-    }
-        .shopbybrand-list {
-          list-style-type: none; /* Remove default bullets */
-          padding-left: 0;       /* Remove default padding */
-          margin-bottom: 1em;
-          margin-top: 50px;
-      
-        }
-        /* each item of Tops in search results */ 
-        .shopbybrand-list li {
-          color: black;
-          font-size: 17px;
-          padding-top: 5px;
-          margin-bottom: 8px;
-        }
+/* Individual list items in "Specials" */
+.specials-list li {
+  color: black;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-bottom: 8px;
+}
 
-        #menswear-box .shopbybrand-list {
-          position: absolute;
-          top: 4%;     /* Move up or down */
-          left: 61%;    /* Move right */
-        }
+/* Position the "Specials" list relative to dropdown */
+#menswear-box .specials-list {
+  position: absolute;
+  top: 4%;                  /* Slightly down from top */
+  left: 9%;                 /* Slightly from left edge */
+}
 
-    #menswear-box .denim_model {  /* Image inside the white search results rectanglee */
-          position: absolute;
-          bottom: 7%;
-          left: 8%;
-          width: 150px; /* adjust size as needed */
-          height: auto;
-        }
+/* Position the second heading (e.g., "Tops") */
+#menswear-box h2:nth-of-type(2) {
+  top: 5%;
+  left: 35%;                /* Positioned more to the right */
+}
 
+/* Style for the "Tops" list */
+.tops-list {
+  list-style-type: none;    /* Remove bullets */
+  padding-left: 0;
+  margin-bottom: 1em;
+  margin-top: 50px;
+}
 
+/* Items within the "Tops" list */
+.tops-list li {
+  color: black;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-bottom: 8px;
+}
 
+/* Position the "Tops" list */
+#menswear-box .tops-list {
+  position: absolute;
+  top: 4%;                  /* Vertical alignment */
+  left: 36%;                /* Horizontal offset */
+}
+
+/* Position the third heading (e.g., "Bottoms") */
+#menswear-box h2:nth-of-type(3) {
+  top: 70%;                 /* Lower in the dropdown */
+  left: 35%;                /* Same horizontal position as "Tops" */
+}
+
+/* Style for the "Bottoms" list */
+.bottoms-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+  margin-top: 50px;
+}
+
+/* Items within the "Bottoms" list */
+.bottoms-list li {
+  color: black;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-bottom: 8px;
+}
+
+/* Position the "Bottoms" list */
+#menswear-box .bottoms-list {
+  position: absolute;
+  top: 69%;
+  left: 36%;
+}
+
+/* Position the fourth heading (e.g., "Shop By Brand") */
+#menswear-box h2:nth-of-type(4) {
+  top: 5%;
+  left: 60%;                /* Positioned far right */
+}
+
+/* Style for the "Shop By Brand" list */
+.shopbybrand-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+  margin-top: 50px;
+}
+
+/* Items within the "Shop By Brand" list */
+.shopbybrand-list li {
+  color: black;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-bottom: 8px;
+}
+
+/* Position the "Shop By Brand" list */
+#menswear-box .shopbybrand-list {
+  position: absolute;
+  top: 4%;
+  left: 61%;
+}
+
+/* Styling and positioning of an image inside the dropdown */
+#menswear-box .denim_model {
+  position: absolute;       /* Positioned relative to dropdown */
+  bottom: 7%;               /* 7% from bottom of dropdown */
+  left: 8%;                 /* 8% from left */
+  width: 150px;             /* Fixed width */
+  height: auto;             /* Height scales proportionally */
+}
 
      /*---------------------- THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
      .Customer_Review_Section {
@@ -757,7 +741,7 @@ header {
     margin-bottom: 2px;
   }
 
-/* responsiveness for phone */
+/* --------- responsiveness for phone ------------- */
 @media (max-width: 600px) {
   
   .background-images {
@@ -805,6 +789,8 @@ header {
   }
 }
 
+ /*---------------------- THIS SECTION IS FOR THE SHOPPING CATEGORIES-----------------------*/
+
 
 .shop_categories {
   background-image: url('../img/red_gradient_background.png');
@@ -823,7 +809,7 @@ header {
   color: white;
 }
 
-/* ⬇️ Add scroll here, but ONLY to row */
+
 .categories_row {
   display: flex;
   flex-wrap: nowrap;
@@ -834,7 +820,7 @@ header {
   scroll-behavior: smooth;
 }
 
-/* Optional: prettier scroll bar */
+
 .categories_row::-webkit-scrollbar {
   height: 10px;
 }
@@ -1019,14 +1005,12 @@ header {
         margin-top: 7px;
       }
     
-      /* ✅ SCROLLING container */
       .blog_scroll_wrapper {
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
       }
     
-      /* ✅ FLEX container inside scroll wrapper */
       .blog_images {
         flex-wrap: nowrap;
         gap: 20px;
@@ -1097,7 +1081,7 @@ header {
     width: auto;
   }
 
-      /* Responsive for phone */
+      /*  -------------- Responsive for phone ------------- */
       @media (max-width: 600px) {
         .footer {
           background-image: url('../img/black_rectangle_footer.jpg');
@@ -1148,7 +1132,7 @@ header {
         
 
 
-  /* ----------- Responsive for phones ------------- */
+  /* ----------- NAVIGATION DROPDOWN MENU RESPONSIVE FOR PHONE AND DESKTOP DIFFERENT VERSIONS ------------- */
   @media (max-width: 600px) {
     /* 1. Remove default UL margin/padding entirely */
     .menu-toggle {

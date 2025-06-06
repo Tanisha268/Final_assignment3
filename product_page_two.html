@@ -1,154 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/product_page_two.css">
+  <!-- Meta & Title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/product_page_two.css">
 </head>
 
 <body>
-     <section class = "promo">
-            <div class="banner">
-                <div class="red_rectangle"></div>
-                <div class="marquee">
-                  <div class="marquee-content">
-                    <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                    <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                    <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                    <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-        <section class="top_pattern_logo"> 
-            <img src="img/background_top_patterns.png" class="top_pattern">
-            <img src="img/small_retro_logo_top_pattern.png" class="small_retro_logo">
-        </section>
 
-        <nav>
-          <div class="menu-toggle">☰</div>
-            <ul class="nav_links">
-                <li>Home</li>
-                <li>Latest Arrivals</li>
-                <li>Menswear</li>
-                <li>Womenswear</li>
-                <li>Accessories</li>
-                <li>About Us</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>FAQ</li>
-            </ul>
-            <div class="nav_icons"> 
-                <img src="img/search_icon.png" alt="Search Icon">
-                <img src="img/avatar_login.png" alt="Avatar Login">
-                <img src="img/shoppingcart_icon.png" alt="Shopping Cart">
-              </div>
-         </nav>
+  <!-- Top Promo Banner with Marquee Text -->
+  <section class="promo">
+    <div class="banner">
+      <div class="red_rectangle"></div>
+      <div class="marquee">
+        <div class="marquee-content">
+          <!-- Repeating Sale Text -->
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+          <p>END OF SUMMER: Buy one, Get 50% Off - Until Stocks Last</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-         <section class="main_product_page">
-          <!-- Left Side with background set in CSS -->
+  <!-- Top Decorative Pattern and Logo -->
+  <section class="top_pattern_logo"> 
+    <img src="img/background_top_patterns.png" class="top_pattern">
+    <img src="img/small_retro_logo_top_pattern.png" class="small_retro_logo">
+  </section>
 
-          <div class="product_images_left">
-            <a href="search_results.html" class="back-to-results">← Back to Search Results</a>
-            <div class="small_images_sidebar">
-              <img src="img/jacket2_small1.jpg">
-              <img src="img/jacket2_small2.jpg">
-              <img src="img/jacket2_small3.jpg">
-            </div>
-            <img class="main_image" src="img/product_two_img1.jpg">
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="menu-toggle">☰</div> <!-- Mobile Menu Icon -->
+    <ul class="nav_links">
+      <!-- Navigation Items -->
+      <li>Home</li>
+      <li>Latest Arrivals</li>
+      <li>Menswear</li>
+      <li>Womenswear</li>
+      <li>Accessories</li>
+      <li>About Us</li>
+      <li>Blog</li>
+      <li>Contact</li>
+      <li>FAQ</li>
+    </ul>
+    <div class="nav_icons"> 
+      <!-- Search, Account, Cart Icons -->
+      <img src="img/search_icon.png" alt="Search Icon">
+      <img src="img/avatar_login.png" alt="Avatar Login">
+      <img src="img/shoppingcart_icon.png" alt="Shopping Cart">
+    </div>
+  </nav>
+
+  <!-- Main Product Page Section -->
+  <section class="main_product_page">
+
+    <!-- Left Product Images -->
+    <div class="product_images_left">
+      <a href="search_results.html" class="back-to-results">← Back to Search Results</a>
+      
+      <!-- Small Thumbnails -->
+      <div class="small_images_sidebar">
+        <img src="img/jacket2_small1.jpg">
+        <img src="img/jacket2_small2.jpg">
+        <img src="img/jacket2_small3.jpg">
+      </div>
+
+      <!-- Main Product Image -->
+      <img class="main_image" src="img/product_two_img1.jpg">
+    </div>
+
+    <!-- Right Product Info and Add to Cart -->
+    <div class="product_description_section">
+
+      <!-- Product Title and Price -->
+      <div class="product_description_header">
+        <h1>Navy Green Spray Jacket</h1>
+        <h2>$39.00</h2>
+
+        <!-- Add to Cart Button -->
+        <button class="pink_rectangle">Add to Cart</button>
+
+        <!-- Cart Notification Pop-up -->
+        <div id="cart-notification" class="cart-notification hidden">
+          <button id="close-cart-notification" class="close-button">×</button>
+          <h2>YAY</h2>
+          <p>Item Added to Cart</p>
+
+          <div class="cart-items-container"></div>
+
+          <hr />
+          <div class="totals-row">
+            <p class="total-items">Total Items: 0</p>
+            <p class="total-price">Total Price: $0.00</p>
           </div>
-        
-      ]  <!-- Right Side -->
-          <div class="product_description_section">
-                <div class="product_description_header">
-                  <h1>Navy Green Spray Jacket</h1>
-                  <h2>$39.00</h2>
-                    <button class="pink_rectangle">
-                      Add to Cart
-                    </button>
-                    <div id="cart-notification" class="cart-notification hidden">
-                      <button id="close-cart-notification" class="close-button">×</button>
-                      <h2>YAY</h2>
-                      <p>Item Added to Cart</p>
-                    
-                      <div class="cart-items-container"></div>
-                    
-                      <hr />
-                      <div class="totals-row">
-                        <p class="total-items">Total Items: 0</p>
-                        <p class="total-price">Total Price: $0.00</p>
-                      </div>
-                    
-                      <a href="cart_page.html" class="view-cart-button">View Cart</a>
-                    </div>
-                    
-        
-                </div>
-            <img src = "img/buy_with_shop_pay.jpg" class = "buy_later">
-            <p class="payment_options_text">More Payment Options</p>
-            <hr>   
 
-                <div class="product_description_description">
-                    <h1>Description</h1>
-                   
-                    <h2>Size</h2>
-                        <p>Tagged Size L</p>
-                    <h2>Measurements (cm)</h2>
-                        <table class="my-table">
-                          <tr>
-                            <td>Chest</td>
-                            <td>Length</td>
-                            <td>Arms</td>
-                          </tr>
-                          <tr>
-                            <td>62</td>
-                            <td>66</td>
-                            <td>63</td>
-                          </tr>
-                        </table>
-                    <h2>Materials</h2>
-                        <p>100% Polyester with fleeced lining</p>
-                    <h2>Features</h2>
-                        <ul>
-                          <li>Diesel patch motif to single chest zip pocket</li>
-                          <li>2 pockets to front</li>
-                          <li>Press stud button up tabs to back of waistband for adjustable sizing</li>
-                        </ul>
-              </div>
-          </div>
-        </section>
-        <footer class="footer">
-          <img src="img/retro_star_logo.jpg" class="footer_logo">
-        
-          <div class="footer_words">
-            <h2>Our Products</h2>
-            <h2>About Us</h2>
-            <h2>Our Policies</h2>
-        
-            <div class="follow_section">
-              <h2>Follow Us</h2>
-              <div class="follow_logos">
-                <img src="img/icon_facebook.png">
-                <img src="img/icon_insta.png">
-                <img src="img/icon_tiktok.jpg">
-              </div>
-            </div>
-        
-            <h2>Create Account</h2>
-          </div>
-        </footer>
-        <script>
-          window.productInfo = {
-            name: 'Navy Green Spray Jacket',
-            price: 39.00,
-            image: 'img/product_two.jpg'
-          };
-        </script>
+          <a href="cart_page.html" class="view-cart-button">View Cart</a>
+        </div>
+      </div>
 
-        <script src="jss/product_page_two.js"></script>
+      <!-- Shop Pay Option -->
+      <img src="img/buy_with_shop_pay.jpg" class="buy_later">
+      <p class="payment_options_text">More Payment Options</p>
+      <hr>
+
+      <!-- Product Description Details -->
+      <div class="product_description_description">
+        <h1>Description</h1>
+
+        <!-- Size Info -->
+        <h2>Size</h2>
+        <p>Tagged Size L</p>
+
+        <!-- Measurements Table -->
+        <h2>Measurements (cm)</h2>
+        <table class="my-table">
+          <tr>
+            <td>Chest</td>
+            <td>Length</td>
+            <td>Arms</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td>66</td>
+            <td>63</td>
+          </tr>
+        </table>
+
+        <!-- Material Info -->
+        <h2>Materials</h2>
+        <p>100% Polyester with fleeced lining</p>
+
+        <!-- Features List -->
+        <h2>Features</h2>
+        <ul>
+          <li>Diesel patch motif to single chest zip pocket</li>
+          <li>2 pockets to front</li>
+          <li>Press stud button up tabs to back of waistband for adjustable sizing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <img src="img/retro_star_logo.jpg" class="footer_logo">
+
+    <div class="footer_words">
+      <!-- Footer Navigation Links -->
+      <h2>Our Products</h2>
+      <h2>About Us</h2>
+      <h2>Our Policies</h2>
+
+      <!-- Social Media Follow Section -->
+      <div class="follow_section">
+        <h2>Follow Us</h2>
+        <div class="follow_logos">
+          <img src="img/icon_facebook.png">
+          <img src="img/icon_insta.png">
+          <img src="img/icon_tiktok.jpg">
+        </div>
+      </div>
+
+      <h2>Create Account</h2>
+    </div>
+  </footer>
+
+  <!-- JavaScript Variables for Cart Functionality -->
+  <script>
+    window.productInfo = {
+      name: 'Navy Green Spray Jacket',
+      price: 39.00,
+      image: 'img/product_two.jpg'
+    };
+  </script>
+
+  <!-- External JS File -->
+  <script src="jss/product_page_two.js"></script>
 </body>
 </html>

@@ -332,7 +332,7 @@ html, body {
     color: #000000;
   }
 
-      /* -------- THE OR LINE -------- */
+      /* -------- PICKING WHAT SHOPPING OPTION I WANT  -------- */
 
       .shipping_option {
         display: flex;
@@ -386,7 +386,6 @@ html, body {
         .checkout_buttons img:hover {
           transform: scale(1.1);
         }
-            /* -------- PICKUP/ DELIVERY BUTTON -------- */
       
             .shipping_option {
               display: flex;
@@ -631,7 +630,7 @@ html, body {
       }
   }
 
-  /*------------------------------------- THIS SECTION IS FOR THE BUTTONS COME UP WHEN YOU CLICK PICK-UP  ---------------------------------------*/
+  /*------------------------------------- THIS SECTION IS FOR THE BUTTONS COMING UP WHEN YOU CLICK PICK-UP  ---------------------------------------*/
 
   .pickup_details {
     margin-left: 30px;

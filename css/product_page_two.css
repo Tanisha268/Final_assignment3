@@ -1,7 +1,8 @@
 html, body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
   
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
 .red_rectangle {
@@ -280,75 +281,7 @@ html, body {
               cursor: pointer;
             }
   
- /* ----------------- Responsive for phone size --------------- */
- .main_product_page {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: clamp(500px, 90vh, 700px); 
-}
-
-.main_image {
-  max-height: 80%;
-  margin-left: auto;
-  margin-right: clamp(40px, 8vw, 120px); 
-  max-width: 80%;
-  margin-top: clamp(40px, 8vh, 80px); 
-  z-index: 2;
-  justify-content: center;
-  position: relative;
-  border-radius: 10px;
-}
-    .back-to-results {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      font-family: 'Jacques Francoiss',serif;
-      font-size: 16px;
-      color: rgb(0, 0, 0);
-      padding: 6px 12px;
-      border-radius: 5px;
-      z-index: 5;
-      cursor: pointer;
-    }
-
-.images-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-}
-
-.product_images_left {
-  position: relative;
-  width: 60%;
-  height: clamp(500px, 90vh, 700px);
-  background-image: url('../img/background_retro_image.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-    .small_images_sidebar {
-      position: relative;
-      margin-top: clamp(400px, 90vh, 700px);
-      margin-right: auto;
-      margin-left: clamp(10px, 4vw, 30px); 
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: clamp(20px, 5vh, 50px); 
-      z-index: 3;
-    }
-    
-          .small_images_sidebar img {
-            width: clamp(70px, 8vw, 115px); 
-            height: auto;
-            cursor: pointer;
-          }
-
+ 
 /* ----------------- Responsive for phone size --------------- */
 @media (max-width: 600px) {
   .main_product_page {
@@ -358,7 +291,7 @@ html, body {
 
   .product_images_left {
     position: relative;
-    width: 100vw;
+    width: 95%;
     height: auto;
     background-image: url('../img/background_retro_image.png');
     background-size: cover;
@@ -381,8 +314,8 @@ html, body {
   .main_image {
     max-width: 80vw;
     height: auto;
-    margin: 0 auto;
     z-index: 2;
+    margin-top: -8px;
   }
 
   .small_images_sidebar {
@@ -391,7 +324,7 @@ html, body {
     justify-content: center;
     gap: 25px;
     margin-top: 75px;
-    margin-left: 50px;
+    margin-left: 30px;
   }
 
   .small_images_sidebar img {
@@ -614,7 +547,7 @@ html, body {
       }
     
       .buy_later {
-        width: 100%;
+        width: 50%;
         font-size: 14px;
       }
     
