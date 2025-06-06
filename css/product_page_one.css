@@ -40,7 +40,7 @@ html, body {
     color: white;
     line-height: 70px;
     margin: 0;
-    padding-right: 50px; /* spacing between duplicated lines */
+    padding-right: 50px; 
   }
   
   @keyframes scrollText {
@@ -62,7 +62,7 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 70px; /* pushes below the red banner */
+    margin-top: 70px; 
     z-index: 1;
     position: relative;
   }
@@ -71,9 +71,9 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* perfectly center */
+    transform: translate(-50%, -50%); 
     z-index: 3;
-    width: 150px; /* adjust logo size as needed */
+    width: 150px;
     height: auto;
   }
 /* --------Responsive for phone size-------- */
@@ -82,13 +82,13 @@ html, body {
       width: 100%;
       height: 100%;
       display: block;
-      margin-top: 70px; /* pushes below the red banner */
+      margin-top: 70px; 
       z-index: 1;
       position: relative;
     }
     
     .small_retro_logo {
-      width: 50px; /* adjust logo size as needed */
+      width: 50px; 
     }
 
   }
@@ -99,7 +99,7 @@ html, body {
     position: relative;
     background-color: black;
     height: 60px;
-    width: 100%; /* Keep this at 100%! */
+    width: 100%; 
     display: flex;
     align-items: center;
     z-index: 5;
@@ -124,7 +124,7 @@ html, body {
 
 
   .cart_icon_wrapper {
-    position: relative; /* so badge is positioned relative to this */
+    position: relative; 
     display: inline-block;
   }
   
@@ -138,7 +138,7 @@ html, body {
     font-weight: bold;
     padding: 3px 6px;
     border-radius: 50%;
-    display: none; /* hide initially */
+    display: none; 
     min-width: 20px;
     height: 20px;
     line-height: 14px;
@@ -173,7 +173,6 @@ html, body {
  .nav_links li:hover {
     text-decoration: underline; 
 } 
-  /* Responsive for tablets and smaller */
  /* Hide the hamburger by default */
  .menu-toggle {
   display: none;
@@ -405,7 +404,7 @@ html, body {
 }
     /*------------------ THIS SECTION IS FOR THE PRODUCT DESCRIPTIONS HEADER-----------------------*/
     .product_description_section {
-      width: 50%; /* matches the left side */
+      width: 50%; 
       display: flex;
       flex-direction: column;
       color: #333;
@@ -565,8 +564,8 @@ html, body {
       margin-top: 8px;
       margin-bottom: 10px;
       user-select: none;
-      font-weight: 500;  /* slightly bolder */
-      letter-spacing: 0.05em; /* a bit spaced out */
+      font-weight: 500;  
+      letter-spacing: 0.05em;
       text-decoration: underline;
     }
 
@@ -776,7 +775,7 @@ html, body {
 
      /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
      .footer {
-      background-image: url('img/black_rectangle_footer.jpg');
+      background-image: url('../img/black_rectangle_footer.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       display: flex;
@@ -832,7 +831,6 @@ html, body {
             align-items: center;
             padding: 15px 20px;
             gap: 20px;
-            
           }
           
           .footer_logo {
@@ -863,7 +861,7 @@ html, body {
           }
           
           .follow_logos img {
-            height: 10px; /* adjust icon size */
+            height: 10px; 
             width: auto;
           }
         }

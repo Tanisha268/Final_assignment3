@@ -40,7 +40,7 @@ html, body {
     color: white;
     line-height: 70px;
     margin: 0;
-    padding-right: 50px; /* spacing between duplicated lines */
+    padding-right: 50px; 
   }
   
   @keyframes scrollText {
@@ -62,7 +62,7 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 70px; /* pushes below the red banner */
+    margin-top: 70px; 
     z-index: 1;
     position: relative;
   }
@@ -98,7 +98,7 @@ html, body {
     position: relative;
     background-color: black;
     height: 60px;
-    width: 100%; /* Keep this at 100%! */
+    width: 100%; 
     display: flex;
     align-items: center;
     z-index: 5;
@@ -141,7 +141,6 @@ html, body {
  .nav_links li:hover {
     text-decoration: underline; 
 } 
-  /* Responsive for tablets and smaller */
  /* Hide the hamburger by default */
  .menu-toggle {
   display: none;
@@ -168,7 +167,7 @@ html, body {
       }
 
       .nav_links {
-        display: none;  /* Hide the nav links */
+        display: none; 
       }
 
       .nav_icons img {
@@ -187,19 +186,19 @@ html, body {
   .confirmation_message {
     background-image: url("../img/background_retro_image.png");
     width: 100%;
-    height: 70vh;  /* full viewport height */
+    height: 70vh;  
     background-size: cover;  
     background-position: center;
     
     display: flex;
-    justify-content: center;  /* horizontal center */
+    justify-content: center;  
     text-align: center;
   }
   
   .confirmation_text {
     margin-top: 50px;
-    width: 100%;        /* full width for margin to work */
-    color: rgb(0, 0, 0);       /* or any color that contrasts with the bg */
+    width: 100%;       
+    color: rgb(0, 0, 0);       
     font-family: "Jacques Francois", serif;
   }
 
@@ -225,19 +224,19 @@ html, body {
         .confirmation_message {
             background-image: url("../img/background_retro_image.png");
             width: 100%;
-            height: 80vh;  /* full viewport height */
+            height: 80vh;  
             background-size: cover;  
             background-position: center;
             
             display: flex;
-            justify-content: center;  /* horizontal center */
+            justify-content: center;  
             text-align: center;
           }
           
           .confirmation_text {
             margin-top: 50px;
-            width: 100%;        /* full width for margin to work */
-            color: rgb(0, 0, 0);       /* or any color that contrasts with the bg */
+            width: 100%;        
+            color: rgb(0, 0, 0);       
             font-family: "Jacques Francois", serif;
           }
         
@@ -248,19 +247,18 @@ html, body {
         
                 .confirmation_text h2 {
                     font-size: 30px;
-              }
+               }
         
               .confirmation_text p {
                 font-size: 15px;
-            }
+              }
+
             .confirmation_text p:last-of-type {
                 font-size: 15px;
                     text-decoration: underline;
-         }
+             }
 
       }
-
-
 
     /*--------------------------- THIS SECTION IS FOR THE FOOTER ------------------------------*/
   .footer {
@@ -306,11 +304,11 @@ html, body {
   }
   
   .follow_logos img {
-    height: 20px; /* adjust icon size */
+    height: 20px; 
     width: auto;
   }
 
-      /* Responsive for phone */
+      /* ------- Responsive for phone ------ */
       @media (max-width: 600px) {
         .footer {
           background-image: url('../img/black_rectangle_footer.jpg');
@@ -351,7 +349,7 @@ html, body {
         }
         
         .follow_logos img {
-          height: 10px; /* adjust icon size */
+          height: 10px; 
           width: auto;
         }
       }

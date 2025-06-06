@@ -19,12 +19,12 @@ header {
 
   /*------------------ THIS SECTION IS FOR THE FIRST MOVING IMAGE STACK -----------------------*/
 .moving_images_one {
-  width: 10vw; /* responsive instead of 10% */
-  height: 150vh; /* responsive instead of 200% */
+  width: 10vw; 
+  height: 150vh;
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 65vw; /* instead of 65% */
+  left: 65vw; 
   z-index: 2;
 }
 
@@ -32,7 +32,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  gap: 2vh; /* instead of 30px */
+  gap: 2vh; 
   display: flex;
   flex-direction: column;
   animation: moveImagesUp 10s linear infinite;
@@ -122,7 +122,7 @@ header {
     position: relative;
     width: 100%;
     height: 50vh;
-    overflow: hidden; /* or any fixed height */
+    overflow: hidden;
   }
 
   .image_stack_one {
@@ -166,7 +166,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90vh; /* Matches .banner height */
+  height: 90vh; 
   background-color: black;
   z-index: 0;
 }
@@ -175,18 +175,18 @@ header {
   position: absolute;
   top: 0;
   left: 0; 
-  height: 90vh;; /* Matches .banner height */
+  height: 90vh; 
   object-fit: cover;
   z-index: 1;
 }
   /*-------- responsive for phone ----------*/
   @media (max-width: 600px) {
     .black_rectangle {
-      height: 57vh; /* or 60vh if you want it slightly taller */
+      height: 57vh; 
     }
   
     .background-image {
-      height: 57vh; /* make sure it matches */
+      height: 57vh; 
       object-fit: cover;
       left: -400px;
     }
@@ -197,7 +197,7 @@ header {
   .banner {
     position: relative;
     width: 100%;
-    height: 200px; /* Smaller height */
+    height: 200px; 
     overflow: hidden;
     z-index: 3;
   }
@@ -237,7 +237,7 @@ header {
   color: white;
   line-height: 70px;
   margin: 0;
-  padding-right: 50px; /* spacing between duplicated lines */
+  padding-right: 50px; 
 }
 
 @keyframes scrollText {
@@ -253,11 +253,11 @@ header {
 @media (max-width: 390px) {
   .red_rectangle,
   .marquee {
-    height: 30px; /* reduce height for small screen */
+    height: 30px; 
   }
 
   .marquee-content p {
-    font-size: 16px; /* shrink font */
+    font-size: 16px; 
     line-height: 50px;
     padding-right: 30px;
   }
@@ -265,9 +265,9 @@ header {
   /*------------------ THIS SECTION IS FOR THE WORDS + DESIGN ON THE BANNER -----------------------*/
   .header-content {
     position: absolute;
-    bottom: 100px;       /* Move down the screen */
-    left: 10%;        /* Starting from 10% from the left */
-    transform: translateX(-10%);  /* Pulls it slightly left */
+    bottom: 100px;       
+    left: 10%;        
+    transform: translateX(-10%);  
     text-align: center;
     z-index: 6;
   }
@@ -276,7 +276,7 @@ header {
     font-family: "Snell Roundhand", cursive;
     font-size: 150px;
     color: white;
-    margin: 0 0 10px 0; /* bottom margin to separate from h2 */
+    margin: 0 0 10px 0; 
     z-index: 6;
   }
   
@@ -289,10 +289,10 @@ header {
 
   .retro_lines {
     position: absolute;
-    top: 150px; /* adjust to fit below the headings */
+    top: 150px; 
     left: 40px;
     width: 650px;
-    z-index: 2; /* behind headings */
+    z-index: 2; 
   }
   /*-------- responsive for phone ----------*/
   @media (max-width: 600px) {
@@ -302,27 +302,27 @@ header {
     }
   
     .header-content h1 {
-      font-size: 50px; /* scale down heading */
-      margin: 0 0 1px 0; /* bottom margin to separate from h2 */
+      font-size: 50px; 
+      margin: 0 0 1px 0; 
 
     }
   
     .header-content h2 {
-      font-size: 20px; /* scale down subheading */
+      font-size: 20px; 
     }
   
     .retro_lines {
       top: 30%;
       left: 35%;
       transform: translateX(-50%);
-      width: 300px; /* shrink lines */
+      width: 300px; 
     }
   }
 
 
   /*-------------------------- THIS SECTION IS FOR THE NAVIGATION BAR -----------------------------*/
   nav {
-    margin-top: -90px; /* adjust as needed */
+    margin-top: -90px; 
     position: relative;
     background-color: black;
     height: 70px;
@@ -512,43 +512,43 @@ header {
 
 /* Dropdown box styling for the menswear menu */
 #menswear-box {
-  position: absolute;        /* Position dropdown relative to its nearest positioned ancestor */
-  top: 100%;                /* Position dropdown immediately below the button */
-  width: 60%;               /* Width relative to the parent container */
-  height: 740%;             /* Very tall dropdown to fit all categories */
-  padding: 15px;            /* Inner spacing inside dropdown */
-  display: none;            /* Hidden by default, shown on interaction */
-  z-index: 100;             /* Sit above most other page elements */
-  background-color: rgb(250, 249, 249); /* Light off-white background */
-  border-radius: 10px;      /* Rounded corners */
-  border: 2px solid rgb(84, 83, 83); /* Dark border around dropdown */
-  box-sizing: border-box;   /* Include padding and border in element's width/height */
-  box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  position: absolute;        
+  top: 100%;                
+  width: 60%;               
+  height: 740%;             
+  padding: 15px;            
+  display: none;            
+  z-index: 100;             
+  background-color: rgb(250, 249, 249); 
+  border-radius: 10px;      
+  border: 2px solid rgb(84, 83, 83); 
+  box-sizing: border-box;   
+  box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.3); 
 }
 
 /* Main headings inside the dropdown */
 #menswear-box h2 {
-  position: absolute;       /* Position each heading explicitly */
-  font-size: 30px;          /* Large heading font size */
-  color: rgb(0, 0, 0);      /* Black text */
-  margin: 2px 0;            /* Minimal vertical margin */
-  font-family: "Marcellus SC", serif; /* Elegant serif font */
-  font-weight: normal;      /* Normal weight for the font */
-  text-decoration: underline; /* Underline for emphasis */
+  position: absolute;      
+  font-size: 30px;          
+  color: rgb(0, 0, 0);      
+  margin: 2px 0;            
+  font-family: "Marcellus SC", serif; 
+  font-weight: normal;      
+  text-decoration: underline; 
 }
 
 /* Positioning the first heading (e.g., "Specials") */
 #menswear-box h2:nth-of-type(1) {
-  top: 5%;                  /* 5% from top of dropdown */
-  left: 8%;                 /* 8% from left side */
+  top: 5%;                 
+  left: 8%;               
 }
 
 /* Style for the "Specials" list within the dropdown */
 .specials-list {
-  list-style-type: none;    /* Remove default bullet points */
-  padding-left: 0;          /* Remove default left padding */
-  margin-bottom: 1em;       /* Space below the list */
-  margin-top: 50px;         /* Space above the list */
+  list-style-type: none;    
+  padding-left: 0;          
+  margin-bottom: 1em;      
+  margin-top: 50px;         
 }
 
 /* Individual list items in "Specials" */
@@ -562,19 +562,19 @@ header {
 /* Position the "Specials" list relative to dropdown */
 #menswear-box .specials-list {
   position: absolute;
-  top: 4%;                  /* Slightly down from top */
-  left: 9%;                 /* Slightly from left edge */
+  top: 4%;                  
+  left: 9%;                
 }
 
 /* Position the second heading (e.g., "Tops") */
 #menswear-box h2:nth-of-type(2) {
   top: 5%;
-  left: 35%;                /* Positioned more to the right */
+  left: 35%;               
 }
 
 /* Style for the "Tops" list */
 .tops-list {
-  list-style-type: none;    /* Remove bullets */
+  list-style-type: none;   
   padding-left: 0;
   margin-bottom: 1em;
   margin-top: 50px;
@@ -591,14 +591,14 @@ header {
 /* Position the "Tops" list */
 #menswear-box .tops-list {
   position: absolute;
-  top: 4%;                  /* Vertical alignment */
-  left: 36%;                /* Horizontal offset */
+  top: 4%;                  
+  left: 36%;                
 }
 
 /* Position the third heading (e.g., "Bottoms") */
 #menswear-box h2:nth-of-type(3) {
-  top: 70%;                 /* Lower in the dropdown */
-  left: 35%;                /* Same horizontal position as "Tops" */
+  top: 70%;                 
+  left: 35%;               
 }
 
 /* Style for the "Bottoms" list */
@@ -627,7 +627,7 @@ header {
 /* Position the fourth heading (e.g., "Shop By Brand") */
 #menswear-box h2:nth-of-type(4) {
   top: 5%;
-  left: 60%;                /* Positioned far right */
+  left: 60%;                
 }
 
 /* Style for the "Shop By Brand" list */
@@ -655,11 +655,11 @@ header {
 
 /* Styling and positioning of an image inside the dropdown */
 #menswear-box .denim_model {
-  position: absolute;       /* Positioned relative to dropdown */
-  bottom: 7%;               /* 7% from bottom of dropdown */
-  left: 8%;                 /* 8% from left */
-  width: 150px;             /* Fixed width */
-  height: auto;             /* Height scales proportionally */
+  position: absolute;      
+  bottom: 7%;             
+  left: 8%;                
+  width: 150px;            
+  height: auto;            
 }
 
      /*---------------------- THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
@@ -670,7 +670,7 @@ header {
       overflow: hidden;
       z-index: 2;
       margin: 0;
-      background-image: url('../img/background retro image.jpg'); /* Make sure the path is correct and unescaped */
+      background-image: url('../img/background retro image.jpg');
       background-size: contain;
       background-position: center;
     }
@@ -695,7 +695,7 @@ header {
     .customer-reviews-heading {
       position: relative;
       text-align: center;
-      font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+      font-size: clamp(1.5rem, 4vw, 2.5rem); 
       margin-top: -0.9rem;
       margin-bottom: clamp(1rem, 1vw, 2rem);
       font-weight: normal;
@@ -711,15 +711,15 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: clamp(30px, 80vw, 80px); /* Responsive spacing */
+    gap: clamp(30px, 80vw, 80px); 
     padding: 0.5rem 2rem;
   }
   
   .review {
-    flex: 1 1 clamp(250px, 30%, 300px); /* Responsive width between 250–300px */
+    flex: 1 1 clamp(250px, 30%, 300px); 
     max-width: 300px;
     text-align: center;
-    font-size: clamp(16px, 2vw, 20px); /* Responsive text */
+    font-size: clamp(16px, 2vw, 20px); 
     font-family: "Jacques Francois", serif;
     color: black;
     display: flex;
@@ -773,7 +773,7 @@ header {
   }
 
   .review p {
-    margin-top: 2px;   /* Reduce space between icon and text */
+    margin-top: 2px;   
   }
 
   .review {
@@ -784,8 +784,8 @@ header {
   }
 
   .review img {
-    width: 40px;              /* Adjust as needed */
-    margin-bottom: 1px;       /* Reduce gap between icon and text */       /* Center the icon */
+    width: 40px;              
+    margin-bottom: 1px;      
   }
 }
 
@@ -813,9 +813,9 @@ header {
 .categories_row {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto; /* Enable scroll */
+  overflow-x: auto;
   overflow-y: hidden;
-  gap: 55px; /* You can increase this even more */
+  gap: 55px;
   padding-bottom: 20px;
   scroll-behavior: smooth;
 }
@@ -837,7 +837,7 @@ header {
 
 /* Image size */
 .categories_row img {
-  width: 270px; /* Increase as needed */
+  width: 270px;
   height: auto;
   display: block;
 }
@@ -856,7 +856,7 @@ header {
     .shop_categories {
       background-size: cover;
       padding: 30px 0px 10px 30px;
-      overflow-x: auto; /* fallback for horizontal scrolling */
+      overflow-x: auto; 
     }
   
     .shopping_categories_heading {
@@ -868,19 +868,19 @@ header {
     .categories_row {
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;          /* prevent wrapping */
+      flex-wrap: nowrap;          
       gap: 20px;
-      overflow-x: auto;           /* enable horizontal scroll */
-      -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-      scrollbar-width: none;      /* hide scrollbar in Firefox */
+      overflow-x: auto;           
+      -webkit-overflow-scrolling: touch; 
+      scrollbar-width: none;     
     }
   
     .categories_row::-webkit-scrollbar {
-      display: none;              /* hide scrollbar in Chrome/Safari */
+      display: none;             
     }
   
     .categories_row > div {
-      flex: 0 0 auto;             /* prevent shrinking & allow side-by-side layout */
+      flex: 0 0 auto;            
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -908,7 +908,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2vw 5vw 0 5vw; /* responsive padding */
+    padding: 2vw 5vw 0 5vw; 
     color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
@@ -917,7 +917,7 @@ header {
   }
   
   .about_us_content {
-    max-width: 90vw; /* max width relative to viewport */
+    max-width: 90vw; 
     margin: 0 auto;
     padding: clamp(20px, 3vw, 40px) clamp(10px, 2vw, 20px);
   }
@@ -960,7 +960,7 @@ header {
     background-image: url('../img/red_gradient_background.png');
     padding: clamp(20px, 5vw, 40px) clamp(20px, 8vw, 80px);
     text-align: center;
-    background-color: #fff; /* or any background you prefer */
+    background-color: #fff; 
   }
   
   .blogs_heading {
@@ -980,7 +980,7 @@ header {
   }
   
   .blog_images img {
-    width: clamp(220px, 23vw, 350px); /* responsive width */
+    width: clamp(220px, 23vw, 350px); 
     height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -1077,11 +1077,11 @@ header {
   }
   
   .follow_logos img {
-    height: 20px; /* adjust icon size */
+    height: 20px; 
     width: auto;
   }
 
-      /*  -------------- Responsive for phone ------------- */
+  /*  -------------- Responsive for phone ------------- */
       @media (max-width: 600px) {
         .footer {
           background-image: url('../img/black_rectangle_footer.jpg');
@@ -1122,21 +1122,16 @@ header {
         }
         
         .follow_logos img {
-          height: 10px; /* adjust icon size */
+          height: 10px; 
           width: auto;
         }
       }
-
-
-      
-        
-
 
   /* ----------- NAVIGATION DROPDOWN MENU RESPONSIVE FOR PHONE AND DESKTOP DIFFERENT VERSIONS ------------- */
   @media (max-width: 600px) {
     /* 1. Remove default UL margin/padding entirely */
     .menu-toggle {
-      display: block;          /* hamburger is visible on mobile */
+      display: block;          
       font-size: 28px;
       background: none;
       color: white;
@@ -1150,7 +1145,7 @@ header {
     .nav_links {
       margin: 0;
       padding: 0;
-      display: none;          /* still hidden by default */
+      display: none;         
       position: absolute;
       top: 60px;
       left: 0;

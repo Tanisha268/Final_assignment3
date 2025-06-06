@@ -39,7 +39,7 @@ html, body {
     color: white;
     line-height: 70px;
     margin: 0;
-    padding-right: 50px; /* spacing between duplicated lines */
+    padding-right: 50px; 
   }
   
   @keyframes scrollText {
@@ -61,7 +61,7 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 70px; /* pushes below the red banner */
+    margin-top: 70px; 
     z-index: 1;
     position: relative;
   }
@@ -97,7 +97,7 @@ html, body {
     position: relative;
     background-color: black;
     height: 60px;
-    width: 100%; /* Keep this at 100%! */
+    width: 100%;
     display: flex;
     align-items: center;
     z-index: 5;
@@ -128,7 +128,7 @@ html, body {
   }
   
       .cart_icon_wrapper #cart-icon {
-        width: auto; /* your preferred size */
+        width: auto; 
         height: 42px;
       }
       
@@ -136,7 +136,7 @@ html, body {
         position: absolute;
         top: -8px;
         right: -8px;
-        background-color: #ff3b3b; /* bright red */
+        background-color: #ff3b3b; 
         color: rgb(0, 0, 0);
         font-weight: 700;
         font-size: 14px;
@@ -146,8 +146,8 @@ html, body {
         text-align: center;
         line-height: 20px;
         box-shadow: 0 0 3px rgba(0,0,0,0.3);
-        pointer-events: none; /* clicks go through */
-        display: none; /* hidden when zero */
+        pointer-events: none; 
+        display: none; 
         user-select: none;
         transition: transform 0.3s ease;
       }
@@ -177,7 +177,7 @@ html, body {
  .nav_links li:hover {
     text-decoration: underline; 
 } 
-  /* Responsive for tablets and smaller */
+
  /* Hide the hamburger by default */
  .menu-toggle {
   display: none;
@@ -258,7 +258,6 @@ html, body {
   }
 
   /* --------Responsive for phone size-------- */
-
 @media (max-width: 600px) {
   .cart_pages {
     display: flex;
@@ -332,7 +331,7 @@ html, body {
     color: #000000;
   }
 
-      /* -------- PICKING WHAT SHOPPING OPTION I WANT  -------- */
+      /* ----------------------------- PICKING WHAT SHOPPING OPTION I WANT  --------------------------- */
 
       .shipping_option {
         display: flex;
@@ -654,18 +653,18 @@ html, body {
     padding: 15px 20px;
     margin-bottom: 15px;
     cursor: pointer;
-    width: 400px; /* adjust width as needed */
+    width: 400px; 
     transition: border-color 0.3s ease, background-color 0.3s ease;
   }
   
   .store_option:hover {
-    border-color: #007BFF; /* highlight on hover */
+    border-color: #007BFF; 
     background-color: #f0f8ff;
   }
   
   .store_option.selected {
-    border-color: #d10000; /* red border when selected */
-    background-color: #ffe6e6; /* subtle red background */
+    border-color: #d10000; 
+    background-color: #ffe6e6; 
   }
   
   .store_name {
@@ -696,7 +695,7 @@ html, body {
   .store_option {
     padding: 10px 15px;
     margin-bottom: 15px;
-    width: 290px; /* adjust width as needed */
+    width: 290px; 
   }
   
   .store_name {
@@ -765,7 +764,7 @@ html, body {
         }
       
         .payment_wrapper {
-          width: 90%; /* Shrinks width on small screens */
+          width: 90%; 
           padding: 15px;
         }
       
@@ -796,24 +795,23 @@ html, body {
     font-size: 16px;
     cursor: not-allowed;
     font-family: "Marcellus SC", serif;
-    opacity: 0.5; /* transparent initially */
+    opacity: 0.5; 
     transition: opacity 0.3s ease;
   
-    width: 250px; /* fixed width */
+    width: 250px; 
     text-align: center;
   
-    display: block; /* so margin works */
-    margin: 30px auto 0; /* 50px top margin, auto left/right, 0 bottom */
+    display: block; 
+    margin: 30px auto 0; 
   
-    /* Center text vertically and horizontally inside the button */
-    line-height: 1.5; /* adjust line height for vertical alignment */
+    line-height: 1.5; 
   }
 
      /* --------Responsive for phone size-------- */
      @media (max-width: 600px) {
         .payment_button {
             width: 300px;
-            margin: 10px auto 0; /* 50px top margin, auto left/right, 0 bottom */
+            margin: 10px auto 0; 
         }
 
         }
@@ -864,7 +862,7 @@ html, body {
     }
     
     .follow_logos img {
-      height: 20px; /* adjust icon size */
+      height: 20px; 
       width: auto;
     }
   
@@ -909,7 +907,7 @@ html, body {
           }
           
           .follow_logos img {
-            height: 10px; /* adjust icon size */
+            height: 10px; 
             width: auto;
           }
         }

@@ -39,7 +39,7 @@ html, body {
     color: white;
     line-height: 70px;
     margin: 0;
-    padding-right: 50px; /* spacing between duplicated lines */
+    padding-right: 50px; 
   }
   
   @keyframes scrollText {
@@ -61,7 +61,7 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 70px; /* pushes below the red banner */
+    margin-top: 70px; 
     z-index: 1;
     position: relative;
   }
@@ -97,7 +97,7 @@ html, body {
     position: relative;
     background-color: black;
     height: 60px;
-    width: 100%; /* Keep this at 100%! */
+    width: 100%; 
     display: flex;
     align-items: center;
     z-index: 5;
@@ -105,7 +105,6 @@ html, body {
     margin-top: 5px; /
 }
 
-  
   .nav_icons {
     display: flex;
     gap: 20px;
@@ -140,7 +139,7 @@ html, body {
  .nav_links li:hover {
     text-decoration: underline; 
 } 
-  /* Responsive for tablets and smaller */
+
  /* Hide the hamburger by default */
  .menu-toggle {
   display: none;
@@ -167,7 +166,7 @@ html, body {
       }
 
       .nav_links {
-        display: none;  /* Hide the nav links */
+        display: none;  
       }
 
       .nav_icons img {
@@ -194,7 +193,6 @@ html, body {
   }
 
 /* --------Responsive for phone size-------- */
-
 @media (max-width: 600px) {
   .black-rectangle {
     height: 60px;
@@ -222,7 +220,6 @@ html, body {
   }
 
   /* --------Responsive for phone size-------- */
-
 @media (max-width: 600px) {
   .cart_pages {
     display: flex;
@@ -251,11 +248,11 @@ html, body {
   
   .cart_items_summary {
     background-image: url("../img/background_retro_image.png");
-    background-size: cover;         /* makes image cover container */
-    background-position: center;    /* centers the image */
+    background-size: cover;         
+    background-position: center;    
     background-repeat: no-repeat;
-    height: 80vh;                  /* full height of the viewport */
-    width: 70%;                     /* only 70% width */
+    height: 80vh;                  
+    width: 70%;                  
   }
     
     .cart_row {
@@ -337,7 +334,7 @@ html, body {
       .cart_main_container {
         flex-direction: column;
         align-items: stretch;
-        column-gap: 1500px; /* smaller gap for small screens */
+        column-gap: 1500px; 
         width: 100%;
         height: 50%;
         margin-bottom: 40px;
@@ -395,7 +392,7 @@ html, body {
   /*--------------------------------- THIS SECTION IS FOR CART SUMMARY  ---------------------------------------*/
 .product_cart_summary {
   width: 30%;
-  margin-left: auto; /* Pushes it to the right */
+  margin-left: auto; 
 
 }
 
@@ -461,9 +458,9 @@ html, body {
         .product_cart_summary {
           width: 90%;
           margin: 0 auto;
-          display: flex;           /* add this */
-          flex-direction: column;  /* add this */
-          align-items: center;     /* optional, centers children horizontally */
+          display: flex;          
+          flex-direction: column;  
+          align-items: center;    
         }
     
       .order_summary {
@@ -503,12 +500,12 @@ html, body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px; /* space between images */
+      gap: 15px; 
       margin-top: 20px;
     }
     .continue_checkout {
-      width: 80%; /* Match the image widths */
-      max-width: 300px; /* Prevent it from getting too wide */
+      width: 80%; 
+      max-width: 300px; 
       margin: 0 auto 30px auto;
       padding: 12px 0;
       background-color: black;
@@ -524,11 +521,11 @@ html, body {
     }
 
     .payment_options img {
-      width: 70%; /* or any appropriate width */
+      width: 70%; 
       max-width: 300px;
       height: 70%;
-      transform: translateY(-5px);  /* moves the button up by 5px */
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* subtle shadow for lift effect */
+      transform: translateY(-5px);  
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
     }
     .checkout_link {
       width: 100%;
@@ -540,34 +537,34 @@ html, body {
   /* --------------- Responsive for phone size --------------- */ 
     @media (max-width: 600px) {
       .cart_main_container {
-        flex-direction: column;  /* stack all children vertically */
-        align-items: center;     /* center content horizontally */
+        flex-direction: column;  
+        align-items: center;     
       }
     
       .product_cart_summary {
-        width: 90%;              /* full width on mobile */
+        width: 90%;              
         margin: 0 auto;
       }
     
       .payment_options {
-        width: 90%;              /* match width to order summary */
+        width: 90%;              
         padding-top: 20px;
-        flex-direction: column;  /* stack images vertically */
+        flex-direction: column;  
         align-items: center;
         gap: 15px;
         margin-top: 20px;
       }
     
       .payment_options img {
-        width: 80%;              /* responsive width */
+        width: 80%;              
         max-width: 300px;
-        height: auto;            /* keep aspect ratio */
+        height: auto;            
         box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        transform: none;         /* remove any unwanted translate */
+        transform: none;        
       }
     
       .continue_checkout {
-        width: 80%;              /* consistent width */
+        width: 80%;              
         margin: 20px auto 30px auto;
       }
     }

@@ -40,7 +40,7 @@ html, body {
     color: white;
     line-height: 70px;
     margin: 0;
-    padding-right: 50px; /* spacing between duplicated lines */
+    padding-right: 50px; 
   }
   
   @keyframes scrollText {
@@ -62,7 +62,7 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 70px; /* pushes below the red banner */
+    margin-top: 70px; 
     z-index: 1;
     position: relative;
   }
@@ -71,9 +71,9 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* perfectly center */
+    transform: translate(-50%, -50%); 
     z-index: 3;
-    width: 150px; /* adjust logo size as needed */
+    width: 150px; 
     height: auto;
   }
 /* --------Responsive for phone size-------- */
@@ -82,15 +82,14 @@ html, body {
       width: 100%;
       height: 100%;
       display: block;
-      margin-top: 70px; /* pushes below the red banner */
+      margin-top: 70px; 
       z-index: 1;
       position: relative;
     }
     
     .small_retro_logo {
-      width: 50px; /* adjust logo size as needed */
+      width: 50px; 
     }
-
   }
 
   /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
@@ -99,7 +98,7 @@ html, body {
     position: relative;
     background-color: black;
     height: 60px;
-    width: 100%; /* Keep this at 100%! */
+    width: 100%; 
     display: flex;
     align-items: center;
     z-index: 5;
@@ -124,7 +123,7 @@ html, body {
 
 
   .cart_icon_wrapper {
-    position: relative; /* so badge is positioned relative to this */
+    position: relative; 
     display: inline-block;
   }
   
@@ -138,7 +137,7 @@ html, body {
     font-weight: bold;
     padding: 3px 6px;
     border-radius: 50%;
-    display: none; /* hide initially */
+    display: none; 
     min-width: 20px;
     height: 20px;
     line-height: 14px;
@@ -173,7 +172,6 @@ html, body {
  .nav_links li:hover {
     text-decoration: underline; 
 } 
-  /* Responsive for tablets and smaller */
  /* Hide the hamburger by default */
  .menu-toggle {
   display: none;
@@ -200,7 +198,7 @@ html, body {
       }
 
       .nav_links {
-        display: none;  /* Hide the nav links */
+        display: none; 
       }
 
       .nav_icons img {
@@ -305,7 +303,7 @@ html, body {
 
   .images-container {
     display: flex;
-    flex-direction: column; /* Reverse the order: small images come after main */
+    flex-direction: column; 
     align-items: center;
     gap: 20px;
     width: 100%;
@@ -382,16 +380,16 @@ html, body {
 
   /*  ------------------- Add to Cart Pressing and Summary Appearing ----------------------- */
   .cart-notification {
-    position: absolute; /* makes it float above everything */
-    top: 225px; /* distance from the top of the screen */
-    right: 0px; /* distance from the right edge */
+    position: absolute; 
+    top: 225px; 
+    right: 0px;
     width: 400px;
     background-color: #dedede;
     border: 2px solid rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     font-family: Arial, sans-serif;
-    z-index: 9999; /* ensures it's on top */
+    z-index: 9999; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
   
@@ -453,8 +451,8 @@ html, body {
   }
   
   .view-cart-button {
-    display: block; /* makes margin auto work */
-    margin: 20px auto 0; /* top: 15px, sides: auto (center), bottom: 0 */
+    display: block; 
+    margin: 20px auto 0; 
     padding: 10px 20px;
     background-color: white;
     border: 2px solid orange;
@@ -509,6 +507,7 @@ html, body {
       display: block;
     }
 
+    /* ----------------- Responsive for phone size --------------- */
     @media (max-width: 600px) {
       .cart-notification {
         width: 70%;
@@ -618,8 +617,8 @@ html, body {
           font-family: "Jacques Francois", serif;
           font-size: 18px;
           margin-left: 60px;
-          margin-top: 5px;       /* Add this line to reduce space above the <p> */
-          margin-bottom: 10px;   /* Keep or adjust this as needed */
+          margin-top: 5px;       
+          margin-bottom: 10px;  
         }
         
         .product_description_description ul {
@@ -669,7 +668,7 @@ html, body {
           font-family: "Jacques Francois", serif;
           font-size: 15px;
           margin-left: 25px;
-          margin-top: 5px;       /* Add this line to reduce space above the <p> */
+          margin-top: 5px;       
           margin-bottom: 10px;
         
         }
@@ -748,11 +747,11 @@ html, body {
       }
       
       .follow_logos img {
-        height: 20px; /* adjust icon size */
+        height: 20px; 
         width: auto;
       }
     
-          /* Responsive for phone */
+  /* -------- Responsive for phone --------- */
           @media (max-width: 600px) {
             .footer {
               background-image: url('../img/black_rectangle_footer.jpg');
@@ -793,7 +792,7 @@ html, body {
             }
             
             .follow_logos img {
-              height: 10px; /* adjust icon size */
+              height: 10px; 
               width: auto;
             }
           }
